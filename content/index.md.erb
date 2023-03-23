@@ -1,0 +1,24 @@
+---
+title: "Semantic overlay over P2P network for academic paper sharing and publishing"
+---
+<header markdown="1">
+# <%= @item[:title] %>
+
+{:#authors}
+- <%= person 'Bryan-Elliott Tam', 'https://github.com/constraintAutomaton', '' %>
+- <%= person 'Ruben Taelman', 'http://www.rubensworks.net/', 'http://www.rubensworks.net/#me' %>
+- <%= person 'Pieter Colpaert', 'https://pietercolpaert.be/', 'https://pietercolpaert.be/#me' %>
+
+{:#affiliations}
+- {:#myaffiliation} IDLab, Department of Electronics and Information Systems, Ghent University – imec
+
+<%= section 'abstract' %>
+</header>
+
+<main>
+  <!-- Add sections by specifying their file name, excluding the '.md' suffix. -->
+  <%= section 'introduction' %>
+  <%= section 'literature_review' %>
+</main>
+
+<footer></footer>
