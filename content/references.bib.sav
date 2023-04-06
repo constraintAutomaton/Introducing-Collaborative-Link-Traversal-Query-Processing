@@ -11,7 +11,7 @@
   abstract   = {This is a critical literature review of the open-source software landscape and what purpose it aims to serve by accelerating a debate in the field of IS about what open source means and how it has transformed the social and economic landscape of the software industry. As the general population has developed an increased dependence on information technology, the necessity for quality software offerings has also increased. This article attempts to present, interpret, and compare the two contrasting theories of the open-source landscape—the libertarian view versus the corporate view. Subsequently, it aims to delve into the battle of these two conflicting theories and what their interpretations present from the perspective of socially embedded lens—freedom or benefit (profit). This article will examine the differing opinions and dichotomy of the scholars from multiple angles and if the juxtaposition of these two theories creates the holistic view of the landscape.},
   doi        = {10.1109/MITP.2020.3014450},
   file       = {:article/A Critical Review of Open Source Software.pdf:PDF},
-  groups     = {Commodification internet, to summarise},
+  groups     = {Commodification internet},
   ranking    = {rank5},
   readstatus = {read},
 }
@@ -306,12 +306,13 @@
   month       = Oct,
   pages       = {55-68},
   file        = {:article/sparql_query_in_networks_of_browsers_camera_ready.pdf:PDF},
-  groups      = {querying},
+  groups      = {querying, currently reading, to summarise},
   hal_id      = {hal-01805154},
   hal_version = {v2},
   keywords    = {Decentralized Data Management ; Decentralized Applications ; SPARQL Query Processing ; Web Browsers},
   pdf         = {https://hal-nantes-universite.archives-ouvertes.fr/hal-01805154v2/file/sparql_query_in_networks_of_browsers_camera_ready.pdf},
-  priority    = {prio1},
+  ranking     = {rank5},
+  readstatus  = {read},
   url         = {https://hal-nantes-universite.archives-ouvertes.fr/hal-01805154},
 }
 
@@ -326,7 +327,7 @@
   publisher  = {Springer Berlin Heidelberg},
   abstract   = {Peer-to-Peer systems have proven to be an effective way of sharing data. Modern protocols are able to efficiently route a message to a given peer. However, determining the destination peer in the first place is not always trivial. We propose a model in which peers advertise their expertise in the Peer-to-Peer network. The knowledge about the expertise of other peers forms a semantic topology. Based on the semantic similarity between the subject of a query and the expertise of other peers, a peer can select appropriate peers to forward queries to, instead of broadcasting the query or sending it to a random set of peers. To calculate our semantic similarity measure we make the simplifying assumption that the peers share the same ontology. We evaluate the model in a bibliographic scenario, where peers share bibliographic descriptions of publications among each other. In simulation experiments we show how expertise based peer selection improves the performance of a Peer-to-Peer system with respect to precision, recall and the number of messages.},
   file       = {:article/Peer Selection in Peer to Peer Networks with Semantic Topologies.pdf:PDF},
-  groups     = {querying, to summarise},
+  groups     = {querying},
   isbn       = {978-3-540-30145-5},
   ranking    = {rank4},
   readstatus = {read},
@@ -668,6 +669,141 @@ THE INTERNET.pdf:PDF},
   groups  = {Commodification internet},
 }
 
+@InProceedings{Grubenmann2017ChallengesOS,
+  author    = {Tobias Grubenmann and Abraham Bernstein and Dmitry Moor and Sven Seuken},
+  booktitle = {International Workshop on the Semantic Web},
+  title     = {Challenges of Source Selection in the WoD},
+  year      = {2017},
+  file      = {:article/Challenges of Source Selection in the WoD.pdf:PDF},
+  groups    = {querying},
+}
+
+@InProceedings{10.1145/1989284.1989320,
+  author    = {Abiteboul, Serge and Bienvenu, Meghyn and Galland, Alban and Antoine, \'{E}milien},
+  booktitle = {Proceedings of the Thirtieth ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems},
+  title     = {A Rule-Based Language for Web Data Management},
+  year      = {2011},
+  address   = {New York, NY, USA},
+  pages     = {293–304},
+  publisher = {Association for Computing Machinery},
+  series    = {PODS '11},
+  abstract  = {There is a new trend to use Datalog-style rule-based languages to specify modern distributed applications, notably on the Web. We introduce here such a language for a distributed data model where peers exchange messages (i.e. logical facts) as well as rules. The model is formally defined and its interest for distributed data management is illustrated through a variety of examples. A contribution of our work is a study of the impact on expressiveness of "delegations" (the installation of rules by a peer in some other peer) and explicit timestamps. We also validate the semantics of our model by showing that under certain natural conditions, our semantics converges to the same semantics as the centralized system with the same rules. Indeed, we show this is even true when updates are considered.},
+  doi       = {10.1145/1989284.1989320},
+  file      = {:article/A rule-based language for web data management.pdf:PDF},
+  groups    = {File sharing P2P},
+  isbn      = {9781450306607},
+  keywords  = {datalog, delegation, web, distribution},
+  location  = {Athens, Greece},
+  numpages  = {12},
+  url       = {https://doi.org/10.1145/1989284.1989320},
+}
+
+@Article{6582416,
+  author  = {Diallo, Ousmane and Rodrigues, Joel J. P. C. and Sene, Mbaye and Lloret, Jaime},
+  journal = {IEEE Transactions on Parallel and Distributed Systems},
+  title   = {Distributed Database Management Techniques for Wireless Sensor Networks},
+  year    = {2015},
+  number  = {2},
+  pages   = {604-620},
+  volume  = {26},
+  doi     = {10.1109/TPDS.2013.207},
+  file    = {:article/Distributed Database Management Techniques for Wireless Sensor Networks.pdf:PDF},
+  groups  = {querying},
+}
+
+@InProceedings{Crespo2005,
+  author    = {Crespo, Arturo and Garcia-Molina, Hector},
+  booktitle = {Agents and Peer-to-Peer Computing},
+  title     = {Semantic Overlay Networks for P2P Systems},
+  year      = {2005},
+  address   = {Berlin, Heidelberg},
+  editor    = {Moro, Gianluca and Bergamaschi, Sonia and Aberer, Karl},
+  pages     = {1--13},
+  publisher = {Springer Berlin Heidelberg},
+  abstract  = {In a peer-to-peer (P2P) system, nodes typically connect to a small set of random nodes (their neighbors), and queries are propagated along these connections. Such query flooding tends to be very expensive. We propose that node connections be influenced by content, so that for example, nodes having many ``Jazz'' files will connect to other similar nodes. Thus, semantically related nodes form a Semantic Overlay Network (SON). Queries are routed to the appropriate SONs, increasing the chances that matching files will be found quickly, and reducing the search load on nodes that have unrelated content. We have evaluated SONs by using an actual snapshot of music-sharing clients. Our results show that SONs can significantly improve query performance while at the same time allowing users to decide what content to put in their computers and to whom to connect.},
+  file      = {:article/Semantic Overlay Networks for P2P Systems.pdf:PDF},
+  groups    = {querying},
+  isbn      = {978-3-540-31657-2},
+}
+
+@InBook{Doulkeridis2010,
+  author    = {Doulkeridis, Christos and Vlachou, Akrivi and N{\o}rv{\aa}g, Kjetil and Vazirgiannis, Michalis},
+  editor    = {Shen, Xuemin and Yu, Heather and Buford, John and Akon, Mursalin},
+  pages     = {463--494},
+  publisher = {Springer US},
+  title     = {Distributed Semantic Overlay Networks},
+  year      = {2010},
+  address   = {Boston, MA},
+  isbn      = {978-0-387-09751-0},
+  abstract  = {Semantic Overlay Networks (SONs) have been recently proposed as a way to organize content in peer-to-peer (P2P) networks. The main objective is to discover peers with similar content and then form thematically focused peer groups. Efficient content retrieval can be performed by having queries selectively forwarded only to relevant groups of peers to the query. As a result, less peers need to be contacted, in order to answer a query. In this context, the challenge is to generate SONs in a decentralized and distributed manner, as the centralized assembly of global information is not feasible. Different approaches for exploiting the generated SONs for content retrieval have been proposed in the literature, which are examined in this chapter, with a particular focus on SON interconnections for efficient search. Several applications, such as P2P document and image retrieval, can be deployed over generated SONs, motivating the need for distributed and truly scalable SON creation. Therefore, recently several research papers focus on SONs as stated in our comprehensive overview of related work in the field of semantic overlay networks. A classification of existing algorithms according to a set of qualitative criteria is also provided. In spite of the rich existing work in the field of SONs, several challenges have not been efficiently addressed yet, therefore, future promising research directions are pointed out and discussed at the end of this chapter.},
+  booktitle = {Handbook of Peer-to-Peer Networking},
+  doi       = {10.1007/978-0-387-09751-0_17},
+  file      = {:article/Xuemin Shen, Heather Yu, John Buford, Mursalin Akon (eds.) - Handbook of Peer-to-Peer Networking-Springer (2010).pdf:PDF},
+  groups    = {querying},
+  url       = {https://doi.org/10.1007/978-0-387-09751-0_17},
+}
+
+@InBook{10.5555/2028190.2028192,
+  author    = {Filali, Imen and Bongiovanni, Francesco and Huet, Fabrice and Baude, Fran\c{c}oise},
+  pages     = {20–55},
+  publisher = {Springer-Verlag},
+  title     = {A Survey of Structured P2P Systems for RDF Data Storage and Retrieval},
+  year      = {2011},
+  address   = {Berlin, Heidelberg},
+  isbn      = {9783642230738},
+  abstract  = {The Semantic Web enables the possibility to model, create and query resources found on the Web. Enabling the full potential of its technologies at the Internet level requires infrastructures that can cope with scalability challenges while supporting expressive queries. The attractive features of the Peer-to-Peer (P2P) communication model, and more specifically structured P2P systems, such as decentralization, scalability, fault-tolerance seems to be a natural solution to deal with these challenges. Consequently, the combination of the Semantic Web and the P2P model can be a highly innovative attempt to harness the strengths of both technologies and come up with a scalable infrastructure for RDF data storage and retrieval. In this respect, this survey details the research works adopting this combination and gives an insight on how to deal with the RDF data at the indexing and querying levels. We also present some works which adopt the publish/subscribe paradigm for processing RDF data in order to offer long standing queries.},
+  booktitle = {Transactions on Large-Scale Data- and Knowledge-Centered Systems III: Special Issue on Data and Knowledge Management in Grid and P2P Systems},
+  groups    = {File sharing P2P},
+  numpages  = {36},
+}
+
+@InProceedings{Bertier2010,
+  author    = {Bertier, Marin and Frey, Davide and Guerraoui, Rachid and Kermarrec, Anne-Marie and Leroy, Vincent},
+  booktitle = {Middleware 2010},
+  title     = {The Gossple Anonymous Social Network},
+  year      = {2010},
+  address   = {Berlin, Heidelberg},
+  editor    = {Gupta, Indranil and Mascolo, Cecilia},
+  pages     = {191--211},
+  publisher = {Springer Berlin Heidelberg},
+  abstract  = {While social networks provide news from old buddies, you can learn a lot more from people you do not know, but with whom you share many interests. We show in this paper how to build a network of anonymous social acquaintances using a gossip protocol we call Gossple, and how to leverage such a network to enhance navigation within Web 2.0 collaborative applications, {\`a} la LastFM and Delicious. Gossple nodes (users) periodically gossip digests of their interest profiles and compute their distances (in terms of interest) with respect to other nodes. This is achieved with little bandwidth and storage, fast convergence, and without revealing which profile is associated with which user. We evaluate Gossple on real traces from various Web 2.0 applications with hundreds of PlanetLab hosts and thousands of simulated nodes.},
+  file      = {:article/The Gossple Anonymous Social Network.pdf:PDF},
+  groups    = {querying},
+  isbn      = {978-3-642-16955-7},
+}
+
+@Article{Ndelec2017,
+  author    = {Brice N{\'{e}}delec and Julian Tanke and Davide Frey and Pascal Molli and Achour Most{\'{e}}faoui},
+  journal   = {World Wide Web},
+  title     = {An adaptive peer-sampling protocol for building networks of browsers},
+  year      = {2017},
+  month     = aug,
+  number    = {3},
+  pages     = {629--661},
+  volume    = {21},
+  doi       = {10.1007/s11280-017-0478-5},
+  file      = {:article/An adaptive peer sampling protocol for building networks of browsers.pdf:PDF},
+  groups    = {File sharing P2P},
+  publisher = {Springer Science and Business Media {LLC}},
+  url       = {https://doi.org/10.1007/s11280-017-0478-5},
+}
+
+@InProceedings{Li2003,
+  author    = {Li, Jinyang and Loo, Boon Thau and Hellerstein, Joseph M. and Kaashoek, M. Frans and Karger, David R. and Morris, Robert},
+  booktitle = {Peer-to-Peer Systems II},
+  title     = {On the Feasibility of Peer-to-Peer Web Indexing and Search},
+  year      = {2003},
+  address   = {Berlin, Heidelberg},
+  editor    = {Kaashoek, M. Frans and Stoica, Ion},
+  pages     = {207--215},
+  publisher = {Springer Berlin Heidelberg},
+  abstract  = {This paper discusses the feasibility of peer-to-peer full-text keyword search of the Web. Two classes of keyword search techniques are in use or have been proposed: flooding of queries over an overlay network (as in Gnutella), and intersection of index lists stored in a distributed hash table. We present a simple feasibility analysis based on the resource constraints and search workload. Our study suggests that the peer-to-peer network does not have enough capacity to make naive use of either of search techniques attractive for Web search. The paper presents a number of existing and novel optimizations for P2P search based on distributed hash tables, estimates their effects on performance, and concludes that in combination these optimizations would bring the problem to within an order of magnitude of feasibility. The paper suggests a number of compromises that might achieve the last order of magnitude.},
+  file      = {:article/On the Feasibility of Peer to Peer Web Indexing and Search.pdf:PDF},
+  groups    = {querying},
+  isbn      = {978-3-540-45172-3},
+  priority  = {prio1},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: grouping:
@@ -675,6 +811,7 @@ THE INTERNET.pdf:PDF},
 1 StaticGroup:archiving\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:Commodification internet\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:comunication\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:currently reading\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:File sharing P2P\;0\;0\;0x8a8a8aff\;\;\;;
 1 StaticGroup:querying\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:to summarise\;0\;1\;0x8a8a8aff\;\;\;;

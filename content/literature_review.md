@@ -37,4 +37,4 @@ The expertise is a semantic description of the knowledge contain inside the peer
 it knows and check if there expertise align with the query it is making, hence pruning or prioteriszing the peer to visit.
 The limitation is that the peer must share the same ontology.
 From the benchmark results, they found that the best results are produce when the distribution of the knowledge by peer was organize in accordance with the structrue of the ontology.
-They mention that in there future work they would make so the network topology would mathch the netwokr topology.
+They mention that in there future work they would make so the network topology would mathch the network topology.

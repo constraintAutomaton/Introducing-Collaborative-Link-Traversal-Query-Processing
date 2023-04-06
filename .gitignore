@@ -1,6 +1,6 @@
 .DS_Store
 *.pdf
-
+!/content/article/*
 .sass-cache
 tmp
 output
