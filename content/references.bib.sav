@@ -134,6 +134,7 @@
   file      = {:article/A Decentralized Architecture for Sharing and Querying Semantic Data.pdf:PDF},
   groups    = {File sharing P2P},
   isbn      = {978-3-030-21348-0},
+  priority  = {prio1},
 }
 
 @PhdThesis{Fielding,
@@ -190,7 +191,6 @@
   keywords  = {overlay network, information retrieval, peer-to-peer system},
   location  = {Karlsruhe, Germany},
   numpages  = {12},
-  priority  = {prio1},
   url       = {https://doi.org/10.1145/863955.863976},
 }
 
@@ -242,6 +242,7 @@
   hal_version = {v2},
   keywords    = {Decentralized Data Management ; Decentralized Applications ; SPARQL Query Processing ; Web Browsers},
   pdf         = {https://hal-nantes-universite.archives-ouvertes.fr/hal-01805154v2/file/sparql_query_in_networks_of_browsers_camera_ready.pdf},
+  priority    = {prio1},
   ranking     = {rank5},
   readstatus  = {read},
   url         = {https://hal-nantes-universite.archives-ouvertes.fr/hal-01805154},
@@ -536,6 +537,7 @@
   keywords  = {ontologies, peer selection, peer-to-peer, query routing},
   location  = {New York, NY, USA},
   numpages  = {10},
+  priority  = {prio1},
   url       = {https://doi.org/10.1145/988672.988759},
 }
 
@@ -683,6 +685,7 @@
   file      = {:article/The Gossple Anonymous Social Network.pdf:PDF},
   groups    = {querying},
   isbn      = {978-3-642-16955-7},
+  priority  = {prio1},
 }
 
 @Article{Ndelec2017,
@@ -835,6 +838,7 @@
   file      = {:article/Decentralized Indexing over a Network of RDF Peers.pdf:PDF},
   groups    = {querying},
   isbn      = {978-3-030-30793-6},
+  priority  = {prio1},
 }
 
 @Article{Si2021,
@@ -873,8 +877,8 @@
   pages     = {455--469},
   publisher = {Springer International Publishing},
   abstract  = {The Linked Data Fragment (LDF) approach promotes a new trade-off between performance and data availability for querying Linked Data. If data providers' HTTP caches plays a crucial role in LDF performances, LDF clients are also caching data during SPARQL query processing. Unfortunately, as these clients do not collaborate, they cannot take advantage of this large decentralized cache hosted by clients. In this paper, we propose CyCLaDEs an overlay network based on LDF fragments similarity. For each LDF client, CyCLaDEs builds a neighborhood of LDF clients hosting related fragments in their cache. During query processing, neighborhood cache is checked before requesting LDF server. Experimental results show that CyCLaDEs is able to handle a significant amount of LDF query processing and provide a more specialized cache on client-side.},
-  file      = {:/home/id357/Documents/PhD/ipfs-comunica/reference_paper/CyCLaDEs A Decentralized Cache for Triple Pattern Fragments.pdf:PDF},
-  groups    = {caching},
+  file      = {:article/CyCLaDEs A Decentralized Cache for Triple Pattern Fragments.pdf:PDF},
+  groups    = {caching, p2p-caching},
   isbn      = {978-3-319-34129-3},
   priority  = {prio1},
 }
@@ -884,8 +888,8 @@
   booktitle  = {International Conference on Extending Database Technology},
   title      = {Flower-CDN: a hybrid P2P overlay for efficient query processing in CDN},
   year       = {2009},
-  file       = {:/home/id357/Documents/PhD/ipfs-comunica/reference_paper/Flower-CDN a hybrid P2P overlay for efficient query processing in CDN.pdf:PDF},
-  groups     = {caching},
+  file       = {:article/Flower-CDN a hybrid P2P overlay for efficient query processing in CDN.pdf:PDF},
+  groups     = {caching, p2p-caching},
   priority   = {prio1},
   ranking    = {rank5},
   readstatus = {read},
@@ -897,7 +901,7 @@
   title     = {Behave: Behavioral Cache for Web Content},
   year      = {2014},
   file      = {:article/Behave Behavioral Cache for Web Content.pdf:PDF},
-  groups    = {caching},
+  groups    = {caching, p2p-caching},
   priority  = {prio1},
 }
 
@@ -931,8 +935,9 @@
   booktitle = {LDOW},
   title     = {How Caching Improves Efficiency and Result Completeness for Querying Linked Data},
   year      = {2011},
-  file      = {:/home/id357/Documents/PhD/ipfs-comunica/reference_paper/How Caching Improves Efficiency and Result Completeness for Querying Linked Data.pdf:PDF},
-  groups    = {caching},
+  file      = {:article/How Caching Improves Efficiency and Result Completeness for Querying Linked Data.pdf:PDF},
+  groups    = {caching, p2p-caching},
+  priority  = {prio1},
 }
 
 @InProceedings{Dahlin1994,
@@ -941,7 +946,7 @@
   title     = {Cooperative caching: using remote client memory to improve file system performance},
   year      = {1994},
   file      = {:article/Cooperative Caching Using Remote Client Memory to Improve File System Performance.pdf:PDF},
-  groups    = {caching},
+  groups    = {caching, p2p-caching},
 }
 
 @Article{Kapadia2018,
@@ -951,7 +956,7 @@
   year    = {2018},
   volume  = {2},
   file    = {:/home/id357/Documents/PhD/ipfs-comunica/reference_paper/Implementation of Cooperative Caching Algorithms Using Remote Client Memory.pdf:PDF},
-  groups  = {caching},
+  groups  = {caching, p2p-caching},
 }
 
 @InProceedings{Aebeloe2021,
@@ -970,6 +975,7 @@
   isbn       = {9781450383127},
   location   = {Ljubljana, Slovenia},
   numpages   = {12},
+  priority   = {prio1},
   ranking    = {rank5},
   readstatus = {read},
   url        = {https://doi.org/10.1145/3442381.3450037},
@@ -979,11 +985,11 @@
   author      = {Sarven Capadisli, Tim Berners-Lee, Ruben Verborgh, Kjetil Kjernsmo},
   institution = {W3C Solid Community Group},
   title       = {Solid Protocol},
+  year        = {2022},
   month       = {December},
   type        = {Protocol},
   groups      = {web specification},
-  url.bak     = {https://solidproject.org/TR/protocol},
-  year.bak    = {2022},
+  url         = {https://solidproject.org/TR/protocol},
 }
 
 @InBook{Yu2014,
@@ -1129,7 +1135,7 @@
   author     = {Olaf Hartig},
   booktitle  = {Extended Semantic Web Conference},
   title      = {Zero-Knowledge Query Planning for an Iterator Implementation of Link Traversal Based Query Execution},
-  file       = {:articles/Zero Knowledge Query Planning for an Iterator Implementation of Link Traversal Based Query Execution.pdf:PDF},
+  file       = {:article/Zero Knowledge Query Planning for an Iterator Implementation of Link Traversal Based Query Execution.pdf:PDF},
   groups     = {Link traversal, linked traversal},
   readstatus = {skimmed},
   year.bak   = {2011},
@@ -1149,25 +1155,112 @@
 }
 
 @TechReport{spec:shacl,
-  author   = {Holger Knublauch, Dimitris Kontokostas},
-  title    = {Shapes Constraint Language (SHACL)},
-  month    = {July},
-  type     = {Recommendation},
-  groups   = {specification, linked traversal, web specification},
-  school   = {W3C},
-  url.bak  = {https://www.w3.org/TR/shacl/},
-  year.bak = {2017},
+  author = {Holger Knublauch, Dimitris Kontokostas},
+  title  = {Shapes Constraint Language (SHACL)},
+  year   = {2017},
+  month  = {July},
+  type   = {Recommendation},
+  groups = {specification, linked traversal, web specification},
+  school = {W3C},
+  url    = {https://www.w3.org/TR/shacl/},
 }
 
 @TechReport{spec:ldp,
-  author   = {Steve Speicher, John Arwe, Ashok Malhotra},
-  title    = {Linked Data Platform 1.0},
-  month    = {February},
+  author = {Steve Speicher, John Arwe, Ashok Malhotra},
+  title  = {Linked Data Platform 1.0},
+  year   = {2015},
+  month  = {February},
+  type   = {Recommendation},
+  groups = {specification, web specification},
+  school = {W3C},
+  url    = {https://www.w3.org/TR/ldp/},
+}
+
+@TechReport{spec:typeIndex,
+  author = {Timea Turdean , John Arwe, Virginia Balseiro,Sarven Capadisli, Tim Berners-Lee},
+  title  = {Type Indexes Version 1.0.0},
+  year   = {2022},
+  month  = {August},
+  type   = {Recommendation},
+  groups = {specification, web specification},
+  school = {W3C Solid Community Group},
+  url    = {https://solid.github.io/type-indexes/},
+}
+
+@InProceedings{Iyer2002SquirrelAD,
+  author     = {Sitaram Iyer and Antony Ian Taylor Rowstron and Peter Druschel},
+  booktitle  = {ACM SIGACT-SIGOPS Symposium on Principles of Distributed Computing},
+  title      = {Squirrel: a decentralized peer-to-peer web cache},
+  year       = {2002},
+  file       = {:article/Squirrel a decentralized peer-to-peer web cache.pdf:PDF},
+  groups     = {p2p-caching},
+  readstatus = {skimmed},
+}
+
+@Article{Verborgh2016author,
+  author     = {Ruben Verborgh and Miel Vander Sande and Olaf Hartig and Jo Van Herwegen and Laurens De Vocht and Ben De Meester and Gerald Haesendonck and Pieter Colpaert},
+  journal    = {J. Web Semant.},
+  title      = {Triple Pattern Fragments: A low-cost knowledge graph interface for the Web},
+  file       = {:articles/Triple Pattern Fragments A low-cost knowledge graph interface for the Web.pdf:PDF},
+  pages.bak  = {184-206},
+  volume.bak = {37-38},
+  year.bak   = {2016},
+}
+
+@InProceedings{Ermilov2013author,
+  author      = {Ermilov, Ivan and Martin, Michael and Lehmann, Jens and Auer, S{\"o}ren},
+  booktitle   = {Knowledge Engineering and the Semantic Web},
+  title       = {Linked Open Data Statistics: Collection and Exploitation},
+  editor      = {Klinov, Pavel and Mouromtsev, Dmitry},
+  publisher   = {Springer},
+  abstract    = {This demo presents LODStats, a web application for collection and exploration of the Linked Open Data statistics. LODStats consists of two parts: the core collects statistics about the LOD cloud and publishes it on the LODStats web portal, a front-end for exploration of dataset statistics. Statistics are published both in human-readable and machine-readable formats, thus allowing consumption of the data through web front-end by the users as well as through an API by services and applications. As an example for the latter we showcase how to visualize the statistical data with the CubeViz application.},
+  address.bak = {Berlin, Heidelberg},
+  groups      = {rdf statistic},
+  isbn        = {978-3-642-41360-5},
+  pages.bak   = {242--249},
+  year.bak    = {2013},
+}
+
+@TechReport{spec:shapeTree,
+  author   = {Eric Prud'hommeaux, Justin Bingham},
+  title    = {Shape Trees Specification},
+  year     = {2021},
+  month    = {December},
   type     = {Recommendation},
-  groups   = {specification, web specification},
+  groups   = {specification, linked traversal, web specification},
+  priority = {prio1},
   school   = {W3C},
-  url.bak  = {https://www.w3.org/TR/ldp/},
-  year.bak = {2015},
+  url      = {https://shapetrees.org/TR/specification/},
+}
+
+@InProceedings{verstraete2022solid,
+  author    = {Verstraete, Melanie and Verbrugge, Sofie and Colle, Didier},
+  booktitle = {31st ITS European Conference},
+  title     = {Solid: Enabler of decentralized, digital platforms ecosystems},
+  year      = {2022},
+  pages     = {1--19},
+  file      = {:article/Solid Enabler of decentralized, digital platforms ecosystems:},
+  groups    = {Commodification internet},
+}
+
+@TechReport{spec:httpcache,
+  author      = {R. Fielding, M. Nottingham, J. Reschke},
+  institution = {Internet Engineering Task Force (IETF)},
+  title       = {HTTP Caching},
+  year        = {2022},
+  month       = {June},
+  groups      = {web specification},
+  url         = {https://httpwg.org/specs/rfc9111.html#RFC7234},
+}
+
+@TechReport{spec:linkedDataBestPratices,
+  author      = {Bernadette Hyland, Ghislain Atemezing, Boris Villazón-Terrazas},
+  institution = {W3C},
+  title       = {Best Practices for Publishing Linked Data},
+  year        = {2022},
+  month       = {June},
+  groups      = {web specification},
+  url         = {https://www.w3.org/TR/ld-bp/},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
@@ -1180,6 +1273,7 @@
 1 StaticGroup:currently reading\;0\;0\;0x8a8a8aff\;\;\;;
 1 StaticGroup:File sharing P2P\;0\;0\;0x8a8a8aff\;\;\;;
 1 StaticGroup:linked traversal\;0\;1\;0x8a8a8aff\;\;\;;
+1 StaticGroup:p2p-caching\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:p2p-topology\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:querying\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:statistic\;0\;1\;0x8a8a8aff\;\;\;;

@@ -1,81 +1,84 @@
-## Literature review
+## Related works
 {:#litterature_review}
 
 
-
-
-### Link Traversal
+### Link Traversal Query Processing
 
 LTQP of Linked Data documents is a technique that consists of [recursively lookup URL from dereferenced named nodes acquired by the query engine in order to explore 
 the surrounding information around the original response](cite:cites Hartig2016) using the follow-your-nose principle of Linked Data[](cite:cites Yu2014).
 The query first start with a small set of URI called [seed URIs](cite:cites Hartig2013AnOO) that form the initial data source for the execution.
 The engine then resolves the URI of the named node it encounters in order to explore unknown data sources following a lookup policy [](cite:cites hartig2012).
 
+Link traversal has a great exploratory potential but it comes with some difficulties. 
+A first difficulty is the [open-endedness of the web](cite:cites Umbrich2014LinkTQ).
+Naively following all the links from a discovered document can potentially generate a seemingly infinite number of new links to follow.
+This pseudo-infinite search space necessitates query optimization technique in order to provide the user fast and adequately complete results.
+Another obstacle comes from the [difficulties to evaluate the cost of a query plan prior to the execution.
+We can't always have information about the data source,
+it's content,
+the reachability of the document and their potential contribution to the results prior to the execution](cite:cites Hartig2014LinkedDQ, verborgh2020).
+A current solution to optimize the plan of execution is to use a query planning heuristic [](cite:cites Hartig2011ZeroKnowledgeQP), but as they are
+simply heuristic their power is limited and they don't take capture the particularity of each query and data sources.
+A better approach in the absence of those a priori knowledges would be to use adaptative query processing [](cite:cites taelman2023),
+which means adapting the query plan based on either inference from the data collected or from new knowledge acquired while querying.
+
+
 The traditional form of link traversal consists of following more or less naively the links inside the response payload
 and dereferencing them to get a new data source. In most cases, the data source encountered,
 does not have a strict structure that can be leveraged
 to speed up the execution. Nonetheless reachability criterium can be defined to restrict the links that are followed based on conditions,
-classical examples are $$c_all$$ which follow every link and $$c_match$$ which 
+classical examples are $$ c_all $$ which follow every link and $$ c_match $$ which 
 follow links that match the query pattern [](cite:cites hartig2012, Bogaerts).
 
-When there is a priori knowledge about the linked data document, such as about it's structure (eg: Which link to follow to find a new relevant, document, indexes to locate the triple necessary to answer a query), a technique called [Guided Link-Traversal-Based](cite:cites verborgh2020), can be used to restrict further potential links to follow by using this knowledge as it is to restrict the links or using the knowledge as a meta knowledge to find while traversing information that can be used to diminish the traversal search horizon.
-In practice it has been used to query over multiples [Solid pods](cite:cites spec:solid),
+
+### Guided Link Traversal Query Processing in Solid
+
+When there is a priori knowledge about the linked data documents a technique called [Guided Link-Traversal-Based](cite:cites verborgh2020) (GLTQP), can be used to restrict further potential links to follow by using.
+GLTQP uses a priori knowledge about the structure of the data 
+(eg: Which link to follow to find a new relevant documents) and meta knowledge 
+to find while traversing information that can be used to diminish the traversal search horizon,
+hence restricting even more the links to follow by the query engine.
+In practice, it has been used to query over multiples [Solid pods](cite:cites spec:solid),
 using the [Linked Data Platform specification](cite:cites spec:ldp) to access the information and the [Solid type index](cite:cites spec:typeIndex) located inside the pods to know 
 the emplacement of the information requested [](cite:cites taelman2023).
-It comes then like in the traditional form of link traversal the search domain stay pseudo-infinite or unknowns,
-but at every traversal step we might get a finite domain pertaining to getting complete information about the current subject,
-using the index inside the Solid pod.
+Other specifications could also be used to gain knowledge while traversing to guide the link traversal such as 
+[shape trees](cite:cites spec:shapeTree) and Shape [constraint languages (SHACL)](cite:cites spec:shacl).
+The result on the search domain explore by the SPARQL query engine remain pseudo-infinite or unknowns,
+but at every traversal step we might get a finite domain pertaining to getting complete information about the current subject.
+
 
 <!-- What can we learn from it-->
-
-### Privacy in Solid
-
+<!--network topology -->
 
 
-### Collaborative Agent
+### Collaborative Querying
 
 
 ### P2P caching
 
+Caching is a common mecanism to diminush the processing time given 
+that we repeat an operation that has been done in the past and that it's result has not been invalidated. 
+HTTP come natively with it's caching mecanism[](cite:cites spec:httpcache), but this cache is local 
+hence does not exploit, the possibility that another agent have in it's own cache the data requested.
+We also have to take into consideration that a large number of triple are published online [](cite:cites Verborgh2016author, Ermilov2013author) 
+, but linked data principle emphasis the design of dataset that can be 
+[reused](https://lod-cloud.net/) and the usage of standar vocabularies[](cite:cites spec:linkedDataBestPratices), which might have the repercussion if those principal
+are applied that intermediary result or even result of queries could be shared and reused by multiple query engine.
+In the context of the web and even particularly in the context of semantic web,
+there exist P2P caching mecanism in the academic litterature.
 
-
-<!--
-### Academic reference system
-[Jin in](cite:cites jin2006, Ning2006SemreXTL) proposed a P2P system, called SemreX, to share academic paper with the personal comment made by the researchers.
-It is based on semantic classification and querying.
-Jin, state that most papers are not published in journals, hence making them difficult to find in a centralized paradigm, because the the centralized entity
-has to be aware of the existence of those low output data sources.
-Jin present that most unstructure P2P network used for example for music and video sharing are not adequat for academic publication,
-because those systems are not made to described the content of the shared file.
-Jin proposed to use [RDF](https://www.w3.org/TR/rdf11-concepts/), to decribe using [hypermedia description](cite:cites Fielding) the content of academic paper using the metadata of the PDF file,
-which came with some diffuculty due to the hetorogious manner that article publisher encode their information insde the PDFs, for the classification the authors used machine learning algorithm that
-take as input the pages of the paper and uses the connex cathegorisation from wikipedia[](cite:cites Yuan2012SemreXAS).
-
-
-<!-- Talk about querying-->
-
-[Bibster](cite:cites Haase2004) proposed a similar solution as Semrex, but focus more on the sharing of bibliographic metadata. The paper propose the use of SeRQL to query the RDF information from
-the selected peers. The user of Bibster, can query it's local bibliographic metadata, a manual selection of peers or the whole networks. When it come to the query of the whole network Bibster
-apply a expertise-based peer selection.
-
-
-<!-- talk about duplication -->
-
-Bibster also try to solve the problem of duplication of information has on a large network non coordinated network it is bound to have duplicate information. But those duplication might not
-be completly identical, hence Bibster use it's ontologies and simularity function such as similarity into the title to measure the simularity between answer to avoid duplication.
-
-
-<!-- Free riding -->
-[free riding problem](cite:cites jin2006)
-
-### Querying
-
-[](cite:cites Haase2004a) propose a way to do peer selection when executing query to fetch bibliographic metadata in a peer-to-peer network.
-Their system build a "virtual" semantic topology over the network peer to peer network, in that topology every node expose their "expertise".
-The expertise is a semantic description of the knowledge contain inside the peer. Using the expertise the querying peer can make a request to all the peer
-it knows and check if there expertise align with the query it is making, hence pruning or prioteriszing the peer to visit.
-The limitation is that the peer must share the same ontology.
-From the benchmark results, they found that the best results are produce when the distribution of the knowledge by peer was organize in accordance with the structrue of the ontology.
-They mention that in there future work they would make so the network topology would mathch the network topology.
-
--->
+[Squirrel](cite:cites Iyer2002SquirrelAD) proposed a P2P caching mecanism, where the URL are map to keys inside distributed hash table (DHT).
+If the user does not have in it's local cache the content desired, it first make a query to the P2P network before doing the request to the
+URL in question. 
+Squirrel does not propose a mecanism to take into account the locality of the client making the request and the node that will answer the request.
+[Flower-CDN](cite:cites Manal2009) propose to modify the keys of the DHT to consider the locality.
+The content of the websites are distributed into peer of a locality, inside this locality 
+a super peer knows where to locate the every content of all the websites. 
+When a client makes a query to the DHT, the DHT direct to the super peer closest to the locality of the client
+and the super peer find the content requested by the client.
+[Behave](cite:cites Frey2014) proposed another paradigm instead of using a structured network with a DHT, it rely on an unstructed
+network where each peer have a partial view of the whole web, part of it's view is random and another part is based on the the
+behavior of the web browser (the website it visit), to create a "behavioral locality". 
+It use a gossip protocol to at certain time exchange the peer the node know with an other peer to change it's view on the network.
+With this approach behave was able to for 50% of their query to be retrieve with 0 hop.
+[CyCLaDEs](cite:cites Folz2016) adapted the concept of Behave for the use case of SPARQL query of RDF documents.
