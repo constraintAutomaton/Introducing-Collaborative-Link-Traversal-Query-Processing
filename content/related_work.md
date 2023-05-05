@@ -51,10 +51,11 @@ but at every traversal step we might get a finite domain pertaining to getting c
 <!--network topology -->
 
 
-### Collaborative Querying
+### Collaborative SPARQL Querying
+In the [](cite:cites grall:hal-01805154)
 
 
-### P2P caching
+### P2P caching in the context of the web
 
 Caching is a common mecanism to diminush the processing time given 
 that we repeat an operation that has been done in the past and that it's result has not been invalidated. 
@@ -77,8 +78,8 @@ a super peer knows where to locate the every content of all the websites.
 When a client makes a query to the DHT, the DHT direct to the super peer closest to the locality of the client
 and the super peer find the content requested by the client.
 [Behave](cite:cites Frey2014) proposed another paradigm instead of using a structured network with a DHT, it rely on an unstructed
-network where each peer have a partial view of the whole web, part of it's view is random and another part is based on the the
-behavior of the web browser (the website it visit), to create a "behavioral locality". 
-It use a gossip protocol to at certain time exchange the peer the node know with an other peer to change it's view on the network.
-With this approach behave was able to for 50% of their query to be retrieve with 0 hop.
+network where each peer have a partial view of the whole web. Each peer's view of the network is partially random and
+partially based on the websites the peer visits with its web browser to create a "behavioral locality". 
+It uses a gossip protocol, at certain times the peer exchange randomly the node they know to change its view on the network.
+With this approach behave was able to for 50% of their query to be retrieved with 0 hop which shows that the system has a great potential for scalability.
 [CyCLaDEs](cite:cites Folz2016) adapted the concept of Behave for the use case of SPARQL query of RDF documents.

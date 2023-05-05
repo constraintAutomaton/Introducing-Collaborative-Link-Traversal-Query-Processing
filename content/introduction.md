@@ -43,14 +43,19 @@ and the technical part.
 ## Proposal
 {:#proposal}
 
-This paper proposes to make query engine collaborate in order to improve 
-the completeness of Link Traversal Query Processing (LTQP) result and 
-their query execution time in the context of the traversal of Solid pods.
-It also has to be considered that Solid pods can be structured and express their order using RDF vocabularies and web specifications.
-Applications could also exploit those mechanisms to facilitate the query of information inside
-multiple pods either explicitly or implicitly.
-I propose to divide the collaboration in two parts; a collaboration in the exploration of data sources
-and in the cache of results and intermediary results.
+This paper aims to create and propose a Link Traversal Query Processing (LTQP) that I decided to call
+Collaborative Link Traversal Query Processing (CLTQP).
+It consists of using multiple SPARQL query engine with the aim of improving the completeness of LTQP
+Query by exploring more of the search space and to reduce the execution time by this exchange too.
+In this PhD project, I will apply this query paradigm in the context of Solid, which imply
+consideration to privacy, it also has to be considered that Solid pods have structure documented
+using RDF vocabularies and web specifications, so the solution
+has to exploit those already existing optimization.
+The purpose is also to give to users of a community the ability to manage and generate their own computational power,
+allowing social applications to function without relying on profit-driven enterprises, hence it is an
+effort to deco modify the online information sharing.
+The collaboration process can be divided into two parts: 
+first, collaboration in exploring data sources, and second, collaboration in caching results and intermediate results.
 
 The purpose of the first part is to investigate more of the search space,
 indeed, in LTQP, the search space tends to be huge or pseudo-infinite

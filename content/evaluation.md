@@ -1,18 +1,16 @@
 ## Evaluation
 
-For the evaluation of this work a prototype will be built with the context of Solid for
-academic paper publishing.
+To evaluate this work, I plan to build a prototype and test it against an existing RDF social media benchmark [](cite:cites Angles2020TheLS, Angles2014TheLD, Spasic2016).
+Additionally, I will use the prototype to test a use case involving self-publication of academic papers.
 
- and a benchmark will be build.
+For evaluation metrics, I will take inspiration from the authors discussed in the literature review section [](#literature_review) and consider the following measurements:
 
- We are going to evaluate
-
- - The number of peer
- - The result completness
- - The hability to access isolated documents
- - Number of request
- - the overlapping of the search space exploration of the Query engine
- - The query execution time
- - The rate of production of result (in a variable manner)
- - The delay between the first result and the start of the execution
- - The cache miss and the rate of use of the cache
+- **Number of engine**
+- **Result completeness** 
+- **Ability to access isolated documents**
+- **Number of requests**
+- **Overlapping of the search space exploration of the Query engine**
+- **Query execution time**
+- **Rate of production of results (in a variable manner)**
+- **Delay between the first result and the start of the execution**
+- **Cache miss and rate of use of the cache**
