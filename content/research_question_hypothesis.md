@@ -1,6 +1,7 @@
 ## Research question and Hypotheses
+{:#research_question}
 
-Building on the proposal of the section [](#proposal) and of related works of the section [](#litterature_review) research questions are formalized,
+Building on the proposal of the [](#proposal) and of related works of the [](#litterature_review) research questions are formalized,
 to guide the study. 
 
 **Question 1**: Can we archive better query result completeness in the context of Linked Data Query Processing by making multiple SPARQL query engine collaborate?

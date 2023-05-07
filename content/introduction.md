@@ -3,89 +3,59 @@
 
 
 
-The [Solid Protocol](https://solidproject.org/TR/protocol), is an effort to "realise a space where individuals can maintain their autonomy,
-control their data and privacy, and choose applications and services to fulfil their needs."[](cite:cites spec:solid) while using existing web standards.
-It's principle are based on the [W3C TAG Ethical Web Principles](https://www.w3.org/TR/ethical-web-principles/).
-However, those principal and the Solid Protocol motivations, does not concretly engage on the means that they will realise these principal and neither do they engage with the
-economic disparity incresate by the web, which have an impact on the reach of the individual communication.
-In those two documents, there is an assumption that the societal structure stay the same but that the web can change to forwards changws or maintain autonomu and control,
-whitout clearly what is consider to be autonomy, what is privacy and what is control.
-Nonetheless, the W3C TAG Ethical Web Principles and the Solid protocol propose descentralization as a mean to enhance individual power and control.
-In this paper, we take the position that individual power and collective go one in the same.
-Decentralization and federation can have multiple meaning it can be from above or it can involve directly the actor using the system.
-In this paper we propose a collaborative aggretator inside Solid as a mean to keep the control of the user over social application futhermore 
-it can also be use in more centralized context.
-By collaborative
+The [Solid Protocol](cite:cites spec:solid), is an effort,
+based on the [W3C TAG Ethical Web Principles](https://www.w3.org/TR/ethical-web-principles/),
+to "realise a space where individuals can maintain their autonomy,
+control their data and privacy, and choose applications and services to fulfil their needs
+"[](cite:cites spec:solid) while using existing web standards.
+In the context of Solid [](cite:cites verstraete2022solid) defined data sovereignty as 
+"the power an individual has over their data.[...] the self-determination of 
+individuals and organizations with regard to the use of their data "[](cite:cites verstraete2022solid)
+and a state of being in control of our data is obtained
+"[w]hen an individual or an organization [...] can choose where [its] data is stored and who is granted access to it.
+This decentralization of data control and storage results in breaking
+through existing data silos."[](cite:cites verstraete2022solid)
 
-<!-- Let's define terms also, power autonomy privacy -->
-
----
-<!-- General introduction about the web and it's problem, critic of the utopian vision, structural aspect of the problem-->
-Popular narative claim that the web is a free, inovative and discrimination free environment.
-<!-- reference-->
-But the web exist into a social and economical environment with it's own inertia hence it have a tendency to reproduce certain aspect of society. Hence we
-
-Yet the web have an emantipiraty carcacter-
-
-[language](https://w3techs.com/technologies/overview/content_language)
-
-<!-- website visited -->
-
-<!-- cap rich and poor -->
-
-<!-- type of content -->
+[](cite:cites Smyrnaios2018) contextualize and historicize the commodification of the internet. 
+The paper proposes that at its inception the web was not really built as an equitable and empowering place, even if at its beginning it was seeing and used as a public good. 
+The birth of the internet, ARPANET, was a US military project, funded by US taxpayer money, private companies
+were not interested in investing in this technology.
+In the 1970-80's, 
+"the internet was both invented and
+developed by a ‘republic of computer scientists’[...] no gap between design and use [existed]. In other words, ARPANET’s designers were also its first users,
+giving them the power to change the orientation of technical inventions and their implementation according to their own interests and needs.
+[...] while it was the very epitome of a technocratic apparatus designed for war,
+it came to represent a tool for individual freedom and a more harmonious society."
+[](cite:cites Smyrnaios2018)
+The internet has public good was not really met to be interacting with the public, the general masses, it's private companies for profit driven goals
+that brought computers, the interface of the internet to the common citizen when they saw its potential profitability [](cite:cites Smyrnaios2018).
+Seeing the internet has an object in history, built from a concrete environment with its own dynamic influencing its design and usage, and in return it influencing and making history, appear to be a good start to understand why the internet does not have fulfilled its promise of 
+active participation, global understanding and higher form of democracy, and instead seems to have in large proportion reproduce the structure from which it was born
+and even in some regards amplifies certain social problematic elements [](cite:cites Curran2016ch1).
 
 
+In the context of this PhD program, I propose to investigate a more socialistic and decomodificalistic approach to Solid and linked data
+in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic current approach. 
+By this switch, I propose to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
+with the power to make an application work by a collective of users with the same aims.
+If the computational power is in the hand of a third party,
+this party will always have "the real" control over the application.
+At its most basic expression the power to limit the access,
+sure the user can choose another party, particularly with Solid, but this party will need to finance itself,
+in some ways either by charging a fee or by using the user as the product [](cite:cites Smyrnaios2018) (maybe with more "consent" with Solid).
+Also, the cartelisation of the market is still a problem in that paradigm.
+We have to consider the increase of the gap between the rich and the poor in general and in particular due to web technologies [](cite:cites Curran2016ch1, Rizwan2021),
+so the centralization of computational power is not only a question of power over personal data or of freedom of expression but also a question economy, equality and justice.
+In this research I focus on querying over Solid pods, in a paradigm that I call Collaborative Link Traversal Query Processing (CLTQP) where every user could lend some of his computational power when querying to increase the query result completeness and reduce the query execution time of all the other users in a collaborative way,
+so in some ways acting as one powerful querying engine.
+In that perspective app are more shells that represent contracts and provide the tools to do the work,
+the data are out there in the Solid pods and the open web and the computational power is also out there in the hand of the users.
 
-societal/structural part of Linked data in general and Solid in particular
-and the technical part.
-
-## Proposal
-{:#proposal}
-
-This paper aims to create and propose a Link Traversal Query Processing (LTQP) that I decided to call
-Collaborative Link Traversal Query Processing (CLTQP).
-It consists of using multiple SPARQL query engine with the aim of improving the completeness of LTQP
-Query by exploring more of the search space and to reduce the execution time by this exchange too.
-In this PhD project, I will apply this query paradigm in the context of Solid, which imply
-consideration to privacy, it also has to be considered that Solid pods have structure documented
-using RDF vocabularies and web specifications, so the solution
-has to exploit those already existing optimization.
-The purpose is also to give to users of a community the ability to manage and generate their own computational power,
-allowing social applications to function without relying on profit-driven enterprises, hence it is an
-effort to deco modify the online information sharing.
-The collaboration process can be divided into two parts: 
-first, collaboration in exploring data sources, and second, collaboration in caching results and intermediate results.
-
-The purpose of the first part is to investigate more of the search space,
-indeed, in LTQP, the search space tends to be huge or pseudo-infinite
-which means that it's difficult to guarantee completeness of results. 
-We can nonetheless apply search strategies called reachability criterion to restrict the links followed by the
-SPARQL query engine and use stopping condition such as a limit of time or triples to close the query processing.
-
-An important property emerging from the difficulty of reaching completeness is the bias of the query results. 
-This bias emerges from a sensibility to the initial condition, induce by the seeds URL provided to the engine.
-We have to consider that in LTQP, we can only follow links encounter inside the data sources discovered,
-via the triple present inside an already discovered data source;
-also the web cannot be modeled as a fully connected graph;
-hence some data sources are more difficult to access than others based on the first links provided to the SPARQL query engine.
-Corollary, there is a bias based on the popularity of the data source has it is easier to find a data source that is
-referencing more time and in a wide range of data source type (by data source type I mean data sources that focus on specific topics)
-than data sources having the reverse properties.
-But we cannot assume that less popular data sources are less relevant to the query response and to the
-interpretation of the results, so it is profitable to facilitate their discovery.
-
-A collaboration of SPARQL query engine could explore more of the search space by
-dividing between them non-overlapping or minimally overlapping portion of the search space.
-It is also necessary to share the result between each other, doing so might alleviate the problem stated above.
-
-The second part can be divided into multiple consideration. [](cite:cites Hartig2011) demonstrate that caching in LTQP can
-help improve the completeness of results, but in some condition the query execution time can be increased.
-The second consideration is to be related to the first part, because there is a need to synchronize the results
-between the query engine. 
-The third is related to query performance as the same or similar query can have been executed previously by
-other query engine and put into the cache hence, we can reuse those results to speedup the query execution time as
-it has been demonstrated in the academic literature but in the case of querying of single sources.
+This paper is divided as follows first, the [research proposal is made](#proposal),
+after the [related work](#litterature_review) is presented,
+then the [research questions and hypotheses](#research_question) are formalized,
+the [preliminary results are presented](#preliminary_results),
+and [evaluation methodology](#evaluation) is explained and there is a short [conclusion](#conclusion).
 
 
 

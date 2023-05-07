@@ -1241,6 +1241,7 @@
   pages     = {1--19},
   file      = {:article/Solid Enabler of decentralized, digital platforms ecosystems:},
   groups    = {Commodification internet},
+  priority  = {prio1},
 }
 
 @TechReport{spec:httpcache,
@@ -1279,6 +1280,42 @@
   year    = {2020},
   volume  = {abs/2001.02299},
   groups  = {benchmark},
+}
+
+@Article{Angles2014TheLD,
+  author  = {Renzo Angles and Peter A. Boncz and Josep Llu{\'i}s Larriba-Pey and Irini Fundulaki and Thomas Neumann and Orri Erling and Peter Neubauer and Norbert Mart{\'i}nez-Bazan and Venelin Kotsev and Ioan Toma},
+  journal = {SIGMOD Rec.},
+  title   = {The linked data benchmark council: a graph and RDF industry benchmarking effort},
+  year    = {2014},
+  pages   = {27-31},
+  volume  = {43},
+  groups  = {benchmark},
+}
+
+@InCollection{Curran2016ch1,
+  author    = {James Curran},
+  booktitle = {Misunderstanding the Internet},
+  publisher = {Routledge 2012},
+  title     = {Chapter 1 The internet of dreams Reinterpreting the internet},
+  year      = {2016},
+  chapter   = {1},
+  groups    = {Commodification internet},
+}
+
+@Misc{StatistaWebLanguage,
+  author = {Statista},
+  groups = {statistic},
+}
+
+@TechReport{spec:ipfs,
+  author   = {Robin Berjon},
+  title    = {IPFS Principles},
+  year     = {2023},
+  month    = {March},
+  type     = {Recommendation},
+  groups   = {specification, web specification},
+  priority = {prio1},
+  url      = {https://specs.ipfs.tech/architecture/principles/},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
