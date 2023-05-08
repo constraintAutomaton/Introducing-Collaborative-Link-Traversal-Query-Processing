@@ -9,7 +9,7 @@ to "realise a space where individuals can maintain their autonomy,
 control their data and privacy, and choose applications and services to fulfil their needs
 "[](cite:cites spec:solid) while using existing web standards.
 In the context of Solid [](cite:cites verstraete2022solid) defined data sovereignty as 
-"the power an individual has over their data.[...] the self-determination of 
+"the power an individual has over their data.[...][It is] the self-determination of 
 individuals and organizations with regard to the use of their data "[](cite:cites verstraete2022solid)
 and a state of being in control of our data is obtained
 "[w]hen an individual or an organization [...] can choose where [its] data is stored and who is granted access to it.
@@ -36,7 +36,7 @@ and even in some regards amplifies certain social problematic elements [](cite:c
 
 In the context of this PhD program, I propose to investigate a more socialistic and decomodificalistic approach to Solid 
 in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic current approach. 
-By this switch, I attempt to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
+By this shift, I attempt to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
 to the right of the user to be part of the production of the computational power necessary to make an app work,
 hence making so that communities can control what app can do. 
 If the computational power is in the hand of a third party,
@@ -46,12 +46,12 @@ sure the user can choose another party, particularly with Solid, but this party 
 in some ways either by charging a fee or by using the user as the product [](cite:cites Smyrnaios2018) (maybe with more "consent" with Solid).
 Also, the cartelisation of the market is still a problem in the current paradigm,
 and the increase of the gap between the rich and the poor [](cite:cites Curran2016ch1, Rizwan2021),
-with consideration with the increasing presence of web technologies in day-to-day life, it is also a problem not engaged with the current state of affaires. 
+with consideration with the increasing presence of web technologies in day-to-day life, is also a problem not engaged with the current state of affaires. 
 In this research I focus on querying over Solid pods,
 in a paradigm that I call Collaborative Link Traversal Query Processing (CLTQP) where every user can lend some of 
 his computational power when querying to increase the query result completeness and reduce the query execution time of all the other users in a collaborative way,
 so in some ways acting as one powerful querying engine.
-In that perspective, apps are more shells that represent contracts and provide the tools to do the work,
+In this perspective, apps are more shells that represent contracts and provide the tools to do the work,
 the data are out there in the Solid pods and the open web and the computational power is also out there in the hand of the users.
 
 This paper is divided as follows, first, the [research proposal is made](#proposal),

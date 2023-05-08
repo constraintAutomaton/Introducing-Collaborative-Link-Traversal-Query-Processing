@@ -20,7 +20,7 @@ follow links that match the query pattern [](cite:cites hartig2012, Bogaerts).
 
 ### Guided Link Traversal Query Processing in Solid
 
-When there is a priori knowledge about the linked data documents a technique called [Guided Link Traversal Query Processing](cite:cites verborgh2020) (GLTQP),
+When there is a priori knowledge about the linked data documents a technique called [Guided Link Traversal Query Processing (GLTQP)](cite:cites verborgh2020) ,
 can be used to restrict further potential links to follow by using.
 GLTQP uses a priori knowledge about the structure of the data 
 (eg: Which link to follow to find a new relevant document) and meta knowledge 
@@ -36,7 +36,7 @@ but at every traversal step we might get a finite domain pertaining to getting c
 
 ### Collaborative SPARQL Querying
 [Snob](cite:cites grall:hal-01805154) propose a mechanism for collaborative query based
-on the continuous execution of queries over browsers data sources that are rotating in a network of browser context. 
+on the continuous execution of queries over browsers data sources that are rotating in a network of browser. 
 The browsers form an unstructured peer-to-peer (P2P) network where each peer has
 a random and a profile (browser with similar profiles execute similar queries) base partial view of the network.
 The browsers can share their intermediary results and at specific intervals,
@@ -52,7 +52,7 @@ When querying the SPARQL query engine it will look at its own data sources, then
 To discover new communities, the engine ask the member of the comunities it knows for communities it does not have knowledge of.
 The collaborative aspect is in the partition of a "global" knowledge graph into intentional semantic units and in the
 maintenance and particularly update of the collective data sources which is an important contribution of ColChain but is not related to the aim of my research.
-Other academic contributions have also aimed to leverage the social links between data source to diminish the query execution time, by not flooding the network when querying, such has 
+Other academic contributions have also aimed to leverage the social links between data source to diminish the query execution time, by not flooding the network when querying, such has in
 [](cite:cites Shen2014AnIP, 10.1145/988672.988759, Bertier2010).
 Also in that realm of studies contributions have focus on using the structure of the object that is modeled,
 such has academic papers, instead of the social links between the data sources,
