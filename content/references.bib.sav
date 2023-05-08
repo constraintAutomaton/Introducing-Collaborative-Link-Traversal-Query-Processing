@@ -1318,6 +1318,16 @@
   url      = {https://specs.ipfs.tech/architecture/principles/},
 }
 
+@InProceedings{taelman_iswc_resources_comunica_2018,
+  author    = {Taelman, Ruben and Van Herwegen, Joachim and Vander Sande, Miel and Verborgh, Ruben},
+  booktitle = {Proceedings of the 17th International Semantic Web Conference},
+  title     = {Comunica: a Modular SPARQL Query Engine for the Web},
+  year      = {2018},
+  month     = oct,
+  groups    = {querying},
+  url       = {https://comunica.github.io/Article-ISWC2018-Resource/},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: grouping:

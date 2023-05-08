@@ -4,7 +4,7 @@
 
 
 The [Solid Protocol](cite:cites spec:solid), is an effort,
-based on the [W3C TAG Ethical Web Principles](https://www.w3.org/TR/ethical-web-principles/),
+based on the W3C TAG Ethical Web Principles [](cite:cites spec:w3Ethical),
 to "realise a space where individuals can maintain their autonomy,
 control their data and privacy, and choose applications and services to fulfil their needs
 "[](cite:cites spec:solid) while using existing web standards.
@@ -28,34 +28,37 @@ giving them the power to change the orientation of technical inventions and thei
 it came to represent a tool for individual freedom and a more harmonious society."
 [](cite:cites Smyrnaios2018)
 The internet has public good was not really met to be interacting with the public, the general masses, it's private companies for profit driven goals
-that brought computers, the interface of the internet to the common citizen when they saw its potential profitability [](cite:cites Smyrnaios2018).
+that brought computers, the core interface of the internet to the common citizen when they saw its potential profitability [](cite:cites Smyrnaios2018).
 Seeing the internet has an object in history, built from a concrete environment with its own dynamic influencing its design and usage, and in return it influencing and making history, appear to be a good start to understand why the internet does not have fulfilled its promise of 
 active participation, global understanding and higher form of democracy, and instead seems to have in large proportion reproduce the structure from which it was born
 and even in some regards amplifies certain social problematic elements [](cite:cites Curran2016ch1).
 
 
-In the context of this PhD program, I propose to investigate a more socialistic and decomodificalistic approach to Solid and linked data
+In the context of this PhD program, I propose to investigate a more socialistic and decomodificalistic approach to Solid 
 in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic current approach. 
-By this switch, I propose to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
-with the power to make an application work by a collective of users with the same aims.
+By this switch, I attempt to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
+to the right of the user to be part of the production of the computational power necessary to make an app work,
+hence making so that communities can control what app can do. 
 If the computational power is in the hand of a third party,
 this party will always have "the real" control over the application.
-At its most basic expression the power to limit the access,
-sure the user can choose another party, particularly with Solid, but this party will need to finance itself,
+At its most basic expression, it has the power to limit the access,
+sure the user can choose another party, particularly with Solid, but this party will need to finance itself
 in some ways either by charging a fee or by using the user as the product [](cite:cites Smyrnaios2018) (maybe with more "consent" with Solid).
-Also, the cartelisation of the market is still a problem in that paradigm.
-We have to consider the increase of the gap between the rich and the poor in general and in particular due to web technologies [](cite:cites Curran2016ch1, Rizwan2021),
-so the centralization of computational power is not only a question of power over personal data or of freedom of expression but also a question economy, equality and justice.
-In this research I focus on querying over Solid pods, in a paradigm that I call Collaborative Link Traversal Query Processing (CLTQP) where every user could lend some of his computational power when querying to increase the query result completeness and reduce the query execution time of all the other users in a collaborative way,
+Also, the cartelisation of the market is still a problem in the current paradigm,
+and the increase of the gap between the rich and the poor [](cite:cites Curran2016ch1, Rizwan2021),
+with consideration with the increasing presence of web technologies in day-to-day life, it is also a problem not engaged with the current state of affaires. 
+In this research I focus on querying over Solid pods,
+in a paradigm that I call Collaborative Link Traversal Query Processing (CLTQP) where every user can lend some of 
+his computational power when querying to increase the query result completeness and reduce the query execution time of all the other users in a collaborative way,
 so in some ways acting as one powerful querying engine.
-In that perspective app are more shells that represent contracts and provide the tools to do the work,
+In that perspective, apps are more shells that represent contracts and provide the tools to do the work,
 the data are out there in the Solid pods and the open web and the computational power is also out there in the hand of the users.
 
-This paper is divided as follows first, the [research proposal is made](#proposal),
+This paper is divided as follows, first, the [research proposal is made](#proposal),
 after the [related work](#litterature_review) is presented,
 then the [research questions and hypotheses](#research_question) are formalized,
 the [preliminary results are presented](#preliminary_results),
-and [evaluation methodology](#evaluation) is explained and there is a short [conclusion](#conclusion).
+and the [evaluation methodology](#evaluation) is explained and there is a short [conclusion](#conclusion).
 
 
 
