@@ -9,6 +9,7 @@ require 'scholarmarkdown/filter/labelify'
 require 'scholarmarkdown/filter/references_to_footer'
 require 'scholarmarkdown/filter/headerids_to_section'
 require 'scholarmarkdown/filter/citation_metadata'
+require 'scholarmarkdown/preprocess/katex'
 
 Encoding.default_external = "UTF-8"
 
@@ -16,7 +17,10 @@ compile '/index.*' do
   filter :erb
   filter :scholar_citation, bibfile: items['/references.bib'],
                             style: 'lncs-custom'
-  filter :kramdown
+  filter :kramdown, math_engine: 'sskatex',
+  math_engine_opts: {
+    :katex_js=> File.join(Katex.gem_path, 'vendor', 'katex', 'javascripts', 'katex.js')
+  }
   filter :scholar_hyphenate_iri
   filter :scholar_include_code
   filter :scholar_labelify
