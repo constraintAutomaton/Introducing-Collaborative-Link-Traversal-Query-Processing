@@ -1,6 +1,8 @@
 ## Research project proposal
 {:#proposal}
 
+<span class="comment" data-author="RT">I'm wondering if we need the related work section before this one, because you go in quite some detail on link traversal, but the reader doesn't really know the background yet. Perhaps we can even merge this section with res questions and hypotheses, and call the section "Problem Statement".</span>
+
 This paper aims to create a Link Traversal Query Processing paradigm called
 Collaborative Link Traversal Query Processing.
 It consists of using multiple SPARQL query engine with the aim of improving the completeness of LTQP

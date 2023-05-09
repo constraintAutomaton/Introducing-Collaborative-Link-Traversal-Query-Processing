@@ -1,8 +1,6 @@
 ## Introduction
 {:#introduction}
 
-
-
 The [Solid Protocol](cite:cites spec:solid), is an effort,
 based on the W3C TAG Ethical Web Principles [](cite:cites spec:w3Ethical),
 to "realise a space where individuals can maintain their autonomy,
@@ -47,6 +45,10 @@ in some ways either by charging a fee or by using the user as the product [](cit
 Also, the cartelisation of the market is still a problem in the current paradigm,
 and the increase of the gap between the rich and the poor [](cite:cites Curran2016ch1, Rizwan2021, Sevignani2013),
 with consideration with the increasing presence of web technologies in day-to-day life, is also a problem not engaged with the current state of affaires.
+
+<span class="comment" data-author="RT">The text above may be a bit too high-level and long for a PhD symposium.</span>
+
+<span class="comment" data-author="RT">The jump to Link Traversal is too sudden. It's unclear why link traversal is needed. We need some paragraphs inbetween. This could for example be about the need of decentralization, its challenges, and link traversal as a partial solution.</span>
 
 In this research I focus on querying over Solid pods,
 in a paradigm that I call Collaborative Link Traversal Query Processing (CLTQP) where every user can lend some of 
