@@ -1,4 +1,4 @@
-## Related works
+## Related Work
 {:#litterature_review} 
 
 ### Link Traversal Query Processing

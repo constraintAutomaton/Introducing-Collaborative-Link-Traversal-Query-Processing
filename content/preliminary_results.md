@@ -7,3 +7,5 @@ a backend of our P2P network in relation to the communication of the SPARQL quer
 I am also participating in a group with other researchers to investigate how to use Solid for the use case of social media applications
 and medical applications in a  P2P manner and while preserving privacy.
 Lastly, I experimented with GLTQP in Comunica for the use case of fragmented databases.
+
+<span class="comment" data-author="RT">The text above is too vague. We'll need to make each thing more concrete, but only if we can show something preliminary already, or can say what kind of methodology we applied.</span>
