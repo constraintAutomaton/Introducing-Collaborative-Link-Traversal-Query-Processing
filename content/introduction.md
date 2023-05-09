@@ -43,16 +43,21 @@ If the computational power is in the hand of a third party,
 this party will always have "the real" control over the application.
 At its most basic expression, it has the power to limit the access,
 sure the user can choose another party, particularly with Solid, but this party will need to finance itself
-in some ways either by charging a fee or by using the user as the product [](cite:cites Smyrnaios2018) (maybe with more "consent" with Solid).
+in some ways either by charging a fee or by using the user as the product [](cite:cites Sevignani2013, Smyrnaios2018) (maybe with more "consent" with Solid).
 Also, the cartelisation of the market is still a problem in the current paradigm,
-and the increase of the gap between the rich and the poor [](cite:cites Curran2016ch1, Rizwan2021),
-with consideration with the increasing presence of web technologies in day-to-day life, is also a problem not engaged with the current state of affaires. 
+and the increase of the gap between the rich and the poor [](cite:cites Curran2016ch1, Rizwan2021, Sevignani2013),
+with consideration with the increasing presence of web technologies in day-to-day life, is also a problem not engaged with the current state of affaires.
+
 In this research I focus on querying over Solid pods,
 in a paradigm that I call Collaborative Link Traversal Query Processing (CLTQP) where every user can lend some of 
 his computational power when querying to increase the query result completeness and reduce the query execution time of all the other users in a collaborative way,
 so in some ways acting as one powerful querying engine.
 In this perspective, apps are more shells that represent contracts and provide the tools to do the work,
 the data are out there in the Solid pods and the open web and the computational power is also out there in the hand of the users.
+With this collective participation, it would be possible at little cost (for example [](cite:cites Sevignani2013) in their studies most participants
+were willing to pay 10 euro a year for alternative social media platforms,
+which would equal to 50 million a year if all the users of Facebook were to do it) to provide a far greater democratic control
+over applications that are interacting with the daily life of many individual.
 
 This paper is divided as follows, first, the [research proposal is made](#proposal),
 after the [related work](#litterature_review) is presented,

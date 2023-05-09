@@ -14,7 +14,7 @@ It has to be taken into account that Link Traversal comes with some difficulties
 and query planning [](cite:cites Hartig2014LinkedDQ, verborgh2020, Hartig2011ZeroKnowledgeQP, taelman2023). 
 In most cases, the data source encountered, does not have a strict structure that can be leveraged to speed up the execution.
 Nonetheless reachability criterium can be defined to restrict the links that are followed based on conditions,
-classical examples are $$ c_{all} $$ which follow every link and $$ c_{match} $$ which 
+classical examples are $$c_{all}$$ which follow every link and $$c_{match}$$ which 
 follow links that match the query pattern [](cite:cites hartig2012, Bogaerts).
 
 
