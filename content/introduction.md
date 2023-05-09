@@ -59,7 +59,7 @@ the data are out there in the Solid pods and the open web and the computational 
 With this collective participation, it would be possible at little cost (for example [](cite:cites Sevignani2013) in their studies most participants
 were willing to pay 10 euro a year for alternative social media platforms,
 which would equal to 50 million a year if all the users of Facebook were to do it) to provide a far greater democratic control
-over applications that are interacting with the daily life of many individual.
+over applications that are interacting with the daily life of many individuals.
 
 This paper is divided as follows, first, the [research proposal is made](#proposal),
 after the [related work](#litterature_review) is presented,

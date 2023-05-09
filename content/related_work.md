@@ -30,7 +30,7 @@ In practice, it has been used to query over multiples [Solid pods](cite:cites sp
 using the [Linked Data Platform specification](cite:cites spec:ldp) to access the information and the [Solid type index](cite:cites spec:typeIndex) located inside the pods to know 
 the emplacement of the information requested [](cite:cites taelman2023).
 Other specifications could also be used to gain knowledge while traversing such as 
-[shape trees](cite:cites spec:shapeTree) and Shape [constraint languages (SHACL)](cite:cites spec:shacl).
+[shape trees](cite:cites spec:shapeTree) and [Shape constraint languages (SHACL)](cite:cites spec:shacl).
 The result on the search domain explored by the SPARQL query engine remain pseudo-infinite or unknowns,
 but at every traversal step we might get a finite domain pertaining to getting complete information about the current subject.
 
