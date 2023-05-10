@@ -38,7 +38,7 @@ but at every traversal step we might get a finite domain pertaining to getting c
 [Snob](cite:cites grall:hal-01805154) propose a mechanism for collaborative query based
 on the continuous execution of queries over browsers data sources that are rotating in a network of browser. 
 The browsers form an unstructured peer-to-peer (P2P) network where each peer has
-a random and a profile (browser with similar profiles execute similar queries) base partial view of the network.
+a random (Ladda [](cite:cites Grall2017) apply a similar method) and a profile (browser with similar profiles execute similar queries) base partial view of the network.
 The browsers can share their intermediary results and at specific intervals,
 the peers are randomly shuffled by asking the peers that a browser knows for other peers.
 In that way over time, without necessarily having query every data sources, it is possible to achieve better query results completeness.
