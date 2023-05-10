@@ -8,6 +8,14 @@ header {
   }
 }
 
+.sidebysidecontainer {
+  display: grid; /* sets the layout to grid */
+  grid-template-columns: repeat(2, 1fr); /* two columns that are equally wide */
+  gap: 0rem; /* space between columns */
+  align-items: end; /* align grid cell contents to bottom of the cell */
+  align-items: stretch !important;
+}
+
 // Table of contents
 ol.index-entries {
   margin-bottom: 0;
