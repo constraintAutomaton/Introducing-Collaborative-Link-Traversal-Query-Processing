@@ -41,7 +41,7 @@ If the computational power is in the hand of a third party,
 this party will always have "the real" control over the application.
 At its most basic expression, it has the power to limit the access,
 sure the user can choose another party, particularly with Solid, but this party will need to finance itself
-in some ways either by charging a fee or by using the user as the product [](cite:cites Sevignani2013, Smyrnaios2018) (maybe with more "consent" with Solid).
+in some ways either by charging a fee or by using the user as the product [](cite:cites Terranova2000FreeLP, Sevignani2013, Smyrnaios2018) (maybe with more "consent" with Solid).
 Also, the cartelisation of the market is still a problem in the current paradigm,
 and the increase of the gap between the rich and the poor [](cite:cites Curran2016ch1, Rizwan2021, Sevignani2013),
 with consideration with the increasing presence of web technologies in day-to-day life, is also a problem not engaged with the current state of affaires.
