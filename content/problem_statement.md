@@ -2,7 +2,6 @@
 {:#proposal}
 
 ### Proposal
-<span class="comment" data-author="RT">I'm wondering if we need the related work section before this one, because you go in quite some detail on link traversal, but the reader doesn't really know the background yet. Perhaps we can even merge this section with res questions and hypotheses, and call the section "Problem Statement".</span>
 
 This paper aims to create a Link Traversal Query Processing paradigm called
 Collaborative Link Traversal Query Processing.
@@ -32,8 +31,8 @@ than data sources having the reverse properties.
 But we cannot assume that less popular data sources are less relevant to the query response and to the
 interpretation of the results, so it is profitable to facilitate their discovery.
 A collaboration of SPARQL query engine could explore more of the search space by
-dividing between them non-overlapping or minimally overlapping portion of the search space to query.
-It is also necessary to share the result between each other.
+dividing between them non-overlapping or minimally overlapping portion of the search space to query,
+the sharing of the results between the engines is also a requisite for this collaboration.
 
 The second part can be divided into multiple consideration. 
 For the first one, [](cite:cites Hartig2011) demonstrate that caching in LTQP can
