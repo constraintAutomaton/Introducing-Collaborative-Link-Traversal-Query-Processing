@@ -31,31 +31,19 @@ Seeing the internet has an object in history, built from a concrete environment 
 active participation, global understanding and higher form of democracy, and instead seems to have in large proportion reproduce the structure from which it was born
 and even in some regards amplifies certain social problematic elements [](cite:cites Curran2016ch1).
 
-
 In the context of this PhD program, I propose to investigate a more socialistic and decomodificalistic approach to Solid 
-in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic current approach. 
+in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013) current approach.
 By this shift, I attempt to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
 to the right of the user to be part of the production of the computational power necessary to make an app work,
-hence making so that communities can control what app can do. 
-If the computational power is in the hand of a third party,
-this party will always have "the real" control over the application.
-At its most basic expression, it has the power to limit the access,
-sure the user can choose another party, particularly with Solid, but this party will need to finance itself
-in some ways either by charging a fee or by using the user as the product [](cite:cites Terranova2000FreeLP, Sevignani2013, Smyrnaios2018) (maybe with more "consent" with Solid).
-Also, the cartelisation of the market is still a problem in the current paradigm,
-and the increase of the gap between the rich and the poor [](cite:cites Curran2016ch1, Rizwan2021, Sevignani2013),
-with consideration with the increasing presence of web technologies in day-to-day life, is also a problem not engaged with the current state of affaires.
-
-<span class="comment" data-author="RT">The text above may be a bit too high-level and long for a PhD symposium.</span>
-
-<span class="comment" data-author="RT">The jump to Link Traversal is too sudden. It's unclear why link traversal is needed. We need some paragraphs inbetween. This could for example be about the need of decentralization, its challenges, and link traversal as a partial solution.</span>
-
-In this research I focus on querying over Solid pods,
-in a paradigm that I call Collaborative Link Traversal Query Processing (CLTQP) where every user can lend some of 
+hence making so that communities can control what app can do.
+For that I focus on querying as in social applications, the request of information, the discovery of it
+and its propagation are the main functionality of those app, 
+hence the main center of power and the means of which users can become the product of those apps
+[](cite:cites Terranova2000FreeLP, Sevignani2013, Smyrnaios2018).
+Concretely I propose  Collaborative Link Traversal Query Processing (CLTQP)
+a Link Traversal Query Processing (LTQP) paradigm where every user can lend some of 
 his computational power when querying to increase the query result completeness and reduce the query execution time of all the other users in a collaborative way,
 so in some ways acting as one powerful querying engine.
-In this perspective, apps are more shells that represent contracts and provide the tools to do the work,
-the data are out there in the Solid pods and the open web and the computational power is also out there in the hand of the users.
 With this collective participation, it would be possible at little cost (for example [](cite:cites Sevignani2013) in their studies most participants
 were willing to pay 10 euro a year for alternative social media platforms,
 which would equal to 50 million a year if all the users of Facebook were to do it) to provide a far greater democratic control

@@ -4,8 +4,8 @@
 ### Proposal
 {:#proposal}
 
-This paper aims to create a Link Traversal Query Processing paradigm called
-Collaborative Link Traversal Query Processing.
+This paper aims to create a LTQP paradigm called
+CLTQP.
 It consists of using multiple SPARQL query engine with the aim of improving the completeness of LTQP
 by exploring more of the search space and to reduce the execution time by the means of exchange of intermediary results.
 In this PhD project, I will apply this query paradigm in the context of Solid, 
