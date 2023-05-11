@@ -1,7 +1,8 @@
 ## Problem statement
-{:#proposal}
+{:#problem_statement}
 
 ### Proposal
+{:#proposal}
 
 This paper aims to create a Link Traversal Query Processing paradigm called
 Collaborative Link Traversal Query Processing.
