@@ -15,11 +15,11 @@ social interaction that the users engage when using the app can be leveraged to 
 The collaboration process can be divided into two parts: 
 first, collaboration in exploring data sources, and second, collaboration in caching results and intermediate results.
 
-The purpose of the first part is to investigate more of the search space,
-indeed, in LTQP, the search space tends to be huge or pseudo-infinite
-which means that it's difficult to guarantee completeness of results. 
-We can nonetheless apply search strategies called reachability criterion to restrict the links followed by the
-SPARQL query engine and use stopping condition such as a limit of time or triples to close the query processing.
+The purpose of the first part is to investigate more of the search space.
+In this case we suppose that an engine wants to make an LTQP and ask other engines
+at a certain moment to assist it to execute that query.
+[As seen before](#litterature_review_LTQP), in LTQP, the search space tends to be huge or pseudo-infinite
+which means that it's difficult to guarantee completeness of results.
 An important property emerging from the difficulty of reaching completeness is the bias of the query results. 
 This bias emerges from a sensibility to the initial condition, induce by the seeds URL provided to the engine.
 We have to consider that in LTQP, we can only follow links encounter inside the data sources discovered,
