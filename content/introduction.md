@@ -1,8 +1,14 @@
 ## Introduction
 {:#introduction}
 
-The [Solid Protocol](cite:cites spec:solid), is an effort,
-based on the W3C TAG Ethical Web Principles [](cite:cites spec:w3Ethical),
+[Solid](cite:cites spec:solid) is a protocol that enables decentralized environment 
+that focuses on privacy, it gives the opportunity to entities and moral entities to store
+their data into private pods and decide which parties have access to it
+[](cite:cites verstraete2022solid).
+It is already used by multiple private companies [](cite:cites verstraete2022solid) and
+the [Flemish government](https://www.vlaanderen.be/digitaal-vlaanderen/athumi-het-vlaams-datanutsbedrijf).
+Solid can be described as an effort,
+based on the [W3C TAG Ethical Web Principles](https://www.w3.org/TR/ethical-web-principles/),
 to "realise a space where individuals can maintain their autonomy,
 control their data and privacy, and choose applications and services to fulfil their needs
 "[](cite:cites spec:solid) while using existing web standards.
@@ -10,9 +16,7 @@ In the context of Solid [](cite:cites verstraete2022solid) defined data sovereig
 "the power an individual has over their data.[...][It is] the self-determination of 
 individuals and organizations with regard to the use of their data "[](cite:cites verstraete2022solid)
 and a state of being in control of our data is obtained
-"[w]hen an individual or an organization [...] can choose where [its] data is stored and who is granted access to it.
-This decentralization of data control and storage results in breaking
-through existing data silos."[](cite:cites verstraete2022solid)
+"[w]hen an individual or an organization [...] can choose where [its] data is stored and who is granted access to it."[](cite:cites verstraete2022solid)
 
 [](cite:cites Smyrnaios2018) contextualize and historicize the commodification of the internet. 
 The paper proposes that at its inception the web was not really built as an equitable and empowering place, even if at its beginning it was seeing and used as a public good. 
