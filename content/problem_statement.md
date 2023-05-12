@@ -44,6 +44,12 @@ The third is related to query performance as the same or similar query can have 
 other query engine and put into the cache, hence, we can reuse those results to speedup the query execution time as
 it has been demonstrated in the academic literature but not in the case of LTQP.
 
+It has to be considered that a mechanism to assure reciprocity might be necessary, it can be 
+implemented in multiple ways for example as an obligation to participate in a ratio of query,
+a number of triples or links to provide, and so on.
+Their enforcement could be managed by a community like structure with policies in that regard.
+Given a user doesn't respect the policy  than they cannot access the result of that community.
+
 ### Research question and Hypotheses
 {:#research_question}
 
