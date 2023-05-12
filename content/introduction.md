@@ -18,23 +18,6 @@ individuals and organizations with regard to the use of their data "[](cite:cite
 and a state of being in control of our data is obtained
 "[w]hen an individual or an organization [...] can choose where [its] data is stored and who is granted access to it."[](cite:cites verstraete2022solid)
 
-[](cite:cites Smyrnaios2018) contextualize and historicize the commodification of the internet. 
-The paper proposes that at its inception the web was not really built as an equitable and empowering place, even if at its beginning it was seeing and used as a public good. 
-The birth of the internet, ARPANET, was a US military project, funded by US taxpayer money, private companies
-were not interested in investing in this technology.
-In the 1970-80's, 
-"the internet was both invented and
-developed by a ‘republic of computer scientists’[...] no gap between design and use [existed]. In other words, ARPANET’s designers were also its first users,
-giving them the power to change the orientation of technical inventions and their implementation according to their own interests and needs.
-[...] while it was the very epitome of a technocratic apparatus designed for war,
-it came to represent a tool for individual freedom and a more harmonious society."
-[](cite:cites Smyrnaios2018)
-The internet has public good was not really met to be interacting with the public, the general masses, it's private companies for profit driven goals
-that brought computers, the core interface of the internet to the common citizen when they saw its potential profitability [](cite:cites Smyrnaios2018).
-Seeing the internet has an object in history, built from a concrete environment with its own dynamic influencing its design and usage, and in return it influencing and making history, appear to be a good start to understand why the internet does not have fulfilled its promise of 
-active participation, global understanding and higher form of democracy, and instead seems to have in large proportion reproduce the structure from which it was born
-and even in some regards amplifies certain social problematic elements [](cite:cites Curran2016ch1).
-
 In the context of this PhD program, I propose to investigate a more socialistic and decomodificalistic approach to Solid 
 in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013) current approach.
 By this shift, I attempt to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,

@@ -2,7 +2,7 @@
 {:#methodology}
 
 I am planning to build a prototype using the SPARQL query engine [Comunica](cite:cites taelman_iswc_resources_comunica_2018)
-and evaluate it against existing RDF social media benchmark [](cite:cites Angles2020TheLS, Angles2014TheLD, Spasic2016)
+and evaluate it against existing RDF social media benchmark [](cite:cites Angles2020TheLS)
 and compare the result with LTQP and GLTQP approaches.
 Like presented at the ["Proposal" section](#proposal) the collaboration can be divided into two, hence we formulate two 
 relatively independent problems; the search domain division and the caching (and communication).
