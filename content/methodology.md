@@ -9,19 +9,23 @@ relatively independent problems; the search domain division and the caching (and
 
 ### Search domain division problem
 There are multiple strategies (combinable) that could be employed to divide the domain.
-It has to be considered first that we don't know in advance the limit of the domain,
+It has to be considered first that we don't know in advance the limit of the domain;
 hence we cannot divide it before the execution of the query.
 A strategy can be to **collect the seed URLs and to divide them between the query engine**,
-the limitation is that we don't consider if the data source discoverable inside the seed URLs overlaps.
-Another strategy would be to **communicate between the engines, the link queue and/or the link visited**. The
-problem with that approach is the increase in execution time due to the communication of the engine and we still
+the limitation is that we don't consider if the data source discoverable inside the seed URLs overlaps, also if the list of seeds URL is very short, then the distribution will be minimal.
+A variance of that strategy would be to distribute the link queue when it is big enough among the peers.
+Another strategy would be to **communicate between the engines, the link queue and/or the link visited**.
+The problem with that approach is the increase in execution time due to the communication of the engine and we still
 need a mechanism to react on the detection of the overlap and to redistribute the domain.
-A last strategy that I propose is to **set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field**, the limitation of that strategy is that the criteria might have to be 
+A different strategy that I propose is to **set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field**, the limitation of that strategy is that the criteria might have to be 
 changed depending on the query executed and the type of dataset that we expect to find result, 
 we might also lose result if the criteriums are too strict.
+A last strategy would be **to have a global link queue that all the participating engine maintains together**.
+The problem with this strategy is the communication necessary and the potential locking mechanism to avoid inconsistencies.
+A variance of this strategy would be to let one peer do the joins and the other peers doing to the traversal and
+the execution of the query.
 
-
-Using a benchmark, I could evaluate those methods alone and in combination to measure, while making the **Number of engine** vary. 
+Using a benchmark, I could evaluate those methods alone and in combination to measure, while making the **Number of engine** vary.
 I propose to measure those metrics:
 **Result completeness**, 
 **Ability to access isolated documents (we can evaluate their isolation by the degree of the node (only the edge that end in the node) and the number of paths that can lead to it)**,
