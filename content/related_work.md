@@ -3,7 +3,7 @@
 
 ### Link Traversal Query Processing
 
-LTQP of Linked Data documents is a technique that consists of [recursively lookup URL from dereferenced named nodes acquired by the query engine in order to explore 
+LTQP is a technique that consists of [recursively lookup URL from dereferenced named nodes acquired by the query engine in order to explore 
 the surrounding information around the original response](cite:cites Hartig2016) using the follow-your-nose principle of Linked Data.
 The query first start with a small set of URI called [seed URIs](cite:cites Hartig2013AnOO) that form the initial data source for the execution.
 The engine then resolves the URI of the named node it encounters in order to explore unknown data sources following a lookup policy.
