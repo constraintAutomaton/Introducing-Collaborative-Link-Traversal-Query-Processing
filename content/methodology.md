@@ -11,7 +11,7 @@ relatively independent problems; the search domain division and the caching (and
 There are multiple strategies (combinable) that could be employed to divide the domain.
 It has to be considered first that we don't know in advance the limit of the domain;
 hence we cannot divide it before the execution of the query.
-A strategy can be to **collect the seed URLs and to divide them between the query engine**,
+A strategy can be to **collect the seed URLs and to divide them between the query engines**,
 the limitation is that we don't consider if the data source discoverable inside the seed URLs overlaps, also if the list of seeds URL is very short, then the distribution will be minimal.
 A variance of that strategy would be to distribute the link queue when it is big enough among the peers.
 Another strategy would be to **communicate between the engines, the link queue and/or the link visited**.
@@ -22,7 +22,7 @@ changed depending on the query executed and the type of dataset that we expect t
 we might also lose result if the criteriums are too strict.
 A last strategy would be **to have a global link queue that all the participating engine maintains together**.
 The problem with this strategy is the communication necessary and the potential locking mechanism to avoid inconsistencies.
-A variance of this strategy would be to let one peer do the joins and the other peers doing to the traversal and
+A variance of this strategy would be to let one peer do the joins and the other peers doing the traversal and
 the execution of the query.
 
 Using a benchmark, I could evaluate those methods alone and in combination to measure, while making the **Number of engine** vary.
@@ -36,14 +36,22 @@ I propose to measure those metrics:
 ### Caching and Communication  problem
 Given that in our collaborative context, we want all the engines implicated in the query 
 to communicate with each other, for the collection of results and the redivision of the domain,
-a **unstructured network** might be the best choice as the lookup for the client as it have a constant time complexity and we know all the peers.
+a **unstructured network** might be the best choice as the lookup for 
+the client is of constant time complexity and we know all the peers.
 
-For the caching following the [related work](#litterature_review), an unstructured approached with a profile overlay might be preferred.
+For the caching following the [related work](#litterature_review), an unstructured approached with 
+a profile overlay might be preferred,but given the potential long execution time a 
+**structured network with a DHT** could also be a profitable solution.
 In regards to that approach, there is a consideration for the privacy and the usefulness of the discovery of new peers.
-Contrary to the approached viewed in the related work, we might not be able to share the whole cache, because some data are private. 
-It comes that considering the overhead and the ratio of data that can be shared, the discovery of peers might not be or be less profitable than expected. 
-If the discovery of peer is more profitable than we can either create profiles based on the query executed like [](cite:cites Folz2016)
+Contrary to the approached viewed in the related work, we might not be able to share the whole cache or distribute the data to any peers
+, because some data are private. 
+It comes that considering the overhead and the ratio of data that can be shared,
+the discovery of peers might not be or be less profitable than expected. 
+If the discovery of peer is more profitable than we can either create profiles based on the query executed like
+[](cite:cites Folz2016)
 and rotate the peers or instead navigating the chain of peers, like [](cite:cites Aebeloe2021).
+The information that could be cached is the **data source URLs that are contributing** given a query,
+the **joint** given triple patterns to avoid their calculations or the **triple patterns**.
 
 Using a benchmark, I could evaluate the same metric as in the search domain problem with the addition of: **Communication time** and **Cache miss and rates of use of the cache**.
 And while making the **Number of engine** vary.

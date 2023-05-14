@@ -44,11 +44,13 @@ The third is related to query performance as the same or similar query can have 
 other query engine and put into the cache, hence, we can reuse those results to speedup the query execution time as
 it has been demonstrated in the academic literature but not in the case of LTQP.
 
-It has to be considered that a mechanism to assure reciprocity might be necessary, it can be 
-implemented in multiple ways for example as an obligation to participate in a ratio of query,
+It has to be considered that a mechanism to assure reciprocity might be necessary to ensure
+fairness and the good functioning of the system,
+it can be implemented in multiple ways for example as an obligation to participate in a ratio of query,
 a number of triples or links to provide, and so on.
 Their enforcement could be managed by a community like structure with policies in that regard.
-Given a user doesn't respect the policy  than they cannot access the result of that community.
+Given a user doesn't respect the policy than they cannot access the results of that community,
+so it is a form of social contract.
 
 ### Research question and Hypotheses
 {:#research_question}
@@ -87,7 +89,6 @@ in a way that each engine can perform their query without too much synchronizati
 the more engines collaborating, the lower average execution time and the higher the search space explored.
 </li>
 
-<li><span class="question_hypothesis">Hypothesis 4</span>: It is possible during execution of CLTQP to delegate part of the search space to other query engines by subsplitting the search space of the subject query engine by applying modification to their reachability criterium and link priority.</li>
 </ul>
 </div>
 
