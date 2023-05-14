@@ -75,7 +75,7 @@ better query execution time and less result bias in the context of LTQP by makin
 have an impact on the completeness and query execution time on CLTQP?</li>
 </ul>
 </div>
-
+ 
 
 <div>
 <ul>
