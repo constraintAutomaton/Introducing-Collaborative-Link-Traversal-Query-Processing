@@ -1,5 +1,5 @@
 # Introducing Collaborative Link Traversal Query Processing in the context of structured decentralized environment
-
+Available as a web page at https://constraintautomaton.github.io/Introducing-Collaborative-Link-Traversal-Query-Processing-in-the-context-of-structured-decentralized/
 ## Abstract
 
 Decentralized web environment aims at giving more autonomy and control of the users over their data.
