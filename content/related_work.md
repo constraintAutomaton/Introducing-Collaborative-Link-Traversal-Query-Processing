@@ -15,7 +15,7 @@ It has to be taken into account that Link Traversal comes with some difficulties
 and query planning [](cite:cites Hartig2014LinkedDQ). 
 In most cases, the data source encountered, does not have a strict structure that can be leveraged to speed up the execution.
 Nonetheless reachability criterium can be defined to restrict the links that are followed based on conditions,
-classical examples are $$c_{all}$$ which follow every link and $$c_{match}$$ which 
+classical examples are `Call` which follow every link and `Cmatch` which 
 follow links that match the query pattern [](cite:cites hartig2012).
 When there is a priori knowledge about the RDF documents, a technique called [Guided Link Traversal Query Processing (GLTQP)](cite:cites verborgh2020) can be used. It consists of restricting links further by using knowledge or meta knowledge about the data sources
 such as structural information like in the case of Solid or information provided by web specification such as
