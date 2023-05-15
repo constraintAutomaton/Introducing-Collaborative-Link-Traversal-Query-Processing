@@ -1,9 +1,20 @@
 ## Introduction
 {:#introduction}
 
+<span class="comment" data-author="RT">
+    In general, all necessary information for your introduction is there, so that's great.
+    However, there is no clear line yet in the reasoning at the moment IMO, which makes it difficult to follow for the reader.
+    One suggestion for a high-level structure for the intro:
+    - Decentralization initiatives give users more control over their data, by decentralizing data
+    - In order to improve performance (without centralizing computation), we can however go a step further, and not only decentralize data, but also decentralize computational effort!
+    - We focus on LTQP (which already allows discovery over decentralized data), and investigate how its processing effort can be distributed.
+    - Specifically, we focus on 2 aspects: ...
+</span>
+
+<span class="comment" data-author="RT">Instead of placing this hard focus on Solid here, I would suggest zooming out first and focus on decentralization initiatives in general, and then zooming in on Solid specifically.</span>
 [Solid](cite:cites spec:solid) is a protocol that enables decentralized environment 
-that focuses on privacy, it gives the opportunity to entities and moral entities to store
-their data into private pods and decide which parties have access to it
+that focuses on privacy, it gives the opportunity to entities and moral entities <span class="comment" data-author="RT">What are moral entities?</span> to store
+their data into personal pods and decide which parties have access to it
 [](cite:cites verstraete2022solid).
 It is already used by multiple private companies [](cite:cites verstraete2022solid) and
 the [Flemish government](https://www.vlaanderen.be/digitaal-vlaanderen/athumi-het-vlaams-datanutsbedrijf).
