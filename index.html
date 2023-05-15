@@ -10,7 +10,7 @@
   <meta name="citation_title" content="Introducing Collaborative Link Traversal Query Processing in the context of structured decentralized environment">
   <meta name="citation_author" content="Bryan-Elliott Tam" />
   
-  <meta name="citation_publication_date" content="2023/05/14" />
+  <meta name="citation_publication_date" content="2023/05/15" />
 </head>
 
 <body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
@@ -30,31 +30,35 @@
       <h2 property="schema:name">Abstract</h2>
       <!-- Context      -->
 
-      <p>Decentralized web environment aims at giving more autonomy and control of the users over their data.
-Solid is a structured decentralized web protocol that emphasis on privacy and
-interoperability via the usage of linked data and the current web technology stack.
+      <p>Decentralized web environment aims at giving more autonomy and control to users over their data.
+<span class="comment" data-author="RT">For example…</span>Solid is a <del class="comment" data-author="RT">structured</del> decentralized web protocol that emphasises privacy and
+interoperability via the usage of linked data and the <del class="comment" data-author="RT">current</del> web <del class="comment" data-author="RT">technology</del> stack.
 <!-- Need         -->
-I propose that the guarantee of privacy and choice (emerging from the interoperability) on the part of the user is not enough, 
+I propose that <span class="comment rephrase" data-author="RT">the guarantee of privacy and choice (emerging from the interoperability) on the part of the user is not enough</span>, 
 we also need to create a state of affairs where the computational power can be produced 
-by the user of the app themselves instead of delegated it to a third party to bring more potent democratic power
-over applications that are often used in the day-to-day life of the individual.
+by the user of the app themselves<span class="comment" data-author="RT">What do you mean by producing computational power by the app user?</span> instead of delegated it to a third party to bring more potent democratic power
+over applications <span class="comment" data-author="RT">I assume you’re trying to motivate the need for distributing these computations. However, the “democratic power” argument is unclear.</span> that are often used in the day-to-day life of the individual.
 <!-- Task         -->
-A crucial aspect of web applications, particularly social one, is the query of information, and it’s discovery.
-An influential example of web discovery technique is Link Traversal Query Processing (LTQP) 
-a SPARQL query paradigm aiming at exploring the web to answer query by dereferencing and following the named nodes inside the data sources.
+A crucial aspect of web applications, particularly social <span class="comment spelling" data-author="RT">one</span>, is the <span class="comment spelling" data-author="RT">query of information</span>, and <span class="comment spelling" data-author="RT">it’s</span> discovery.
+An influential example of web discovery techniques is Link Traversal Query Processing (LTQP) 
+a SPARQL query paradigm aiming at exploring the web to answer queries by dereferencing and following the <span class="comment rephrase" data-author="RT">named nodes</span> inside <del class="comment" data-author="RT">the</del> data sources.
+<span class="comment" data-author="RT">It’s not clear at this point why you want to build upon LTQP. What’s important in LTQP that other techniques lack?</span>
 For this doctoral research, I am introducing the concept of Collaborative Link Traversal Query Processing, a SPARQL
-query processing paradigm for LTQP, where multiple query engine
+query processing paradigm for LTQP, where <span class="comment spelling" data-author="RT">multiple query engine</span>
 collaborate together to increase their query results completeness and reduce their query execution time.
+<span class="comment" data-author="RT">I remember asking this question before; but do you really need to focus on collaborative LTQP here? Wouldn’t it be possible to introduce the collaboration techniques without LTQP? LTQP could surely be your main driver, but your solution could also be useful for other querying paradigms.</span>
 <!-- Object       -->
-In this paper I formalize the objective of my research, document my method and anchor it with the current state of the art.
+In this paper I formalize the objective of my research, document my methods and anchor it with the current state of the art.
 <!-- Findings     -->
-Doing so, I divided the cooperation of query engines into two parts; exploration of the search space, to mainly increase the completeness of results, by having more ground explored and caching for reducing the execution time.
+<del class="comment" data-author="RT">Doing so, </del>I divided the cooperation of query engines into two parts;
+1) <span class="comment" data-author="RT">to improve?</span>the exploration of the search space, to <del class="comment" data-author="RT">mainly</del> increase the completeness of results<del class="comment" data-author="RT">, by having more ground explored</del>, and
+2) caching for reducing the execution time <span class="comment" data-author="RT">maybe also briefly say here why this is important</span>.
 <!-- Conclusion   -->
 To concretize the potential of this proposal, I will create a prototype and evaluate it using existing benchmarks.
 <!-- Perspectives -->
-From my review of the literature, there exist contribution pertaining to collaborative SPARQL query and RDF collaborative caching,
+From my review of the literature, <span class="comment spelling" data-author="RT">there exist contribution</span> pertaining to collaborative SPARQL query and RDF collaborative caching,
 but there is none in the context of LTQP and of structured decentralized environment like Solid.
-hence making this potential contribution novel.</p>
+hence making this <del class="comment" data-author="RT">potential</del> contribution novel.</p>
 
     </div>
 </section>
@@ -67,9 +71,20 @@ hence making this potential contribution novel.</p>
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Introduction</h2>
 
-      <p><a property="schema:citation http://purl.org/spar/cito/cites" href="https://solidproject.org/TR/protocol">Solid</a> <span class="references">[<a href="#ref-1">1</a>]</span> is a protocol that enables decentralized environment 
-that focuses on privacy, it gives the opportunity to entities and moral entities to store
-their data into private pods and decide which parties have access to it
+      <p><span class="comment" data-author="RT">
+    In general, all necessary information for your introduction is there, so that’s great.
+    However, there is no clear line yet in the reasoning at the moment IMO, which makes it difficult to follow for the reader.
+    One suggestion for a high-level structure for the intro:
+    - Decentralization initiatives give users more control over their data, by decentralizing data
+    - In order to improve performance (without centralizing computation), we can however go a step further, and not only decentralize data, but also decentralize computational effort!
+    - We focus on LTQP (which already allows discovery over decentralized data), and investigate how its processing effort can be distributed.
+    - Specifically, we focus on 2 aspects: …
+</span></p>
+
+      <p><span class="comment" data-author="RT">Instead of placing this hard focus on Solid here, I would suggest zooming out first and focus on decentralization initiatives in general, and then zooming in on Solid specifically.</span>
+<a property="schema:citation http://purl.org/spar/cito/cites" href="https://solidproject.org/TR/protocol">Solid</a> <span class="references">[<a href="#ref-1">1</a>]</span> is a protocol that enables decentralized environment 
+that focuses on privacy, it gives the opportunity to entities and moral entities <span class="comment" data-author="RT">What are moral entities?</span> to store
+their data into personal pods and decide which parties have access to it
 <span class="references">[<a href="#ref-2">2</a>]</span>.
 It is already used by multiple private companies <span class="references">[<a href="#ref-2">2</a>]</span> and
 the <a href="https://www.vlaanderen.be/digitaal-vlaanderen/athumi-het-vlaams-datanutsbedrijf">Flemish government</a>.
@@ -130,6 +145,10 @@ then <a href="#evaluation">methodology</a> is explained and there is a short <a 
 
       <h3 id="litterature_review_LTQP">Link Traversal Query Processing</h3>
 
+      <p><span class="comment" data-author="RT">
+    Important here to contrast LTQP with traditional (centralized) query processing.
+</span></p>
+
       <p>LTQP is a technique that consists of recursively lookup URL from dereferenced named nodes acquired by the query engine in order to explore 
 the surrounding information around the original response <span class="references">[<a href="#ref-8">8</a>]</span> using the follow-your-nose principle of Linked Data.
 The query first start with a small set of URI called seed URIs <span class="references">[<a href="#ref-9">9</a>]</span> that form the initial data source for the execution.
@@ -148,6 +167,9 @@ such as structural information like in the case of Solid or information provided
 <a href="https://solid.github.io/type-indexes/">Solid type index</a>, <a href="https://shapetrees.org/TR/specification/">shape trees</a> and <a href="https://www.w3.org/TR/shacl/">Shape constraint languages (SHACL)</a>.</p>
 
       <h3 id="collaborative-sparql-querying">Collaborative SPARQL Querying</h3>
+
+      <p><span class="comment" data-author="RT">Let’s start first by explaining collaborative sparql querying on a high-level.</span></p>
+
       <p><a property="schema:citation http://purl.org/spar/cito/cites" href="https://hal-nantes-universite.archives-ouvertes.fr/hal-01805154">Snob</a> <span class="references">[<a href="#ref-14">14</a>]</span> propose a mechanism for collaborative query based
 on the continuous execution of queries over browsers data sources that are rotating in a network of browser. 
 The browsers form an unstructured peer-to-peer (P2P) network where each peer has
@@ -172,6 +194,8 @@ such has academic papers, instead of the social links between the data sources,
 for example <span class="references">[<a href="#ref-17">17</a>]</span>.</p>
 
       <h3 id="p2p-caching-in-the-context-of-the-web">P2P caching in the context of the web</h3>
+
+      <p><span class="comment" data-author="RT">Make sure to explain what P2P stands for.</span></p>
 
       <p>Squirrel <span class="references">[<a href="#ref-18">18</a>]</span> proposed a P2P caching mechanism, where the URLs are mapped to keys inside a distributed hash table (DHT).
 If the user does not have in its local cache the content desired, it first makes a query to the P2P network before making the request to the
@@ -205,15 +229,16 @@ which imply that there is a strong consideration for privacy during querying <sp
 Also, the structure of the data hosted inside the Solid pods <span class="references">[<a href="#ref-13">13</a>]</span> and the structure of the virtual
 social interaction that the users engage when using the app can be leveraged to optimize link traversal. 
 The collaboration process can be divided into two parts: 
+<span class="comment" data-author="RT">Instead of listing these two parts in terms of the technical solution, could you explain them in terms of the problems they aim to solve? i.e., why is better exploration needed, and why is caching needed?</span>
 first, collaboration in exploring data sources, and second, collaboration in caching results and intermediate results.</p>
 
-      <p>The purpose of the first part is to investigate more of the search space.
-In this case we suppose that an engine wants to make an LTQP and ask other engines
+      <p>The purpose of the first part is to investigate more of the search space.<span class="comment" data-author="RT">But why? What problem are you solving this this?</span>
+In this case we suppose that an engine wants to make an LTQP <span class="comment" data-author="RT">query?</span> and ask other engines
 at a certain moment to assist it to execute that query.
 <a href="#litterature_review_LTQP">As seen before</a>, in LTQP, the search space tends to be huge or pseudo-infinite
 which means that it’s difficult to guarantee completeness of results.
 An important property emerging from the difficulty of reaching completeness is the bias of the query results. 
-This bias emerges from a sensibility to the initial condition, induce by the seeds URL provided to the engine.
+This bias emerges from a sensibility to the initial condition, induce by the seeds URL provided to the engine. <span class="comment" data-author="RT">I don’t really understand what you mean by this bias.</span>
 We have to consider that in LTQP, we can only follow links encounter inside the data sources discovered,
 via the triple present inside an already discovered data source;
 also the web cannot be modeled as a fully connected graph;
@@ -225,18 +250,21 @@ But we cannot assume that less popular data sources are less relevant to the que
 interpretation of the results, so it is profitable to facilitate their discovery.
 A collaboration of SPARQL query engine could explore more of the search space by
 dividing between them non-overlapping or minimally overlapping portion of the search space to query,
-the sharing of the results between the engines is also a requisite for this collaboration.</p>
+the sharing of the results between the engines is also a requisite for this collaboration.
+<span class="comment" data-author="RT">After reading this paragraph, you have not convinced me yet of the need for collaboration to improve discovery. Perhaps talking about sharing computational effort, and perhaps even different collaborative engines exploring using different algorithms, could help here.</span></p>
 
-      <p>The second part can be divided into multiple consideration. 
+      <p>The second part <span class="comment" data-author="RT">Repeat what the second part is about</span> can be divided into multiple consideration. 
+<span class="comment" data-author="RT">It’s not clear to me what the 3 things below are exactly. Are they related work? Are they methods you want to apply? Are they open problems?</span>
 For the first one, <span class="references">[<a href="#ref-23">23</a>]</span> demonstrate that caching in LTQP can
 help improve the completeness of results, but in some condition the query execution time can be increased.
-The second consideration is to be related to the first part of the collaboration,
+The second consideration is to be related to the first part of the collaboration <span class="comment" data-author="RT">What are you referring to exactly now?</span>,
 because there is a need to synchronize the results between the query engines. 
-The third is related to query performance as the same or similar query can have been executed previously by
+The third <span class="comment" data-author="RT">I would suggest using inline 1), 2) etc. Because “the first”, “second”, etc are confusing with respect to the 2 high-level parts of your approach.</span> is related to query performance as the same or similar query can have been executed previously by
 other query engine and put into the cache, hence, we can reuse those results to speedup the query execution time as
-it has been demonstrated in the academic literature but not in the case of LTQP.</p>
+it has been demonstrated in the academic literature but not in the case of LTQP.<span class="comment" data-author="RT">Yes, this last sentence is important! But it should have come much sooner! You could even mention it the first time you introduce these 2 parts of your approach, because this is really at the core of your research, while now it feels as an unimportant afterthought.</span></p>
 
-      <p>It has to be considered that a mechanism to assure reciprocity might be necessary to ensure
+      <p><span class="comment" data-author="RT">I would specifically make use of the term “incentive” here.</span>
+It has to be considered that a mechanism to assure reciprocity might <span class="comment" data-author="RT">It <em>is</em> necessary!</span> be necessary to ensure
 fairness and the good functioning of the system,
 it can be implemented in multiple ways for example as an obligation to participate in a ratio of query,
 a number of triples or links to provide, and so on.
@@ -249,21 +277,27 @@ so it is a form of social contract.</p>
       <p>Building on the proposal and of related works of the <a href="#litterature_review">Section 2</a> 
 research questions and hypotheses are formalized,to guide the study.</p>
 
+      <p><span class="comment" data-author="RT">I would recommend to elaborate on each question and hypothesis below it, because some of them require some more details.</span></p>
+
       <div class="sidebysidecontainer">
+    <span class="comment" data-author="RT">I would not put them in 2 columns, as it breaks the line of reading.</span>
 
 <div>
 <ul>
 <li><span class="question_hypothesis">Question 1</span>: Can we achieve better query result completeness, 
-better query execution time and less result bias in the context of LTQP by making multiple SPARQL query engine collaborate?</li>
+better query execution time and less result bias <span class="comment" data-author="RT">Unclear what this bias is</span> in the context of LTQP by making multiple SPARQL query engine collaborate?</li>
 
-<li><span class="question_hypothesis">Question 2</span>: How can we minimize the overlapping of data sources exploration during CLTQP?</li>
+<li><span class="question_hypothesis">Question 2</span>: How can we minimize the overlapping of data sources <span class="comment" data-author="RT">What is this overlapping? Why is it a problem?</span> exploration during CLTQP?</li>
 
 <li><span class="question_hypothesis">Question 3</span>: How can we in the context of CLTQP share the cache of SPARQL query engine? </li>
+<span class="comment" data-author="RT">Instead of saying how to use a cache, start by saying how to solve problem X, which is solved by using a cache.</span>
 
 <li><span class="question_hypothesis">Question 4</span>: Does cache reduces the query execution time? What is the influence of the number of engines sharing their cache with the query execution time? Are there scenarios where caching is better than others and what are the property of those scenarios?</li>
+<span class="comment" data-author="RT">Those are multiple questions. Can we summarize it into one high-level question, and then mention these sub-questions in the text below it?</span><span class="comment" data-author="RT">These may also be rephrased as just hypotheses.</span>
 
 <li><span class="question_hypothesis">Question 5</span>: Does the structure of decentralized web environment applications 
 have an impact on the completeness and query execution time on CLTQP?</li>
+<span class="comment" data-author="RT">Interesting question, but feels unrelated to collaboration.</span>
 </ul>
 </div>
  
@@ -271,13 +305,13 @@ have an impact on the completeness and query execution time on CLTQP?</li>
 <div>
 <ul>
 <li><span class="question_hypothesis">Hypothesis 1</span>: It is possible to partition the search space in the context of CLTQP,
-in a way that each engine can perform their query without too much synchronization and domain overlap.</li>
+in a way that each engine can perform their query without too much <span class="comment" data-author="RT">What is too much? Hypotheses must be precise.</span> synchronization and domain overlap.</li>
 
 
-<li><span class="question_hypothesis">Hypothesis 2</span>: We can exploit the GLTQP technique in CLTQP to optimize the queries without producing too much overlap.</li>
+<li><span class="question_hypothesis">Hypothesis 2</span>: We can exploit the GLTQP technique in CLTQP to optimize the queries <span class="comment" data-author="RT">Optimize in terms of what?</span> without producing too much <span class="comment" data-author="RT">What is too much?</span> overlap <span class="comment" data-author="RT">overlap in terms of what?</span>.</li>
 
-<li><span class="question_hypothesis">Hypothesis 3</span>: Given a large enough search space, then 
-the more engines collaborating, the lower average execution time and the higher the search space explored.
+<li><span class="question_hypothesis">Hypothesis 3</span>: Given a large enough <span class="comment" data-author="RT">What is large enough?</span> search space, then 
+the more engines collaborating, the lower average execution time and the higher the search space explored <span class="comment" data-author="RT">how will you measure this?</span>.
 </li>
 
 </ul>
@@ -291,20 +325,25 @@ the more engines collaborating, the lower average execution time and the higher 
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Methodology</h2>
 
-      <p>I am planning to build a prototype using the SPARQL query engine <a property="schema:citation http://purl.org/spar/cito/cites" href="https://comunica.github.io/Article-ISWC2018-Resource/">Comunica</a> <span class="references">[<a href="#ref-24">24</a>]</span>
+      <p><span class="comment" data-author="RT">The next sentence should only be mentioned at the end of your methodology, as it is the implementation of your methods.</span>
+I am planning to build a prototype using the SPARQL query engine <a property="schema:citation http://purl.org/spar/cito/cites" href="https://comunica.github.io/Article-ISWC2018-Resource/">Comunica</a> <span class="references">[<a href="#ref-24">24</a>]</span>
 and evaluate it against existing RDF social media benchmark <span class="references">[<a href="#ref-25">25</a>]</span>
 and compare the result with LTQP and GLTQP approaches.
 Like presented at the <a href="#proposal">“Proposal” section</a> the collaboration can be divided into two, hence we formulate two 
 relatively independent problems; the search domain division and the caching (and communication).</p>
 
       <h3 id="search-domain-division-problem">Search domain division problem</h3>
+
+      <p><span class="comment" data-author="RT">Repeat first briefly why dividing the search space is needed.</span></p>
+
       <p>There are multiple strategies (combinable) that could be employed to divide the domain.
 It has to be considered first that we don’t know in advance the limit of the domain;
 hence we cannot divide it before the execution of the query.
+<span class="comment" data-author="RT">Can we take a more structured approach at listing these strategies? Perhaps as a list with strategy names and descriptions.</span>
 A strategy can be to <strong>collect the seed URLs and to divide them between the query engines</strong>,
 the limitation is that we don’t consider if the data source discoverable inside the seed URLs overlaps, also if the list of seeds URL is very short, then the distribution will be minimal.
-A variance of that strategy would be to distribute the link queue when it is big enough among the peers.
-Another strategy would be to <strong>communicate between the engines, the link queue and/or the link visited</strong>.
+A variance of that strategy would be to distribute the link queue when it is big enough among the peers.<span class="comment" data-author="RT">Isn’t the previous approach then just a special case of this approach? Maybe we can explain it as such.</span>
+Another strategy would be to <strong>communicate between the engines, the link queue and/or the link visited</strong>. <span class="comment" data-author="RT">I don’t see the difference with the previous one.</span>
 The problem with that approach is the increase in execution time due to the communication of the engine and we still
 need a mechanism to react on the detection of the overlap and to redistribute the domain.
 A different strategy that I propose is to <strong>set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</strong>, the limitation of that strategy is that the criteria might have to be 
@@ -313,17 +352,23 @@ we might also lose result if the criteriums are too strict.
 A last strategy would be <strong>to have a global link queue that all the participating engine maintains together</strong>.
 The problem with this strategy is the communication necessary and the potential locking mechanism to avoid inconsistencies.
 A variance of this strategy would be to let one peer do the joins and the other peers doing the traversal and
-the execution of the query.</p>
+the execution of the query.
+<span class="comment" data-author="RT">It feels to me that all of the above approaches in essence dividing the link queue among peers, but have different methods for achieving it. If that is correct, I would explain it as such. You could even consider the different division methods on an axis, ranging from not requiring any inter-peer communication, to requiring a lot of inter-peer communication.</span></p>
 
       <p>Using a benchmark, I could evaluate those methods alone and in combination to measure, while making the <strong>Number of engine</strong> vary.
 I propose to measure those metrics:
+<span class="comment" data-author="RT">No need to put everything here in bold</span>
 <strong>Result completeness</strong>, 
 <strong>Ability to access isolated documents (we can evaluate their isolation by the degree of the node (only the edge that end in the node) and the number of paths that can lead to it)</strong>,
 <strong>Number of requests (of a single engine and globally)</strong>, 
 <strong>Overlapping of the search space exploration of the Query engine</strong>,
- <strong>Query execution time</strong>, <strong>Rate of production of results</strong>, <strong>Delay between the first result and the start of the execution</strong>.</p>
+ <strong>Query execution time</strong>, <strong>Rate of production of results</strong>, <strong>Delay between the first result and the start of the execution</strong>.
+ <span class="comment" data-author="RT">The presentation of these metrics is very messy. Can we explain them in a list, with a proper description for each metric?</span></p>
 
-      <h3 id="caching-and-communication--problem">Caching and Communication  problem</h3>
+      <h3 id="caching-and-communication-problem">Caching and Communication problem</h3>
+
+      <p><span class="comment" data-author="RT">Below, you start by diving into the technical details of structured/unstructured networks. Let’s start first by repeating the problem you want to solve, and how caching can solve it. Then, talk about the methods for achieving this cache.</span></p>
+
       <p>Given that in our collaborative context, we want all the engines implicated in the query 
 to communicate with each other, for the collection of results and the redivision of the domain,
 a <strong>unstructured network</strong> might be the best choice as the lookup for 
@@ -344,7 +389,8 @@ The information that could be cached is the <strong>data source URLs that are co
 the <strong>joint</strong> given triple patterns to avoid their calculations or the <strong>triple patterns</strong>.</p>
 
       <p>Using a benchmark, I could evaluate the same metric as in the search domain problem with the addition of: <strong>Communication time</strong> and <strong>Cache miss and rates of use of the cache</strong>.
-And while making the <strong>Number of engine</strong> vary.</p>
+And while making the <strong>Number of engine</strong> vary.
+<span class="comment" data-author="RT">I would use a more structured approach here for presenting the metrics.</span></p>
     </div>
 </section>
  <!-- 1 -->
@@ -359,7 +405,9 @@ This paradigm makes query engines collaborate together in the exploration
 of the data sources and the sharing of results via a P2P cache.</p>
 
       <p>There are other questions that have not been explored in this proposal;
-How to encourage reciprocity in the network, How to during the execution add new collaborative query engine and how to adapt the execution if a query engine is down.</p>
+How to encourage <span class="comment" data-author="RT">enforce?</span> reciprocity in the network <span class="comment" data-author="RT">This sounds very important though; can you include it in your work?</span>, How to during the execution add new collaborative query engine and how to adapt the execution if a query engine is down. <span class="comment" data-author="RT">Can you refer to “adaptive query processing” here?</span></p>
+
+      <p><span class="comment" data-author="RT">This section summarizes your paper, and future work, but it is missing the actual conclusion :-) It’s important to talk about the potential impact of your work (short and long-term) (within research, and beyond), and repeat why it is important.</span></p>
 
     </div>
 </section>
