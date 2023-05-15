@@ -4,6 +4,10 @@
 ### Link Traversal Query Processing
 {:#litterature_review_LTQP} 
 
+<span class="comment" data-author="RT">
+    Important here to contrast LTQP with traditional (centralized) query processing.
+</span>
+
 LTQP is a technique that consists of [recursively lookup URL from dereferenced named nodes acquired by the query engine in order to explore 
 the surrounding information around the original response](cite:cites Hartig2016) using the follow-your-nose principle of Linked Data.
 The query first start with a small set of URI called [seed URIs](cite:cites Hartig2013AnOO) that form the initial data source for the execution.
@@ -22,6 +26,9 @@ such as structural information like in the case of Solid or information provided
 [Solid type index](https://solid.github.io/type-indexes/), [shape trees](https://shapetrees.org/TR/specification/) and [Shape constraint languages (SHACL)](https://www.w3.org/TR/shacl/).
 
 ### Collaborative SPARQL Querying
+
+<span class="comment" data-author="RT">Let's start first by explaining collaborative sparql querying on a high-level.</span>
+
 [Snob](cite:cites grall:hal-01805154) propose a mechanism for collaborative query based
 on the continuous execution of queries over browsers data sources that are rotating in a network of browser. 
 The browsers form an unstructured peer-to-peer (P2P) network where each peer has
@@ -47,6 +54,8 @@ for example [](cite:cites jin2006).
 
 
 ### P2P caching in the context of the web
+
+<span class="comment" data-author="RT">Make sure to explain what P2P stands for.</span>
 
 [Squirrel](cite:cites Iyer2002SquirrelAD) proposed a P2P caching mechanism, where the URLs are mapped to keys inside a distributed hash table (DHT).
 If the user does not have in its local cache the content desired, it first makes a query to the P2P network before making the request to the
