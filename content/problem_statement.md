@@ -53,10 +53,6 @@ so it is a form of social contract.
 
 Building on the proposal and of the related works of the [](#litterature_review) 
 research questions and hypotheses are formalized, to guide the study.
-
-
-
-
 <ul>
 <li><span class="question_hypothesis">Question 1</span>: Can we achieve better query result completeness (and capture isoled data sources), 
 better query execution time in the context of LTQP by making multiple SPARQL query engine collaborate?</li>

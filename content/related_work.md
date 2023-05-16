@@ -13,11 +13,11 @@ The engine then resolves the URI of the named node it encounters in order to exp
 Link traversal has great exploratory potential. In its traditional form, it consists of following, more or less naively, the links inside the response payload
 and dereferencing them to get new data sources. 
 However, Link Traversal comes with some difficulties, such as the [open-endedness of the web](cite:cites Umbrich2014LinkTQ)
-and query planning (cite:cites Hartig2014LinkedDQ). 
+and query planning [](cite:cites hartig2014LinkedDQ). 
 In most cases, the encountered data sources do not have a strict structure that can be leveraged to speed up the execution.
 Nonetheless, reachability criteria can be defined to restrict the links that are followed based on conditions.
 Classical examples are `Call`, which follows every link, and `Cmatch`, which 
-follows links that match the query pattern (cite:cites Hartig2012).
+follows links that match the query pattern [](cite:cites hartig2012).
 
 
 ### Collaborative SPARQL Querying
