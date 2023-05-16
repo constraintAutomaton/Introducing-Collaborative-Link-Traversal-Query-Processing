@@ -1,14 +1,16 @@
 ## Introduction
 {:#introduction}
 
-Decentralized web initiatives gives users more control over their data.
+Decentralized web initiatives <span class="comment spelling" data-author="RT">gives</span> users more control over their data.
 It can be formalized in a concept called data soverignty. [](cite:cites verstraete2022solid) defined this concept as 
 "the power an individual has over their data.[...][It is] the self-determination of 
 individuals and organizations with regard to the use of their data "[](cite:cites verstraete2022solid)
 and a state of being in control of our data is obtained
 "[w]hen an individual or an organization [...]
 can choose where [its] data is stored and who is granted access to it."[](cite:cites verstraete2022solid)
-In the context of this PhD program, I propose to investigate a more socialistic and decomodificalistic approach to decentralized web environments 
+<span class="comment" data-author="RT">The quote below doesn't read fluently. Can you say it in your own words instead? Alternatively, use a full quote without [].</span>
+
+In the context of this PhD program, I propose to investigate a more socialistic and <span class="comment spelling" data-author="RT">decomodificalistic</span> approach to decentralized web environments 
 in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013) current approach.
 By this shift, I attempt to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
 to the right of the users to generate collectively the computation power necessary
@@ -16,7 +18,7 @@ to make a social apps running by distributing between them the computational loa
 For that, I focus on querying as in social applications, the request of information, the discovery of it
 and its propagation are the main functionality of those apps,
 are computationally demanding 
-and are the mechanism by which users can become the product of those apps [](cite:cites Terranova2000FreeLP, Sevignani2013, Smyrnaios2018).
+and are the mechanism by which users can become the product of those apps [](cite:cites Terranova2000FreeLP, Sevignani2013, Smyrnaios2018). <span class="comment" data-author="RT">This sentence is difficult to read</span>
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can lend some of 
 their computational power when querying to increase the query result completeness and 

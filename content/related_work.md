@@ -16,7 +16,7 @@ However, Link Traversal comes with some difficulties, such as the [open-endednes
 and query planning [](cite:cites Hartig2014LinkedDQ). 
 In most cases, the encountered data sources do not have a strict structure that can be leveraged to speed up the execution.
 Nonetheless, reachability criteria can be defined to restrict the links that are followed based on conditions.
-Classical examples are `Call`, which follows every link, and `Cmatch`, which 
+Classical examples are `cAll`, which follows every link, and `cMatch`, which 
 follows links that match the query pattern [](cite:cites hartig2012).
 
 
