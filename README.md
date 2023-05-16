@@ -13,9 +13,7 @@ An influential example of web discovery techniques is Link Traversal Query Proce
 a SPARQL query paradigm that aims at exploring the web to answer queries by following the links provided by the document,
 hence exploiting the connectivity of data sources.
 In my doctoral research, I introduce Collaborative Link Data Query Processing, a paradigm where multiple query engines collaborate to improve query completeness and execution time in LTQP.
-I divided the cooperation of query engines into two parts:
-1) To improve the exploration of the search space, hence increasing the completeness of results, and
-2) To reduce the potentially long query execution time by caching results.
+I divided the cooperation of query engines into two parts: 1) To improve the exploration of the search space, hence increasing the completeness of results, and 2) To reduce the potentially long query execution time by caching results.
 To validate this proposal, I will develop a prototype and evaluate it using existing benchmarks.
 From my review of the literature, there exist contributions pertaining to collaborative SPARQL query and RDF collaborative caching,
 but there is none in the context of LTQP and of structured decentralized environment, hence making this contribution novel.
