@@ -6,7 +6,7 @@ Data sovereignty focuses on privacy and provider choice, but lacks emphasis on e
 <!-- Task -->
 A crucial aspect of web social applications is the query of information and its discovery and linked data can be used to help in
 their decentralization effort.
-Linked data describes information using IRI and URL.
+Linked data describes information using IRIs and URLs.
 The data source behind those URLs gives context of the information described, making the data richer, 
 more easily reusable, and more interoperable than other publication standards.
 An influential example of web discovery techniques is Link Traversal Query Processing (LTQP),
