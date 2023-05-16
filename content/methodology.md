@@ -80,5 +80,5 @@ depending on the data source and the type of queries.
 Building on the evaluation method of the first problem <span class="comment rephrase" data-author="RT">I add those metric</span>:
 <ul>
 <li>Access time: The time it take to retrieve information from the cache</li>
-<li>Cache miss and rates of use of the cache <span class="comment" data-author="RT">don't fully understand this. Do you mean cache hit-rate?</li>
+<li>Cache miss and rates of use of the cache <span class="comment" data-author="RT">don't fully understand this. Do you mean cache hit-rate?</span></li>
 </ul>
