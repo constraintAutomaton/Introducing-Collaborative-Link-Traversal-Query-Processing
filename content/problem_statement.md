@@ -7,18 +7,14 @@
 This paper aims to create a SPARQL query paradigm called CLQTP.
 It consists of using multiple SPARQL query engines with the aim of improving the completeness of query
 by exploring more of the search space and reducing the query execution time through the means of exchange of results.
-Both problems have been engaged in the academic literature, but not in the case of LTQP and  particularly in LTQP in a structured environment from my knowledge and considering distributed SPARQL querying [](cite:cites 8029358).
+Both problems have been engaged in the academic literature, but not in the case of LTQP from my knowledge and considering the distributed SPARQL querying domain [](cite:cites 8029358).
 In this PhD project, I will apply this query paradigm in the context of Solid, 
 which implies that there is a strong consideration for privacy during querying [](cite:cites Taelman2020)
-and a structured environment that can be leveraged to speed up the query [](cite:cites taelman2023, verborgh2020).
-
-The first problem I try to solve is to increase the query completeness, particularly in the case of LTQP.
-To do so, CLTQP attempts to explore more of the search space by having multiple query engines engaging in a 
-non-overlapping partition of the huge or pseudo-infinite search domain and executing the query.
+and a structured environment that can be leveraged to speed up the query [](cite:cites taelman2023).
+The first problem I try to solve is to increase the query completeness.
+To do so, CLTQP attempts to explore more of the search space by having multiple query engines engaging in  
+non-overlapping partitions of the huge or pseudo-infinite search domain and executing the query.
 Hence, in the same amount of time, having more triple process compared to an approach with one engine.
-The engines can either be independent and execute the whole query process themselves with little synchronization 
-or they can in the other extreme specialize themselves and distribute the role of query processing. For example,
-engines can specialize in the exploration of the search space and others on the joint of triples [](cite:cites 8029358).
 An important property emerging from the traversal of links is a structural proximity bias of the query results, which
 means that from the link traversal method, some data sources have a tendency to be discovered more easily regardless of their potential
 influence on the query completeness and the interpretation of the query results.
@@ -28,18 +24,15 @@ Hence, a data source that takes more steps to be accessed, in regards to the see
 Corollary, there is a bias based on the popularity of the data source, as it is easier to find a data source that is
 referenced more times and in a wide range of data source types (by data source types, I mean data sources that focus on specific topics)
 than data sources having the reverse properties.
-Hence by exploring more of the search space or even by making some engine having different lookup 
-policies to answer a query there is more chance to discover those data sources.
-
+Hence by exploring more of the search space there is more chance to discover those data sources.
 The second problem is to reduce the execution time, and we utilize the mean of P2P caching.
 [](cite:cites Hartig2011) demonstrates that caching in LTQP can help improve the completeness of results,
 but in some conditions, the query execution time can be increased.
 In the [literature](#literature_review_P2P_caching), there are contributions on the topic of P2P caching,
 but from my knowledge, none engage with the problem of LTQP and its particularities,
-such as long execution time, exploration of multiple sources and difficulty for completeness 
-(can we start from cached results and continue the query from there), which may change the conclusion of the caching and network strategy.
+such as long execution time, exploration of multiple sources and difficulty for completeness,
+which may change the conclusion of the caching and network strategy.
 Additionally, in environments like Solid, privacy is an additional consideration for caching [](cite:cites 10.1145/2413176.2413215).
-
 It has to be considered that a mechanism to incentivize reciprocity is necessary to ensure fairness and the good functioning of the system.
 It can be implemented in multiple ways, for example, as an obligation to participate in a ratio of queries,
 a number of triples or links to provide, and so on.

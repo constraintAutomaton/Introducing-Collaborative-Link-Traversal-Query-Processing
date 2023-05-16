@@ -8,7 +8,6 @@ individuals and organizations with regard to the use of their data "[](cite:cite
 and a state of being in control of our data is obtained
 "[w]hen an individual or an organization [...]
 can choose where [its] data is stored and who is granted access to it."[](cite:cites verstraete2022solid)
-
 In the context of this PhD program, I propose to investigate a more socialistic and decomodificalistic approach to decentralized web environments 
 in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013) current approach.
 By this shift, I attempt to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
@@ -26,9 +25,6 @@ so in some ways acting as one powerful querying engine.
 With this collective participation, it would be possible at little cost to provide a democratic economic base from which
 users could have the power to choose features for social applications that cater to their needs and from which
 the monetary barrier over who can start a social application will be reduced.
-
-
-
 This paper is divided as follows, first,
 [related work](#litterature_review) is presented,
 after the [research proposal is made](#proposal),

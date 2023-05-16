@@ -25,8 +25,8 @@ The limitation of this strategy is that we don't consider if the data source dis
 The advantage of this strategy is, like the first one, the communication between engines is low.
 However, unlike the previous one, there is a mechanism to avoid redundant calculations.
 By doing so, the query engine has a lookup policy that restricts links visited by others.
-For example, the engine might be responsible for a specific semantic section of the domain. 
-If the data is geospatial, the criteria could be in relation to the links associated with cities.
+For example, the engine might be responsible for a specific semantic section of the domain, 
+e.g.: cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
 and the type of dataset from which we expect to find results.
 Additionally, we might also lose results if the criteria are too strict.
@@ -36,7 +36,7 @@ Additionally, we might also lose results if the criteria are too strict.
 The advantage of this strategy is that it's a simple way to avoid redundant calculations as all engines have the same link queue.
 Every engine can then execute the query on their own with no consideration for redundancy.
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
-the execution of the query.
+the execution of the query as inspired by the "slave-master" paradigm of [](cite:cites 8029358).
 The problem with this strategy is the necessary communication and the potential locking mechanism to avoid inconsistencies.
 
 </li>
@@ -50,7 +50,7 @@ I propose to measure the following metrics:
 
 <ul>
 <li>Result completeness: The ratio of the answers found in relation to the possible answers</li>
-<li>Query execution time</li>
+<li>Execution time; ratio between the communication and the query execution time</li>
 <li>Ratio between the execution time and the communication time</li>
 <li>Ability to access isolated documents: An analysis of the degree of the data source (considered as edges of a graph) queried</li>
 <li>Number of requests (of a single engine and globally)</li>
@@ -72,7 +72,6 @@ The information that could be cached is the *data source URLs that are contribut
 the *joint* given triple patterns to avoid their calculations or the *triple patterns*.
 The cache could also be considered as a checkpoint for a longer execution or as a map of the data sources to explore
 depending on the data source and the type of queries.
-
 Building on the evaluation method of the first problem I add those metric:
 <ul>
 <li>Access time: The time it take to retrieve information from the cache</li>

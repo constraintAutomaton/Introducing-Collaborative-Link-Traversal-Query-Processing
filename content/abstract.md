@@ -1,10 +1,11 @@
 ## Abstract
 <!-- Context -->
-Decentralized web environments aim to give users data autonomy and control.
+Decentralized web environments aim to give users data autonomy and control in other words data sovereignty.
 <!-- Need -->
 Data sovereignty focuses on privacy and provider choice, but lacks emphasis on empowering users to create and manage applications without significant resources.
 <!-- Task -->
-A crucial aspect of web social applications is the query of information and its discovery.
+A crucial aspect of web social applications is the query of information and its discovery and linked data can be used to help in
+their decentralization effort.
 Linked data describes information using IRI and URL.
 The data source behind those URLs gives context of the information described, making the data richer, 
 more easily reusable, and more interoperable than other publication standards.
