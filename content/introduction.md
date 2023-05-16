@@ -27,7 +27,7 @@ users could have the power to choose features for social applications that cater
 the monetary barrier over who can start a social application will be reduced.
 This paper is divided as follows, first,
 [related work](#litterature_review) is presented,
-after the [research proposal is made](#proposal),
+after the [research proposal](#proposal) is made,
 then the [methodology](#evaluation) is explained and there is a short [conclusion](#conclusion).
 
 
