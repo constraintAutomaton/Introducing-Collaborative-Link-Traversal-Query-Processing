@@ -19,7 +19,7 @@ Hence, in the same amount of time, having more triple process compared to an app
 The engines can either be independent and execute the whole query process themselves with little synchronization 
 or they can in the other extreme specialize themselves and distribute the role of query processing. For example,
 engines can specialize in the exploration of the search space and others on the joint of triples [](cite:cites 8029358).
-An important property emerging from the traversal of links is a structural bias of the query results, which
+An important property emerging from the traversal of links is a structural proximity bias of the query results, which
 means that from the link traversal method, some data sources have a tendency to be discovered more easily regardless of their potential
 influence on the query completeness and the interpretation of the query results.
 The bias has two interconnected sources: a sensitivity to the initial conditions induced by the seed URLs and the structure of the web,
