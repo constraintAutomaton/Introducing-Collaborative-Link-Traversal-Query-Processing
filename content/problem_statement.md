@@ -54,21 +54,21 @@ so it is a form of social contract.
 Building on the proposal and of the related works of the [](#litterature_review) 
 research questions and hypotheses are formalized, to guide the study.
 <ul>
-<li><span class="question_hypothesis">Question 1</span>: Can we achieve better query result completeness (and capture isoled data sources), 
-better query execution time in the context of LTQP by making multiple SPARQL query engine collaborate?</li>
+<li><span class="question_hypothesis">Question 1</span>: Can we achieve better query result completeness (and capture <span class="comment spelling" data-author="RT">isoled</span> data sources) <span class="comment" data-author="RT">What do you mean by this capture?</span>
+and better query execution time in the context of LTQP by making multiple SPARQL query engine collaborate?</li>
 
-<li><span class="question_hypothesis">Question 2</span>: How can we minimize the overlapping of data sources exploration during CLTQP to avoid useless repeated calculation?</li>
+<li><span class="question_hypothesis">Question 2</span>: How can we minimize the overlapping of data sources exploration during CLTQP to avoid useless repeated calculation?<span class="comment" data-author="RT">What do you mean by calculation? Is it query processing?</span></li>
 
 <li><span class="question_hypothesis">Question 3</span>: How can we reduce query execution time by utilizing P2P caching in the context of CLTQP?</li>
 
 <li><span class="question_hypothesis">Hypothesis 1</span>: It is possible to partition the search space in the context of CLTQP,
-in a way that each engine can perform their query without the synchronization dominating the execution time.</li>
+in a way that each engine can perform their query without the synchronization dominating the execution time.<span class="comment" data-author="RT">Can you make this question more interesting? Because if we have an algorithm that doesn't do sync, then the answer is already "yes".</span></li>
 
 
-<li><span class="question_hypothesis">Hypothesis 2</span>: We can exploit the structural aspect of Solid to reduce the query execution time in CLTQP.
+<li><span class="question_hypothesis">Hypothesis 2</span>: We can exploit the structural aspect of Solid to reduce the query execution time in CLTQP.<span class="comment" data-author="RT">By how much do you hypothesize to reduce exec time with? 50%? 1%? 99%? By an order relative to something else?</span>
 </li>
 
-<li><span class="question_hypothesis">Hypothesis 3</span>: Given a large enough search space, as in the number of data sources is such as the execution time is not dominated by the communication time, then 
+<li><span class="question_hypothesis">Hypothesis 3</span>: Given a large enough search space, as in the number of data sources is such as the execution time is not dominated by the communication time<span class="comment" data-author="RT">I don't understand this second part of the sentence</span>, then 
 the more engines collaborating, the lower average execution time and the higher the number of data sources explored.</li>
 </ul>
 Question 1 is the main question of my work. It is to determine if CLTQP is a useful query paradigm.
