@@ -56,9 +56,7 @@ research questions and hypotheses are formalized, to guide the study.
 
 
 
-<div class="sidebysidecontainer">
 
-<div>
 <ul>
 <li><span class="question_hypothesis">Question 1</span>: Can we achieve better query result completeness (and capture isoled data sources), 
 better query execution time in the context of LTQP by making multiple SPARQL query engine collaborate?</li>
@@ -67,12 +65,6 @@ better query execution time in the context of LTQP by making multiple SPARQL que
 
 <li><span class="question_hypothesis">Question 3</span>: How can we reduce query execution time by utilizing P2P caching in the context of CLTQP?</li>
 
-</ul>
-</div>
- 
-
-<div>
-<ul>
 <li><span class="question_hypothesis">Hypothesis 1</span>: It is possible to partition the search space in the context of CLTQP,
 in a way that each engine can perform their query without the synchronization dominating the execution time.</li>
 
@@ -82,12 +74,7 @@ in a way that each engine can perform their query without the synchronization do
 
 <li><span class="question_hypothesis">Hypothesis 3</span>: Given a large enough search space, as in the number of data sources is such as the execution time is not dominated by the communication time, then 
 the more engines collaborating, the lower average execution time and the higher the number of data sources explored.</li>
-
 </ul>
-</div>
-
-</div>
-
 Question 1 is the main question of my work. It is to determine if CLTQP is a useful query paradigm.
 Questions 2 and 3 aim at determining the efficiency of the specific method that will be employed to solve
 the two main problems that I try to resolve. Those questions can be extended to consider the number
