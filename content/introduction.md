@@ -1,32 +1,37 @@
 ## Introduction
 {:#introduction}
 
-Decentralized web initiatives <span class="comment spelling" data-author="RT">gives</span> users more control over their data.
-It can be formalized in a concept called data soverignty. [](cite:cites verstraete2022solid) defined this concept as 
-"the power an individual has over their data.[...][It is] the self-determination of 
-individuals and organizations with regard to the use of their data "[](cite:cites verstraete2022solid)
-and a state of being in control of our data is obtained
-"[w]hen an individual or an organization [...]
-can choose where [its] data is stored and who is granted access to it."[](cite:cites verstraete2022solid)
-<span class="comment" data-author="RT">The quote below doesn't read fluently. Can you say it in your own words instead? Alternatively, use a full quote without [].</span>
-
-In the context of this PhD program, I propose to investigate a more socialistic and <span class="comment spelling" data-author="RT">decomodificalistic</span> approach to decentralized web environments 
-in contrast to the more corporative [](cite:cites Rizwan2021) and capitalistic [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013) current approach.
-By this shift, I attempt to move the definition of power and control, from a more consumer choice, the right to choose who will use my data,
-to the right of the users to generate collectively the computation power necessary
-to make a social apps running by distributing between them the computational load.
-For that, I focus on querying as in social applications, the request of information, the discovery of it
-and its propagation are the main functionality of those apps,
-are computationally demanding 
-and are the mechanism by which users can become the product of those apps [](cite:cites Terranova2000FreeLP, Sevignani2013, Smyrnaios2018). <span class="comment" data-author="RT">This sentence is difficult to read</span>
+Decentralized web initiatives give users more control over their data.
+It can be formalized in a concept called data sovereignty. [](cite:cites verstraete2022solid) defined this concept as 
+"the power an individual has over their data."[](cite:cites verstraete2022solid).
+It can also be interpreted as "the self-determination of 
+individuals and organizations concerning to the use of their data "[](cite:cites verstraete2022solid).
+This means that entities (person and legal)
+"can choose where [their] data is stored and who is granted access to it."[](cite:cites verstraete2022solid)
+In this PhD program, I propose to explore a more socialistic and decommodification-oriented approach
+to decentralized web environments in contrast to the prevailing  corporative [](cite:cites Rizwan2021)
+and capitalistic [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013) current approaches.
+Through this shift, I attempt to move the definition of power and control, from a more consumer choice,
+the right to choose who will use my data,
+to one that include the right of the users as a collective to make use of their data without relying on
+a third-party distributor with substantial computational power.
+Hence, in regard to the usage, not giving their sovereignty,
+to the owner of the computational unit,
+ownership that enables them to make decisions that are not in line with the desire or interest of the users [](cite:cites Sevignani2013)
+and allow them to use the data of the user as the product to sell in their service even when the data
+is anonymous [](cite:cites Terranova2000FreeLP, Sevignani2013, Smyrnaios2018).
+For that purpose, my emphasis is on querying because in the case of social applications, the request for information, the discovery of it
+and its propagation are the core functionalities performed by those applications.
+As the number of users increases and the application becomes more complex, this imposes a significant increase in computational power.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
-a Link Traversal Query Processing (LTQP) paradigm where every user can lend some of 
-their computational power when querying to increase the query result completeness and 
-reduce the query execution time of all the other users in a collaborative way,
-so in some ways acting as one powerful querying engine.
-With this collective participation, it would be possible at little cost to provide a democratic economic base from which
-users could have the power to choose features for social applications that cater to their needs and from which
-the monetary barrier over who can start a social application will be reduced.
+a Link Traversal Query Processing (LTQP) paradigm where every user can share
+their computational power when querying thereby increasing the query result completeness
+and reducing the query execution time of all the other users. 
+In essence, making the engines act as one powerful unit. 
+With this collective participation, 
+it would be possible at little cost to provide a more democratic economic base from which
+users could have more power to choose features for social applications that cater to their
+desire and interest and start social applications with a lesser monetary barrier.
 This paper is divided as follows, first,
 [related work](#litterature_review) is presented,
 after the [research proposal](#proposal) is made,
