@@ -6,27 +6,27 @@ It can be formalized in a concept called data sovereignty. [](cite:cites verstra
 "the power an individual has over their data."[](cite:cites verstraete2022solid).
 It can also be interpreted as "the self-determination of 
 individuals and organizations concerning to the use of their data "[](cite:cites verstraete2022solid).
-This means that entities (person and legal)
+This means that individual and legal entities
 "can choose where [their] data is stored and who is granted access to it."[](cite:cites verstraete2022solid)
 In this PhD program, I attempt to move the definition of power and control,
-in the context of decentralized web environment, from a more consumer choice 
+in the context of decentralized web environments, from a more consumer choice 
 [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013),
 the right to choose who will use my data,
-to one that include the right of the users as a collective to make use of their data without relying on
+to a definition that includes the right of the users as a collective to make use of their data without relying on
 a third-party distributor with substantial computational power.
-Hence, in regard to the usage, not giving their sovereignty,
-to the owner of the computational unit,
-ownership that enables them to make decisions that are not in line with the desire or interest of the users [](cite:cites Sevignani2013)
-and allow them to use the data of the user as the product to sell in their service even when the data
-is anonymous [](cite:cites Terranova2000FreeLP, Sevignani2013).
-For that purpose, my emphasis is on querying because, in the case of social applications, the request for information, 
-the discovery of it while taking into account complex concepts such as serendipity [](cite:cites Smets2022SerendipityIR)
-and its propagation are the core functionalities performed by those applications.
+In the context of data usage, ownership, and control are vested in the owner of the computational unit.
+This ownership empowers them to make decisions that may diverge from the desires or interests of the users [](cite:cites Sevignani2013).
+Additionally, it facilitates the utilization of "users" as products to be sold or as an unpaid source of revenue,
+even when the data is anonymized [](cite:cites Terranova2000FreeLP, Sevignani2013).
+For the purpose of improving this sovereignty, my emphasis is on querying because, in the case of social applications, the request for information, 
+the discovery process,  particularly when considering complex concepts like serendipity [](cite:cites Smets2022SerendipityIR)
+and the propagation of information is the core functionalities performed by those applications.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
-their computational power when querying thereby increasing the query result completeness
-and reducing the query execution time of all the other users. 
-In essence, making the engines act as one powerful unit. 
+their computational power when querying. 
+This collaboration increases query result completeness 
+and reduces execution time for all users,
+in essence creating a unified and powerful engine. 
 With this collective participation, 
 it would be possible at little cost to provide a more democratic economic base from which
 users could have more power to choose features for social applications that cater to their

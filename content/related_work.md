@@ -16,9 +16,8 @@ Link traversal has great exploratory potential.
 In its traditional form, it consists in following, more or less naively,
 the links inside the response payload and dereferencing them to get new data sources. 
 However, Link Traversal comes with some difficulties,
-such as the open-endedness of the weband query planning [](cite:cites Hartig2014LinkedDQ). 
-In most cases, encountered data sources do not have a strict structure that can be leveraged to speed up the execution.
-Nonetheless, reachability criteria can be defined to restrict the links that are followed based on conditions.
+such as the open-endedness of the web and query planning [](cite:cites Hartig2014LinkedDQ). 
+Reachability criteria can be defined to restrict the links that are followed based on conditions.
 Classical examples are `cAll`, which follows every link, and `cMatch`, which follows links that match the query pattern [](cite:cites hartig2012).
 
 
@@ -30,7 +29,7 @@ diminishing the computation load of the execution or the discovery of data sourc
 on the continuous execution of queries over rotating browser data sources. 
 The browsers form an unstructured peer-to-peer (P2P) network where each peer has
 a random and a profile-based (browsers with similar profiles execute similar queries) partial view of the network.
-The browsers can share their intermediary results, and at specific intervals,
+The browsers can share their intermediary results and at specific intervals,
 the peers are randomly shuffled by asking the peers that a browser knows for other peers.
 With this technique,
 it becomes possible to enhance the completeness of query results over time without the need to query every individual data source.
@@ -40,7 +39,7 @@ A community, in the ColChain context, is a set of
 "nodes that participate in and observe [each other] and the fragments published [between them]" [](cite:cites Aebeloe2021).
 So the division of the network is made intentionally by the users.
 When querying the SPARQL query engine, it will look at its own data sources, then the data sources of the communities it knows.
-To discover new communities, the engine inquire peers to identify unknown communities.
+To discover new communities, the engine inquires peers to identify unknown communities.
 The collaborative aspect lies in the partition of a "global" knowledge graph into intentional semantic units and in the
 maintenance and particularly update of the collective data sources, which is an important contribution of ColChain but is not related to the aim of my research.
 Other academic contributions have also aimed to leverage the social links between data sources to diminish the query execution time by not flooding the network when querying, such as in
@@ -70,5 +69,5 @@ the super peer finds the content requested by the client.
 [Behave](cite:cites Frey2014) proposed another paradigm instead of using a structured network with a potentially slow DHT,
 it relies on an unstructured network where each peer has a partial view of the whole web.
 Each peer's view of the network is partially random and partially based on the websites visited to create a "behavioral locality."
-It uses a gossip protocol, at certain times the peer exchange randomly the node they know to change its view on the network.
+It uses a gossip protocol, at certain times the peers exchange randomly the nodes they know to change their view on the network.
 [CyCLaDEs](cite:cites Folz2016) adapted the concept of Behave for the use case of SPARQL query of RDF documents.

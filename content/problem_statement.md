@@ -20,7 +20,7 @@ means that from the link traversal method, some data sources tend to be discover
 influence on the query completeness and the interpretation of the query results.
 The bias has two interconnected sources: a sensitivity to the initial conditions induced by the seed URLs and the structure of the web,
 which is not a fully connected graph.
-Hence, a data source that takes more steps to be accessed, in regards to the seed URLs, will be more difficult to discover.
+Hence, a data source that takes more steps to be accessed, in regards to the seed URLs will be more difficult to discover.
 Corollary, there is a bias based on the popularity of the data source, as it is easier to find a data source that is
 referenced more times and in a wide range of data source types (by data source types, I mean data sources that focus on specific topics)
 than data sources having the reverse properties.
@@ -30,7 +30,7 @@ The second problem is to reduce the execution time, and we explore the mean of P
 but in some conditions, the query execution time can be increased.
 In the [literature](#literature_review_P2P_caching), there are contributions on the topic of P2P caching,
 but from my knowledge, none engage with the problem of LTQP and its particularities,
-such as long execution time, exploration of multiple sources, and difficulty for completeness,
+such as long execution time, exploration of multiple sources, and difficulty in attaining completeness,
 which may change the conclusion of the caching and network strategy.
 Additionally, in environments like Solid, privacy is an additional consideration for caching [](cite:cites 10.1145/2413176.2413215).
 It has to be considered that a mechanism to incentivize reciprocity is necessary to ensure fairness and the good functioning of the system.
@@ -44,7 +44,7 @@ so it is a form of social contract.
 ### Research question and Hypotheses
 {:#research_question}
 
-Building on the proposal and the related works of the [](#litterature_review) 
+Building on the proposal and the related works of [](#litterature_review) 
 research questions and hypotheses are formalized to guide the study.
 <ul>
 <li><span class="question_hypothesis">Question 1</span>: Can we achieve better query result completeness (and access isolated data sources) 

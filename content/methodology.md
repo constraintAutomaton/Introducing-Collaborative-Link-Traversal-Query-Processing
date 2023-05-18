@@ -16,7 +16,7 @@ so we cannot in advance divide the search space.
 The advantage of this strategy is the communication between the engine is minimal,
 at the start or at a moment where we have a large number of URLs we let the engine execute the query on their own and at
 the stopping condition, the engine share the results.
-The limitation of this strategy is that we don't consider if the data source discoverable inside the seed URLs overlaps.
+The limitation of this strategy is that we don't consider if the data sources discoverable inside the seed URLs overlaps.
 
 - <span class="question_hypothesis">Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</span>:
 The advantage of this strategy is, like the first one, the communication between engines is low.
@@ -57,7 +57,7 @@ I propose to measure the following metrics:
 
 The problem is to reduce the query execution time by using already computed results from a shared cache.
 The information cached could be the *data source URLs that are contributing to a query*,
-the *joint* given triple patterns to avoid their calculations, or the *triple patterns*.
+the *joint*, given some triple patterns to avoid their calculations or the *triple patterns*.
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.
 I propose to investigate those two strategies:
 
@@ -73,7 +73,7 @@ it does not consider that engine that has not collaborated might still have resu
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
 The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user [](cite:cites Grall2020),
-but there are strategies with the combination of a gossip protocol and keep privacy [](cite:cites 10.1145/2413176.2413215).
+but there are strategies with the combination of a gossip protocol to keep privacy [](cite:cites 10.1145/2413176.2413215).
 Also, an alternative would be to not share private information.
 
 Building on the evaluation method of the first set of solutions, those metrics are added:

@@ -13,7 +13,7 @@ hence exploiting the connectivity of data sources.
 In my doctoral research, I introduce Collaborative Link Data Query Processing,
 a paradigm where multiple query engines collaborate to improve query completeness and execution time in LTQP.
 <!-- Findings -->
-I divided the research on cooperation of query engines into two parts:
+I divided the research on the cooperation of query engines into two parts:
 1) Improving the completeness of results, by exploring more of the search space,
 and 2) reducing the potentially long query execution time by caching results.
 <!-- Conclusion -->
