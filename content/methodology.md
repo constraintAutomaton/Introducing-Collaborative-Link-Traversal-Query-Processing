@@ -9,10 +9,8 @@ This implies two sets of potential solutions detailed below.
 
 The first problem I try to solve is to increase the query completeness;
 For that purpose we try to divide the search space among peers.
-It has to be considered first that we don't know in advance the shape of the domain,
-the topology of the part of the web to explore with the aims to answer the query;
-hence we cannot divide it before the execution of the query.
-I propose three strategies to divide the domain.
+It has to be considered first that we don't know in advance the topology of the domain,
+so we cannot in advance divide the search space.
 
 - <span class="question_hypothesis">Collect the seed URLs and to divide them between the query engines</span>: 
 The advantage of this strategy is the communication between the engine is minimal,
@@ -28,7 +26,6 @@ For example, the engine might be responsible for a specific semantic section of 
 e.g.: cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
 and the type of dataset from which we expect to find results.
-Additionally, we might also lose results if the criteria are too strict.
 
 - <span class="question_hypothesis">Use a global link queue shared between all the query engines</span>:
 The advantage of this strategy is that it's a simple way to avoid redundant calculations as all engines have the same link queue.
@@ -39,7 +36,7 @@ The problem with this strategy is the necessary communication and the potential 
 
 
 I am planning to build a prototype using the SPARQL meta query engine [Comunica](cite:cites taelman_iswc_resources_comunica_2018),
-because it already has LTQPs algorithms implemented and it is a highly extensible software build which 
+because it already has LTQPs algorithms implemented and it is a highly extensible software which 
 will facilitate the implementation of those algorithms.
 I will evaluate it against the Solid social media benchmark;
 [SolidBench](https://github.com/SolidBench/SolidBench.js) [](cite:cites taelman2023)
@@ -48,15 +45,13 @@ I will evaluate those methods while varying the number of engines
 collaborating by increasing the number until the performance stagnates or diminish.
 I propose to measure the following metrics:
 
-<ul>
-<li>Result accuracy: The F-score; a fraction indicating the correctness and completeness of results</li>
-<li>Query execution time: The total time it takes to complete a query</li>
-<li>The ratio between the execution time and the communication time between the engines</li>
+- Result accuracy: The F-score; a fraction indicating the correctness and completeness of results
+- Query execution time: The total time it takes to complete a query
+- The ratio between the execution time and the communication time between the engines
 <!-- Not sure yet how to do it-->
-<li>Ability to access isolated documents: Measured by analyzing the number of links leading to query-relevant data sources and evaluating their actual contribution</li>
-<li>Overlapping of the search space exploration of the Query engine: The number of times a triple and data source has been queried</li>
-<li>Query result arrival times: The time it takes for each triple from the beginning of the query to be obtained</li>
-</ul>
+- Ability to access isolated documents: Measured by analyzing the number of links leading to query-relevant data sources and evaluating their actual contribution
+- Overlapping of the search space exploration of the Query engine: The number of times a triple and data source has been queried
+- Query result arrival times: The time it takes for each triple from the beginning of the query to be obtained
 
 ### Caching problem
 
@@ -68,21 +63,18 @@ I propose to investigate those two strategies:
 
 - <span class="question_hypothesis">
 Use an unstructured network where the peers are clustered based on their behavior</span>: 
-This approach consists of grouping the engines based on similar behavioral characteristics 
-so that the lookup time to find information in the cache is constant and the peer known 
+The advantage of this strategy is that the lookup time to find information in the cache is constant and the peer known 
 has a high probability of possessing the knowledge desired. 
 The clustering can be based on the engine that has engaged in a query collaboration with the subject engine.
 The disadvantage of that method is that it relies on a type of self-organization of the network of engines,
 it does not consider that engine that has not collaborated might still have results in common.
 
 - <span class="question_hypothesis">Use a DHT to find the cached element</span>:
-The advantage of this approach is that we can get every cached element of the engine implementing the protocol.
-The disadvantage of this approach is that the lookup time is logarithmic with the number of elements cached,
+The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
+The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user [](cite:cites Grall2020),
-but it's still possible to use a DHT combined with a gossip protocol and keep privacy [](cite:cites 10.1145/2413176.2413215).
+but there are strategies with the combination of a gossip protocol and keep privacy [](cite:cites 10.1145/2413176.2413215).
 Also, an alternative would be to not share private information.
 
 Building on the evaluation method of the first set of solutions, those metrics are added:
-
-- Access time: The time it takes to retrieve information from the cache
-- Cache miss and cache hit rates
+The Access time: The time it takes to retrieve information from the cache and the Cache miss and cache hit rates

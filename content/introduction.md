@@ -8,10 +8,9 @@ It can also be interpreted as "the self-determination of
 individuals and organizations concerning to the use of their data "[](cite:cites verstraete2022solid).
 This means that entities (person and legal)
 "can choose where [their] data is stored and who is granted access to it."[](cite:cites verstraete2022solid)
-In this PhD program, I propose to explore a more socialistic and decommodification-oriented approach
-to decentralized web environments in contrast to the prevailing  corporative [](cite:cites Rizwan2021)
-and capitalistic [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013) current approaches.
-Through this shift, I attempt to move the definition of power and control, from a more consumer choice,
+In this PhD program, I attempt to move the definition of power and control,
+in the context of decentralized web environment, from a more consumer choice 
+[](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013),
 the right to choose who will use my data,
 to one that include the right of the users as a collective to make use of their data without relying on
 a third-party distributor with substantial computational power.
@@ -19,10 +18,10 @@ Hence, in regard to the usage, not giving their sovereignty,
 to the owner of the computational unit,
 ownership that enables them to make decisions that are not in line with the desire or interest of the users [](cite:cites Sevignani2013)
 and allow them to use the data of the user as the product to sell in their service even when the data
-is anonymous [](cite:cites Terranova2000FreeLP, Sevignani2013, Smyrnaios2018).
-For that purpose, my emphasis is on querying because in the case of social applications, the request for information, the discovery of it
+is anonymous [](cite:cites Terranova2000FreeLP, Sevignani2013).
+For that purpose, my emphasis is on querying because, in the case of social applications, the request for information, 
+the discovery of it while taking into account complex concepts such as serendipity [](cite:cites Smets2022SerendipityIR)
 and its propagation are the core functionalities performed by those applications.
-As the number of users increases and the application becomes more complex, this imposes a significant increase in computational power.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
 their computational power when querying thereby increasing the query result completeness
@@ -36,7 +35,6 @@ This paper is divided as follows, first,
 [related work](#litterature_review) is presented,
 after the [research proposal](#proposal) is made,
 then the [methodology](#evaluation) is explained and there is a short [conclusion](#conclusion).
-
 
 
 

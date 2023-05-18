@@ -6,14 +6,12 @@ Data sovereignty focuses on privacy and provider choice
 but lacks emphasis on empowering users to create and manage applications without significant computational resources.
 <!-- Task -->
 The exploration and retrieval of information play a pivotal role in web-based social applications.
-Linked data describes information using IRIs and URLs.
-The data source behind those URLs gives context to the information described, making the data richer,
-more easily reusable, and more interoperable than other publication standards.
 A promising example of web discovery techniques is Link Traversal Query Processing (LTQP),
 a SPARQL query paradigm that aims at exploring the web to answer queries by following the links provided by the documents,
 hence exploiting the connectivity of data sources.
 <!-- Object -->
-In my doctoral research, I introduce Collaborative Link Data Query Processing, a paradigm where multiple query engines collaborate to improve query completeness and execution time in LTQP.
+In my doctoral research, I introduce Collaborative Link Data Query Processing,
+a paradigm where multiple query engines collaborate to improve query completeness and execution time in LTQP.
 <!-- Findings -->
 I divided the research on cooperation of query engines into two parts:
 1) Improving the completeness of results, by exploring more of the search space,

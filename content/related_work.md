@@ -8,7 +8,7 @@ LTQP is a technique that consists of [recursively looking up URLs from dereferen
 to explore the surrounding information around the original response](cite:cites Hartig2016) using the follow-your-nose
 principle of Linked Data, compared to traditional SPARQL queries that only query one document,
 and Federated Query Processing where the data sources are known beforehand.
-The query first starts with a small set of URIs called [seed URIs](cite:cites Hartig2013AnOO) that form
+The query first starts with a small set of URIs called [seed URIs](cite:cites Hartig2016) that form
 the initial data source for the execution.
 The engine then resolves the URIs encounters to explore unknown data sources,
 following a lookup policy.
@@ -16,7 +16,7 @@ Link traversal has great exploratory potential.
 In its traditional form, it consists in following, more or less naively,
 the links inside the response payload and dereferencing them to get new data sources. 
 However, Link Traversal comes with some difficulties,
-such as the [open-endedness of the web](cite:cites Umbrich2014LinkTQ) and query planning [](cite:cites Hartig2014LinkedDQ). 
+such as the open-endedness of the weband query planning [](cite:cites Hartig2014LinkedDQ). 
 In most cases, encountered data sources do not have a strict structure that can be leveraged to speed up the execution.
 Nonetheless, reachability criteria can be defined to restrict the links that are followed based on conditions.
 Classical examples are `cAll`, which follows every link, and `cMatch`, which follows links that match the query pattern [](cite:cites hartig2012).
@@ -71,6 +71,4 @@ the super peer finds the content requested by the client.
 it relies on an unstructured network where each peer has a partial view of the whole web.
 Each peer's view of the network is partially random and partially based on the websites visited to create a "behavioral locality."
 It uses a gossip protocol, at certain times the peer exchange randomly the node they know to change its view on the network.
-With this approach, Behave was able in 50% of its query to retrieve the information with 0 hop 
-which shows that the system has a great potential for scalability.
 [CyCLaDEs](cite:cites Folz2016) adapted the concept of Behave for the use case of SPARQL query of RDF documents.
