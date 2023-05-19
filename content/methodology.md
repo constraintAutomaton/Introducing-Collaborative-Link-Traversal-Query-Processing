@@ -55,7 +55,7 @@ I propose to measure the following metrics:
 
 ### Caching problem
 
-The problem is to reduce the query execution time by using already computed results from a shared cache.
+The second problem is to reduce the query execution time by using already computed results from a shared cache.
 The information cached could be the *data source URLs that are contributing to a query*,
 the *joint*, given some triple patterns to avoid their calculations or the *triple patterns*.
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.

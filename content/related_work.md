@@ -9,7 +9,7 @@ to explore the surrounding information around the original response](cite:cites 
 principle of Linked Data, compared to traditional SPARQL queries that only query one document,
 and Federated Query Processing where the data sources are known beforehand.
 The query first starts with a small set of URIs called [seed URIs](cite:cites Hartig2016) that form
-the initial data source for the execution.
+the initial data sources for the execution.
 The engine then resolves the URIs encounters to explore unknown data sources,
 following a lookup policy.
 Link traversal has great exploratory potential.
