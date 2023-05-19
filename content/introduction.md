@@ -14,7 +14,7 @@ in the context of decentralized web environments, from a more consumer choice
 the right to choose who will use my data,
 to a definition that includes the right of the users as a collective to make use of their data without relying on
 a third-party distributor with substantial computational power.
-In the context of data usage, ownership, and control are vested in the owner of the computational unit.
+In the context of data usage, and control id vested in the owner of the computational unit.
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users [](cite:cites Sevignani2013).
 Additionally, it facilitates the utilization of "users" as products to be sold or as an unpaid source of revenue,
 even when the data is anonymized [](cite:cites Terranova2000FreeLP, Sevignani2013).
