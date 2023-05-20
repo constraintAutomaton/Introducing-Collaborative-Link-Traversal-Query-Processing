@@ -8,7 +8,7 @@ if when it comes to the working of applications sovereignty can be
 surrendered to the owner of the computational units or apps.
 <!-- Task -->
 The exploration and retrieval of information is a core functionality of web-based social
-applications because it creates shared experiences to foster interactions.
+applications because it is from this that shared experiences to foster interactions are created.
 A promising example of web discovery techniques is Link Traversal Query Processing (LTQP),
 a SPARQL query paradigm that aims at exploring the web to answer queries by following the links provided by the documents,
 hence exploiting the connectivity of data sources.
