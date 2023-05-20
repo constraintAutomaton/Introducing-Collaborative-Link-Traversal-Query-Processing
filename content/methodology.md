@@ -36,7 +36,7 @@ The problem with this strategy is the necessary communication and the potential 
 
 
 I am planning to build a prototype using the SPARQL meta query engine [Comunica](cite:cites taelman_iswc_resources_comunica_2018),
-because it already has LTQPs algorithms implemented and it is a highly extensible software which 
+because it already has LTQP algorithms implemented and it is a highly extensible software which 
 will facilitate the implementation of those algorithms.
 I will evaluate it against the Solid social media benchmark;
 [SolidBench](https://github.com/SolidBench/SolidBench.js) [](cite:cites taelman2023)
