@@ -41,7 +41,7 @@ Given a user doesn't respect the policy, then they cannot access the results of 
 so it is a form of social contract.
 
 
-### Research question and Hypotheses
+### Research questions and Hypotheses
 {:#research_question}
 
 Building on the proposal and the related works of [](#litterature_review) 
