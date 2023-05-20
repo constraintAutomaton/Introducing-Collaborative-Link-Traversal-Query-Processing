@@ -10,19 +10,19 @@ This implies two sets of potential solutions detailed below.
 The first problem I try to solve is to increase the query completeness;
 For that purpose we try to divide the search space among peers.
 It has to be considered first that we don't know in advance the topology of the domain,
-so we cannot in advance divide the search space.
+so we cannot divide the search space a priori.
 
-- <span class="question_hypothesis">Collect the seed URLs and to divide them between the query engines</span>: 
-The advantage of this strategy is the communication between the engine is minimal,
-at the start or at a moment where we have a large number of URLs we let the engine execute the query on their own and at
-the stopping condition, the engine share the results.
+- <span class="question_hypothesis">Collect the seed URLs and divide them between the query engines</span>: 
+The advantage of this strategy is the communication between the engines is minimal,
+at the start or at a moment when we have a large number of URLs we let the engines execute the query on their own and at
+the stopping condition, the engine share their results.
 The limitation of this strategy is that we don't consider if the data sources discoverable inside the seed URLs overlaps.
 
 - <span class="question_hypothesis">Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</span>:
 The advantage of this strategy is, like the first one, the communication between engines is low.
 However, unlike the previous one, there is a mechanism to avoid redundant calculations.
-By doing so, the query engine has a lookup policy that restricts links visited by others.
-For example, the engine might be responsible for a specific semantic section of the domain, 
+By doing so, the query engines have a lookup policy that restricts links visited by others.
+For example, the engines might be responsible for a specific semantic section of the domain, 
 e.g.: cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
 and the type of dataset from which we expect to find results.
@@ -63,11 +63,11 @@ I propose to investigate those two strategies:
 
 - <span class="question_hypothesis">
 Use an unstructured network where the peers are clustered based on their behavior</span>: 
-The advantage of this strategy is that the lookup time to find information in the cache is constant and the peer known 
-has a high probability of possessing the knowledge desired. 
-The clustering can be based on the engine that has engaged in a query collaboration with the subject engine.
+The advantage of this strategy is that the lookup time to find information in the cache is constant and the peers know 
+have a high probability of possessing the knowledge desired. 
+The clustering can be based on the engines that has engaged in a query collaboration with the subject engine.
 The disadvantage of that method is that it relies on a type of self-organization of the network of engines,
-it does not consider that engine that has not collaborated might still have results in common.
+it does not consider that engines that have not collaborated might still have results in common.
 
 - <span class="question_hypothesis">Use a DHT to find the cached element</span>:
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
