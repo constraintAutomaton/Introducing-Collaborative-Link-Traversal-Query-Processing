@@ -69,11 +69,11 @@ the context of LTQP and LTQP within a structured decentralized environment.</p>
 
       <p>Decentralized web initiatives give users more control over their data.
 It can be formalized in a concept called data sovereignty. <span class="references">[<a href="#ref-1">1</a>]</span> defined this concept as 
-“the power an individual has over their data.”<span class="references">[<a href="#ref-1">1</a>]</span>.
-It can also be interpreted as “the self-determination of 
-individuals and organizations concerning to the use of their data “<span class="references">[<a href="#ref-1">1</a>]</span>.
+<q>the power an individual has over their data.</q><span class="references">[<a href="#ref-1">1</a>]</span>.
+It can also be interpreted as <q>the self-determination of 
+individuals and organizations concerning to the use of their data</q><span class="references">[<a href="#ref-1">1</a>]</span>.
 This means that individual and legal entities
-“can choose where [their] data is stored and who is granted access to it.”<span class="references">[<a href="#ref-1">1</a>]</span>
+<q>can choose where [their] data is stored and who is granted access to it.</q><span class="references">[<a href="#ref-1">1</a>]</span>
 In this PhD program, I attempt to move the definition of power and control,
 in the context of decentralized web environments, from a more consumer choice 
 <span class="references">[<a href="#ref-2">2</a>, <a href="#ref-3">3</a>, <a href="#ref-4">4</a>]</span>,
@@ -82,11 +82,11 @@ to a definition that includes the right of the users as a collective to make use
 a third-party distributor with substantial computational power.
 In the context of data usage, sovereignty, and control are vested in the owner of the computational unit.
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users <span class="references">[<a href="#ref-4">4</a>]</span>.
-Additionally, it facilitates the utilization of “users” as products to be sold or as an unpaid source of revenue,
+Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue,
 even when the data is anonymized <span class="references">[<a href="#ref-2">2</a>, <a href="#ref-4">4</a>]</span>.
-For the purpose of improving this sovereignty, my emphasis is on querying because, in the case of social applications, the request for information, 
-the discovery process,  particularly when considering complex concepts like serendipity <span class="references">[<a href="#ref-5">5</a>]</span>
-and the propagation of information are the core functionalities performed by those applications.
+To improve this sovereignty, my emphasis is on querying because, in the case of social applications, the request for information, 
+its discovery process,  particularly when considering complex concepts like serendipity <span class="references">[<a href="#ref-5">5</a>]</span>
+and its propagation are the core functionalities performed by those applications.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
 their computational power when querying. 
@@ -156,7 +156,7 @@ it becomes possible to enhance the completeness of query results over time witho
 <a property="schema:citation http://purl.org/spar/cito/cites" href="https://doi.bak.org/10.1145/3442381.3450037">ColChain</a> <span class="references">[<a href="#ref-11">11</a>]</span> has a different approach. 
 The query engines still have a partial view of the network but it is based on communities instead of being random or profile-based.
 A community, in the ColChain context, is a set of
-“nodes that participate in and observe [each other] and the fragments published [between them]” <span class="references">[<a href="#ref-11">11</a>]</span>.
+<q>nodes that participate in and observe [each other] and the fragments published [between them]</q> <span class="references">[<a href="#ref-11">11</a>]</span>.
 So the division of the network is made intentionally by the users.
 When querying the SPARQL query engine, it will look at its own data sources, then the data sources of the communities it knows.
 To discover new communities, the engine inquires peers to identify unknown communities.
@@ -185,7 +185,8 @@ the DHT directs to the super peer closest to the locality of the client and
 the super peer finds the content requested by the client.
 Behave <span class="references">[<a href="#ref-16">16</a>]</span> proposed another paradigm instead of using a structured network with a potentially slow DHT,
 it relies on an unstructured network where each peer has a partial view of the whole web.
-Each peer’s view of the network is partially random and partially based on the websites visited to create a “behavioral locality.”
+Each peer’s view of the network is partially random and partially based on the websites visited to create a 
+<q>behavioral locality</q> <span class="references">[<a href="#ref-16">16</a>]</span>.
 It uses a gossip protocol, at certain times the peers exchange randomly the nodes they know to change their view on the network.
 CyCLaDEs <span class="references">[<a href="#ref-17">17</a>]</span> adapted the concept of Behave for the use case of SPARQL query of RDF documents.</p>
 
@@ -234,7 +235,7 @@ Their enforcement could be managed by a community-style structure with policies 
 Given a user doesn’t respect the policy, then they cannot access the results of that community,
 so it is a form of social contract.</p>
 
-      <h3 id="research_question">Research question and Hypotheses</h3>
+      <h3 id="research_question">Research questions and Hypotheses</h3>
 
       <p>Building on the proposal and the related works of <a href="#litterature_review">Section 2</a> 
 research questions and hypotheses are formalized to guide the study.</p>
@@ -284,22 +285,22 @@ This implies two sets of potential solutions detailed below.</p>
       <p>The first problem I try to solve is to increase the query completeness;
 For that purpose we try to divide the search space among peers.
 It has to be considered first that we don’t know in advance the topology of the domain,
-so we cannot in advance divide the search space.</p>
+so we cannot divide the search space a priori.</p>
 
       <ul>
         <li>
-          <p><span class="question_hypothesis">Collect the seed URLs and to divide them between the query engines</span>: 
-The advantage of this strategy is the communication between the engine is minimal,
-at the start or at a moment where we have a large number of URLs we let the engine execute the query on their own and at
-the stopping condition, the engine share the results.
+          <p><span class="question_hypothesis">Collect the seed URLs and divide them between the query engines</span>: 
+The advantage of this strategy is the communication between the engines is minimal,
+at the start or at a moment when we have a large number of URLs we let the engines execute the query on their own and at
+the stopping condition, the engine share their results.
 The limitation of this strategy is that we don’t consider if the data sources discoverable inside the seed URLs overlaps.</p>
         </li>
         <li>
           <p><span class="question_hypothesis">Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</span>:
 The advantage of this strategy is, like the first one, the communication between engines is low.
 However, unlike the previous one, there is a mechanism to avoid redundant calculations.
-By doing so, the query engine has a lookup policy that restricts links visited by others.
-For example, the engine might be responsible for a specific semantic section of the domain, 
+By doing so, the query engines have a lookup policy that restricts links visited by others.
+For example, the engines might be responsible for a specific semantic section of the domain, 
 e.g.: cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
 and the type of dataset from which we expect to find results.</p>
@@ -346,11 +347,11 @@ I propose to investigate those two strategies:</p>
         <li>
           <p><span class="question_hypothesis">
 Use an unstructured network where the peers are clustered based on their behavior</span>: 
-The advantage of this strategy is that the lookup time to find information in the cache is constant and the peer known 
-has a high probability of possessing the knowledge desired. 
-The clustering can be based on the engine that has engaged in a query collaboration with the subject engine.
+The advantage of this strategy is that the lookup time to find information in the cache is constant and the peers know 
+have a high probability of possessing the knowledge desired. 
+The clustering can be based on the engines that has engaged in a query collaboration with the subject engine.
 The disadvantage of that method is that it relies on a type of self-organization of the network of engines,
-it does not consider that engine that has not collaborated might still have results in common.</p>
+it does not consider that engines that have not collaborated might still have results in common.</p>
         </li>
         <li>
           <p><span class="question_hypothesis">Use a DHT to find the cached element</span>:
@@ -375,8 +376,8 @@ The Access time: The time it takes to retrieve information from the cache and th
 My project aims at reducing the query execution time and increasing the query completeness when exploring the web of linked data,
 concretely it consists of creating an LTQP paradigm called CLTQP.
 This paradigm enables query engines to collaborate in the exploration of data sources and the sharing of results through a P2P cache.
-The potential of this proposal is twofold: increasing the completeness of query results and reducing the execution time of SPARQL queries,
-thus democratizing the creation of large-scale social media applications.</p>
+The potential of this proposal is to increase the completeness of query results and reducing the execution time of LTQP queries,
+thus democratizing the creation and usage of large-scale social media applications.</p>
 
     </div>
 </section>
