@@ -1,10 +1,13 @@
 # Introducing Collaborative Link Traversal Query Processing in the context of structured decentralized environment
 Available as a web page at https://constraintautomaton.github.io/Introducing-Collaborative-Link-Traversal-Query-Processing/
 ## Abstract
-Decentralized web environments aim to give users data autonomy and control, in other words, data sovereignty.
-Data sovereignty focuses on privacy and provider choice 
-but lacks emphasis on empowering users to create and manage applications without significant computational resources.
-The exploration and retrieval of information play a pivotal role in web-based social applications.
+Decentralized web environments aim to give users data autonomy and control.
+Data sovereignty focuses on privacy and provider choice,
+but the concept is not complete if it does not include the concrete usage of the data,
+if in that concept when it comes to the working of the application sovereignty can be
+ surrendered to the owner of the computational unit or app.
+The exploration and retrieval of information is a core functionality of web-based social
+applications because it creates shared experiences to foster interactions.
 A promising example of web discovery techniques is Link Traversal Query Processing (LTQP),
 a SPARQL query paradigm that aims at exploring the web to answer queries by following the links provided by the documents,
 hence exploiting the connectivity of data sources.
