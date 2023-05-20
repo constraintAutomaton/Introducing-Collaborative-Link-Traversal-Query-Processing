@@ -36,7 +36,7 @@ it becomes possible to enhance the completeness of query results over time witho
 [ColChain](cite:cites Aebeloe2021) has a different approach. 
 The query engines still have a partial view of the network but it is based on communities instead of being random or profile-based.
 A community, in the ColChain context, is a set of
-"nodes that participate in and observe [each other] and the fragments published [between them]" [](cite:cites Aebeloe2021).
+<q>nodes that participate in and observe [each other] and the fragments published [between them]</q> [](cite:cites Aebeloe2021).
 So the division of the network is made intentionally by the users.
 When querying the SPARQL query engine, it will look at its own data sources, then the data sources of the communities it knows.
 To discover new communities, the engine inquires peers to identify unknown communities.
@@ -68,6 +68,7 @@ the DHT directs to the super peer closest to the locality of the client and
 the super peer finds the content requested by the client.
 [Behave](cite:cites Frey2014) proposed another paradigm instead of using a structured network with a potentially slow DHT,
 it relies on an unstructured network where each peer has a partial view of the whole web.
-Each peer's view of the network is partially random and partially based on the websites visited to create a "behavioral locality."
+Each peer's view of the network is partially random and partially based on the websites visited to create a 
+<q>behavioral locality</q> [](cite:cites Frey2014).
 It uses a gossip protocol, at certain times the peers exchange randomly the nodes they know to change their view on the network.
 [CyCLaDEs](cite:cites Folz2016) adapted the concept of Behave for the use case of SPARQL query of RDF documents.
