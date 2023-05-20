@@ -4,8 +4,8 @@ Decentralized web environments aim to give users data autonomy and control.
 <!-- Need -->
 Data sovereignty focuses on privacy and provider choice,
 but the concept is not complete if it does not include the concrete usage of the data,
-if in that concept when it comes to the working of the application sovereignty can be
- surrendered to the owner of the computational unit or app.
+if, in that concept, when it comes to the working of applications sovereignty can be
+surrendered to the owner of the computational units or apps.
 <!-- Task -->
 The exploration and retrieval of information is a core functionality of web-based social
 applications because it creates shared experiences to foster interactions.
