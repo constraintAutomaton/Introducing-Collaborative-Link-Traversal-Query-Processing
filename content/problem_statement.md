@@ -47,22 +47,22 @@ so it is a form of social contract.
 Building on the proposal and the related works of [](#litterature_review) 
 research questions and hypotheses are formalized to guide the study.
 
-- <span class="question_hypothesis">Question 1</span>: Can we achieve better query result completeness (and access isolated data sources) 
+- **Question 1**: Can we achieve better query result completeness (and access isolated data sources) 
 and better query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?
 
-- <span class="question_hypothesis">Question 2</span>: How can we minimize the overlapping of data sources exploration during CLTQP to avoid useless 
+- **Question 2**: How can we minimize the overlapping of data sources exploration during CLTQP to avoid useless 
 repeated query processing?
 
-- <span class="question_hypothesis">Question 3</span>: How can we reduce query execution time by utilizing P2P caching in the context of CLTQP?
+- **Question 3**: How can we reduce query execution time by utilizing P2P caching in the context of CLTQP?
 
-- <span class="question_hypothesis">Hypothesis 1</span>: It is possible to partition the search space in the context of CLTQP,
+- **Hypothesis 1**: It is possible to partition the search space in the context of CLTQP,
 in a way that the query processing time of overlapping data sources is less than the time to process distinct data sources.
 
 
-- <span class="question_hypothesis">Hypothesis 2</span>: We can exploit the structural aspect of Solid to obtain a ratio of query execution time
+- **Hypothesis 2**: We can exploit the structural aspect of Solid to obtain a ratio of query execution time
 similar to their consideration in LTQP.
 
-- <span class="question_hypothesis">Hypothesis 3</span>: Given a large enough search space,
+- **Hypothesis 3**: Given a large enough search space,
 as in the number of data sources is such as the execution time is not dominated by the communication time,
 then there is a reverse relation between the number of engines collaborating and 
 the execution time and a direct relation with the number of data sources explored. 

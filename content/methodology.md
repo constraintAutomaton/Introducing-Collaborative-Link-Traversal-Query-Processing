@@ -12,22 +12,22 @@ For that purpose we try to divide the search space among peers.
 It has to be considered first that we don't know in advance the topology of the domain,
 so we cannot divide the search space a priori.
 
-- <span class="question_hypothesis">Collect the seed URLs and divide them between the query engines</span>: 
+- **Collect the seed URLs and divide them between the query engines**: 
 The advantage of this strategy is the communication between the engines is minimal,
 at the start or at a moment when we have a large number of URLs we let the engines execute the query on their own and at
 the stopping condition, the engine share their results.
 The limitation of this strategy is that we don't consider if the data sources discoverable inside the seed URLs overlaps.
 
-- <span class="question_hypothesis">Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</span>:
+- **Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field**:
 The advantage of this strategy is, like the first one, the communication between engines is low.
 However, unlike the previous one, there is a mechanism to avoid redundant calculations.
-By doing so, the query engines have a lookup policy that restricts links visited by others.
+The query engines have a lookup policy that restricts links visited by others.
 For example, the engines might be responsible for a specific semantic section of the domain, 
 e.g.: cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
 and the type of dataset from which we expect to find results.
 
-- <span class="question_hypothesis">Use a global link queue shared between all the query engines</span>:
+- **Use a global link queue shared between all the query engines**:
 The advantage of this strategy is that it's a simple way to avoid redundant calculations as all engines have the same link queue.
 Every engine can then execute the query on their own with no consideration for redundancy.
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
@@ -61,15 +61,14 @@ the *joint*, given some triple patterns to avoid their calculations or the *trip
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.
 I propose to investigate those two strategies:
 
-- <span class="question_hypothesis">
-Use an unstructured network where the peers are clustered based on their behavior</span>: 
+- **Use an unstructured network where the peers are clustered based on their behavior**: 
 The advantage of this strategy is that the lookup time to find information in the cache is constant and the peers know 
 have a high probability of possessing the knowledge desired. 
 The clustering can be based on the engines that has engaged in a query collaboration with the subject engine.
 The disadvantage of that method is that it relies on a type of self-organization of the network of engines,
 it does not consider that engines that have not collaborated might still have results in common.
 
-- <span class="question_hypothesis">Use a DHT to find the cached element</span>:
+- **Use a DHT to find the cached element**:
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
 The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user [](cite:cites Grall2020),
@@ -77,4 +76,4 @@ but there are strategies with the combination of a gossip protocol to keep priva
 Also, an alternative would be to not share private information.
 
 Building on the evaluation method of the first set of solutions, those metrics are added:
-The Access time: The time it takes to retrieve information from the cache and the Cache miss and cache hit rates
+The Access time: The time it takes to retrieve information from the cache and the Cache miss and cache hit rates.
