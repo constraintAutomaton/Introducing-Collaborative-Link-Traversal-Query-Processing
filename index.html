@@ -86,7 +86,7 @@ Additionally, it facilitates the utilization of users as products to be sold or 
 even when the data is anonymized <span class="references">[<a href="#ref-2">2</a>, <a href="#ref-4">4</a>]</span>.
 To improve this sovereignty, my emphasis is on querying because, in the case of social applications, the request for information, 
 its discovery process,  particularly when considering complex concepts like serendipity <span class="references">[<a href="#ref-5">5</a>]</span>
-and its propagation are the core functionalities performed by those applications.
+and its propagation are the core functionalities creating the share context enabling sociability.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
 their computational power when querying. 
@@ -209,7 +209,7 @@ and a structured environment that can be leveraged to speed up the query <span c
 The first problem I try to solve is to increase the query completeness.
 To do so, CLTQP attempts to explore more of the search space by having multiple query engines engaging in 
 non-overlapping partitions of the huge or pseudo-infinite search domain and executing the query.
-Hence, in the same amount of time, having more triple processes compared to an approach with one engine.
+Hence, in the same amount of time, having more triple processed compared to an approach with one engine.
 An important property emerging from the traversal of links is a structural proximity bias of the query results, which
 means that from the link traversal method, some data sources tend to be discovered more easily regardless of their potential
 influence on the query completeness and the interpretation of the query results.
@@ -242,26 +242,26 @@ research questions and hypotheses are formalized to guide the study.</p>
 
       <ul>
         <li>
-          <p><span class="question_hypothesis">Question 1</span>: Can we achieve better query result completeness (and access isolated data sources) 
+          <p><strong>Question 1</strong>: Can we achieve better query result completeness (and access isolated data sources) 
 and better query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?</p>
         </li>
         <li>
-          <p><span class="question_hypothesis">Question 2</span>: How can we minimize the overlapping of data sources exploration during CLTQP to avoid useless 
+          <p><strong>Question 2</strong>: How can we minimize the overlapping of data sources exploration during CLTQP to avoid useless 
 repeated query processing?</p>
         </li>
         <li>
-          <p><span class="question_hypothesis">Question 3</span>: How can we reduce query execution time by utilizing P2P caching in the context of CLTQP?</p>
+          <p><strong>Question 3</strong>: How can we reduce query execution time by utilizing P2P caching in the context of CLTQP?</p>
         </li>
         <li>
-          <p><span class="question_hypothesis">Hypothesis 1</span>: It is possible to partition the search space in the context of CLTQP,
+          <p><strong>Hypothesis 1</strong>: It is possible to partition the search space in the context of CLTQP,
 in a way that the query processing time of overlapping data sources is less than the time to process distinct data sources.</p>
         </li>
         <li>
-          <p><span class="question_hypothesis">Hypothesis 2</span>: We can exploit the structural aspect of Solid to obtain a ratio of query execution time
+          <p><strong>Hypothesis 2</strong>: We can exploit the structural aspect of Solid to obtain a ratio of query execution time
 similar to their consideration in LTQP.</p>
         </li>
         <li>
-          <p><span class="question_hypothesis">Hypothesis 3</span>: Given a large enough search space,
+          <p><strong>Hypothesis 3</strong>: Given a large enough search space,
 as in the number of data sources is such as the execution time is not dominated by the communication time,
 then there is a reverse relation between the number of engines collaborating and 
 the execution time and a direct relation with the number of data sources explored.</p>
@@ -295,24 +295,24 @@ so we cannot divide the search space a priori.</p>
 
       <ul>
         <li>
-          <p><span class="question_hypothesis">Collect the seed URLs and divide them between the query engines</span>: 
+          <p><strong>Collect the seed URLs and divide them between the query engines</strong>: 
 The advantage of this strategy is the communication between the engines is minimal,
 at the start or at a moment when we have a large number of URLs we let the engines execute the query on their own and at
 the stopping condition, the engine share their results.
 The limitation of this strategy is that we don’t consider if the data sources discoverable inside the seed URLs overlaps.</p>
         </li>
         <li>
-          <p><span class="question_hypothesis">Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</span>:
+          <p><strong>Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</strong>:
 The advantage of this strategy is, like the first one, the communication between engines is low.
 However, unlike the previous one, there is a mechanism to avoid redundant calculations.
-By doing so, the query engines have a lookup policy that restricts links visited by others.
+The query engines have a lookup policy that restricts links visited by others.
 For example, the engines might be responsible for a specific semantic section of the domain, 
 e.g.: cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
 and the type of dataset from which we expect to find results.</p>
         </li>
         <li>
-          <p><span class="question_hypothesis">Use a global link queue shared between all the query engines</span>:
+          <p><strong>Use a global link queue shared between all the query engines</strong>:
 The advantage of this strategy is that it’s a simple way to avoid redundant calculations as all engines have the same link queue.
 Every engine can then execute the query on their own with no consideration for redundancy.
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
@@ -351,8 +351,7 @@ I propose to investigate those two strategies:</p>
 
       <ul>
         <li>
-          <p><span class="question_hypothesis">
-Use an unstructured network where the peers are clustered based on their behavior</span>: 
+          <p><strong>Use an unstructured network where the peers are clustered based on their behavior</strong>: 
 The advantage of this strategy is that the lookup time to find information in the cache is constant and the peers know 
 have a high probability of possessing the knowledge desired. 
 The clustering can be based on the engines that has engaged in a query collaboration with the subject engine.
@@ -360,7 +359,7 @@ The disadvantage of that method is that it relies on a type of self-organization
 it does not consider that engines that have not collaborated might still have results in common.</p>
         </li>
         <li>
-          <p><span class="question_hypothesis">Use a DHT to find the cached element</span>:
+          <p><strong>Use a DHT to find the cached element</strong>:
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
 The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user <span class="references">[<a href="#ref-9">9</a>]</span>,
@@ -370,7 +369,7 @@ Also, an alternative would be to not share private information.</p>
       </ul>
 
       <p>Building on the evaluation method of the first set of solutions, those metrics are added:
-The Access time: The time it takes to retrieve information from the cache and the Cache miss and cache hit rates</p>
+The Access time: The time it takes to retrieve information from the cache and the Cache miss and cache hit rates.</p>
     </div>
 </section>
  <!-- 1 -->
