@@ -14,7 +14,7 @@ and a structured environment that can be leveraged to speed up the query [](cite
 The first problem I try to solve is to increase the query completeness.
 To do so, CLTQP attempts to explore more of the search space by having multiple query engines engaging in 
 non-overlapping partitions of the huge or pseudo-infinite search domain and executing the query.
-Hence, in the same amount of time, having more triple processes compared to an approach with one engine.
+Hence, in the same amount of time, having more triple processed compared to an approach with one engine.
 An important property emerging from the traversal of links is a structural proximity bias of the query results, which
 means that from the link traversal method, some data sources tend to be discovered more easily regardless of their potential
 influence on the query completeness and the interpretation of the query results.
