@@ -20,7 +20,7 @@ Additionally, it facilitates the utilization of users as products to be sold or 
 even when the data is anonymized [](cite:cites Terranova2000FreeLP, Sevignani2013).
 To improve this sovereignty, my emphasis is on querying because, in the case of social applications, the request for information, 
 its discovery process,  particularly when considering complex concepts like serendipity [](cite:cites Smets2022SerendipityIR)
-and its propagation are the core functionalities performed by those applications.
+and its propagation are the core functionalities creating the share context enabling sociability.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
 their computational power when querying. 
