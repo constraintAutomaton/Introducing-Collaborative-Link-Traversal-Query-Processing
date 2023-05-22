@@ -24,7 +24,7 @@ The advantage of this strategy is, also, the low communication between the engin
 However, unlike the previous one, there is a mechanism to avoid redundant calculations.
 The query engines have a lookup policy that restricts links visited by others.
 For example, the engines might be responsible for a specific semantic section of the domain, 
-e.g.: cities in geospatial query. 
+e.g., cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
 and the type of dataset from which we expect to find results.
 
@@ -48,7 +48,7 @@ I propose to measure the following metrics:
 
 - **Result accuracy**: The F-score; a fraction indicating the correctness and completeness of results
 - **Query execution time**: The total time it takes to complete a query
-- The ratio of the execution time and the communication time between the engines
+- **The ratio of the execution time and the communication time between the engines**
 <!-- Not sure yet how to do it-->
 - **Ability to access isolated documents**: Measured by analyzing the number of links leading to query-relevant data sources and evaluating their actual contribution
 - **Overlapping of the search space**: The number of times a triple and data source has been queried
@@ -69,7 +69,7 @@ The clustering can be based on the engines that have engaged in a query collabor
 The disadvantage of that method is that it relies on a type of self-organization of the network of engines,
 and it does not consider that engines that have not collaborated might still have results in common.
 
-- **DHT to find the cached element**:
+- **Distributed Hash Table (DHT) to find the cached element**:
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
 The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user [](cite:cites Grall2020),
