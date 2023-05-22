@@ -24,9 +24,9 @@ and its propagation are the core functionalities creating the share context enab
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
 their computational power when querying. 
-This collaboration increases query result completeness 
-and reduces execution time for all users,
-in essence creating a unified and powerful engine. 
+This collaboration aims to increase query result completeness 
+and to reduce execution time for all users,
+in essence creating a unified and powerful engine<span class="comment" data-author="RT">Do you mean a virtual query engine across all peers, that is more powerful than a single engine within one peer?</span>. 
 With this collective participation, 
 it would be possible at little cost to provide a more democratic economic base from which
 users could have more power to choose features for social applications that cater to their
