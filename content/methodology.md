@@ -2,15 +2,16 @@
 {:#methodology}
 
 As discussed in [the proposal](#proposal), my work can be divided into two sub-problems;
-the division of the search space and the caching. 
+the division of the search space and caching. 
 This implies two sets of potential solutions detailed below.
 
-### Search domain division problem
+### Search domain division among peers
 
-The first problem I try to solve is to increase the query completeness;
-For that purpose we try to divide the search space among peers.
+My first aim is to increase the query completeness;
+For that purpose I will try to divide the search space among peers in a P2P network.
 It has to be considered first that we don't know in advance the topology of the domain,
 so we cannot divide the search space a priori.
+<span class="comment" data-author="RT">Say that you propose the following strategies.</span>
 
 - **Collect the seed URLs and divide them between the query engines**: 
 The advantage of this strategy is the communication between the engines is minimal,
@@ -41,34 +42,34 @@ will facilitate the implementation of those algorithms.
 I will evaluate it against the Solid social media benchmark;
 [SolidBench](https://github.com/SolidBench/SolidBench.js) [](cite:cites taelman2023)
 and compare the results with other LTQP approaches.
-I will evaluate those methods while varying the number of engines 
-collaborating by increasing the number until the performance stagnates or diminish.
+I will evaluate those methods while varying the number of engines <span class="comment" data-author="RT">You haven't explained yet that each peer hasba single engine?</span> 
+collaborating by increasing the number until the performance stagnates or diminishes.
 I propose to measure the following metrics:
 
-- Result accuracy: The F-score; a fraction indicating the correctness and completeness of results
-- Query execution time: The total time it takes to complete a query
-- The ratio between the execution time and the communication time between the engines
+- **Result accuracy**: The F-score; a fraction indicating the correctness and completeness of results
+- **Query execution time**: The total time it takes to complete a query
+- The ratio of the execution time and the communication time between the engines
 <!-- Not sure yet how to do it-->
-- Ability to access isolated documents: Measured by analyzing the number of links leading to query-relevant data sources and evaluating their actual contribution
-- Overlapping of the search space exploration of the Query engine: The number of times a triple and data source has been queried
-- Query result arrival times: The time it takes for each triple from the beginning of the query to be obtained
+- **Ability to access isolated documents**: Measured by analyzing the number of links leading to query-relevant data sources and evaluating their actual contribution
+- **Overlapping of the search space**: The number of times a triple and data source has been queried
+- **Query result arrival times**: The time it takes for each triple from the beginning of the query to be obtained <span class="comment" data-author="RT">Let's cite the diefficiency metric here.</span>
 
-### Caching problem
+### Collaborative Caching
 
-The second problem is to reduce the query execution time by using already computed results from a shared cache.
+My second aim is to reduce the query execution time by using already computed results from a shared cache.
 The information cached could be the *data source URLs that are contributing to a query*,
-the *joint*, given some triple patterns to avoid their calculations or the *triple patterns*.
+the *joint* <span class="comment" data-author="RT">What is this?</span>, given some triple patterns to avoid their calculations or the *triple patterns* <span class="comment" data-author="RT">I don't understand how you would cache triple patterns. Do you mean results for specific triple patterns over specific sources?</span>.
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.
 I propose to investigate those two strategies:
 
-- **Use an unstructured network where the peers are clustered based on their behavior**: 
+- **Unstructured network where peers are clustered based on their behavior**: 
 The advantage of this strategy is that the lookup time to find information in the cache is constant and the peers know 
 have a high probability of possessing the knowledge desired. 
-The clustering can be based on the engines that has engaged in a query collaboration with the subject engine.
+The clustering can be based on the engines that have engaged in a query collaboration with the subject engine.
 The disadvantage of that method is that it relies on a type of self-organization of the network of engines,
-it does not consider that engines that have not collaborated might still have results in common.
+and it does not consider that engines that have not collaborated might still have results in common.
 
-- **Use a DHT to find the cached element**:
+- **DHT to find the cached element**:
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
 The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user [](cite:cites Grall2020),
@@ -76,4 +77,5 @@ but there are strategies with the combination of a gossip protocol to keep priva
 Also, an alternative would be to not share private information.
 
 Building on the evaluation method of the first set of solutions, those metrics are added:
-The Access time: The time it takes to retrieve information from the cache and the Cache miss and cache hit rates.
+**Cache access time**: The time it takes to retrieve information from the cache and the cache miss and cache hit rates.
+<span class="comment" data-author="RT">Just one metric? Can you think of more?</span>
