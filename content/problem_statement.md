@@ -4,7 +4,7 @@
 ### Proposal
 {:#proposal}
 
-This paper aims to create a SPARQL query paradigm called CLQTP.
+This paper aims to create a SPARQL query paradigm called Collaborative Link Traversal Query Processing (CLQTP).
 It consists of using multiple SPARQL query engines with the aim of improving the completeness
 of queries by exploring more of the search space and reducing the query execution time through the means of exchange of results.
 Both problems have been engaged in the academic literature, but not in the case of LTQP and considering the distributed SPARQL querying domain [](cite:cites 8029358).
@@ -37,7 +37,7 @@ For both problems, it has to be considered that a mechanism to incentivize recip
 It can be implemented in multiple ways, for example, as an obligation to participate in a minimum percentage of queries or
 a number links to provide.
 This enforcement could be managed by a community-specific structure with policies in that regard.
-Given that a user doesn't respect the policy, they cannot access the results of that community,
+Given that a user does not respect the policy, they cannot access the results of that community,
 so it is a form of social contract.
 
 
@@ -53,13 +53,12 @@ and lower query execution time in the context of LTQP by making multiple SPARQL 
 - **Question 2**: How can we minimize the overlapping of data sources exploration during CLTQP to avoid useless 
 repeated query processing?
 
-- **Question 3**: How can we reduce query execution time by utilizing P2P caching in the context of CLTQP?
+- **Question 3**: How can we reduce query execution time using P2P caching in the context of CLTQP?
 
 
-- **Hypothesis 1**: Given a large enough search space, defined
-as a search space in which it is possible the split it between the engines,
-then there is an inverse correlation between the number of engines collaborating and 
-the execution time and a direct correlation with the number of data sources explored. 
+- **Hypothesis 1**: Given a large enough search space, in which it is possible to split it between the engines, 
+there is an inverse correlation between the number of engines collaborating and 
+the execution time, and a direct correlation with the number of data sources explored. 
 
 - **Hypothesis 2**: It is possible to partition the search space in the context of CLTQP,
 in a way that the query processing time of overlapping data sources is less than the time to process distinct data sources.
@@ -68,7 +67,7 @@ in a way that the query processing time of overlapping data sources is less than
 so that its lookup time is faster than the execution of the query.
 
 
-Question 1 is the main question of my work, which aims at determining if CLTQP is a useful query paradigm.
+Question 1, on the one hand, is the main question of my work, which aims at determining if CLTQP is a useful query paradigm.
 Questions 2 and 3, on the other hand, are asked to determine the efficiency of the specific method 
 that will be employed to solve the two main problems.
 Those questions can be extended to consider the number
