@@ -2,11 +2,11 @@
 {:#introduction}
 
 Decentralized web initiatives give users more control over their data.
-It can be formalized in a concept called data sovereignty. [](cite:cites verstraete2022solid) defined this concept as 
+It can be formalized in a concept called data sovereignty. The authors of [](cite:cites verstraete2022solid) defined this concept as 
 <q>the power an individual has over their data.</q>[](cite:cites verstraete2022solid).
 It can also be interpreted as <q>the self-determination of 
 individuals and organizations concerning to the use of their data</q>[](cite:cites verstraete2022solid).
-This means that individual and legal entities
+In practice it means that individual and legal entities
 <q>can choose where [their] data is stored and who is granted access to it.</q>[](cite:cites verstraete2022solid)
 In this PhD program, I attempt to move the definition of power and control,
 in the context of decentralized web environments, from a more consumer choice 
@@ -18,15 +18,15 @@ In the context of data usage, sovereignty, and control are vested in the owner o
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users [](cite:cites Sevignani2013).
 Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue,
 even when the data is anonymized [](cite:cites Terranova2000FreeLP, Sevignani2013).
-To improve this sovereignty, my emphasis is on querying because, in the case of social applications, the request for information, 
-its discovery process,  particularly when considering complex concepts like serendipity [](cite:cites Smets2022SerendipityIR)
-and its propagation are the core functionalities creating the share context enabling sociability.
+To improve this sovereignty, I focus on data querying of social applications.
+In social applications, requesting and discovering new information, while taking into consideration
+complex concepts like serendipity [](cite:cites Smets2022SerendipityIR),
+are the core functionalities creating the shared context that enable sociability.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
 their computational power when querying. 
 This collaboration aims to increase query result completeness 
-and to reduce execution time for all users,
-in essence creating a unified and powerful engine<span class="comment" data-author="RT">Do you mean a virtual query engine across all peers, that is more powerful than a single engine within one peer?</span>. 
+and to reduce execution time for all users.
 With this collective participation, 
 it would be possible at little cost to provide a more democratic economic base from which
 users could have more power to choose features for social applications that cater to their

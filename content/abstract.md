@@ -2,11 +2,10 @@
 <!-- Context -->
 Decentralized web environments aim to give users data autonomy and control.
 <!-- Need -->
-Data sovereignty focuses on privacy and provider choice,
-<span class="comment" data-author="RT">I honestly don't understand the remainder of this sentence, so I suspect the reviewers won't either.</span>
-but the concept is not complete if it does not include the concrete usage of the data,
-if when it comes to the working of applications sovereignty can be
-surrendered to the owner of the computational units or apps.
+Data sovereignty focus on two aspects: privacy and provider choice.
+However, the concept remains incomplete if it fails to incorporate the actual utilization of the data.
+Specifically, in the context of application functionality,
+data sovereignty can be relinquished to the owner of the computational units or applications.
 <!-- Task -->
 The exploration and retrieval of information are core functionalities of web-based social
 applications because it is from those mechanisms that shared experiences to foster interactions are created.
@@ -15,7 +14,6 @@ a SPARQL query paradigm that aims at exploring the web to answer queries by foll
 <!-- Object -->
 In my doctoral research, I introduce Collaborative Link Data Query Processing,
 a paradigm where multiple query engines collaborate to improve query result completeness and execution performance in LTQP.
-<span class="comment" data-author="RT">Make sure to briefly mention here the importance and novelty of the collaborative aspect, or what collaborative means to you.</span>
 <!-- Findings -->
 I divide the research on the cooperation of query engines into two parts:
 1) Improving the completeness of results, by exploring more of the search space,
