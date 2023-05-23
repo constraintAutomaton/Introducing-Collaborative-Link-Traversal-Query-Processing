@@ -10,7 +10,7 @@
   <meta name="citation_title" content="Introducing Collaborative Link Traversal Query Processing in the Context of Structured Decentralized Environments">
   <meta name="citation_author" content="Bryan-Elliott Tam" />
   
-  <meta name="citation_publication_date" content="2023/05/22" />
+  <meta name="citation_publication_date" content="2023/05/23" />
 </head>
 
 <body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
@@ -196,7 +196,7 @@ CyCLaDEs <span class="references">[<a href="#ref-17">17</a>]</span> adapted the
 
       <h3 id="proposal">Proposal</h3>
 
-      <p>This paper aims to create a SPARQL query paradigm called CLQTP.
+      <p>This paper aims to create a SPARQL query paradigm called Collaborative Link Traversal Query Processing (CLQTP).
 It consists of using multiple SPARQL query engines with the aim of improving the completeness
 of queries by exploring more of the search space and reducing the query execution time through the means of exchange of results.
 Both problems have been engaged in the academic literature, but not in the case of LTQP and considering the distributed SPARQL querying domain <span class="references">[<a href="#ref-18">18</a>]</span>.
@@ -229,7 +229,7 @@ For both problems, it has to be considered that a mechanism to incentivize recip
 It can be implemented in multiple ways, for example, as an obligation to participate in a minimum percentage of queries or
 a number links to provide.
 This enforcement could be managed by a community-specific structure with policies in that regard.
-Given that a user doesn’t respect the policy, they cannot access the results of that community,
+Given that a user does not respect the policy, they cannot access the results of that community,
 so it is a form of social contract.</p>
 
       <h3 id="research_question">Research questions and Hypotheses</h3>
@@ -247,13 +247,12 @@ and lower query execution time in the context of LTQP by making multiple SPARQL 
 repeated query processing?</p>
         </li>
         <li>
-          <p><strong>Question 3</strong>: How can we reduce query execution time by utilizing P2P caching in the context of CLTQP?</p>
+          <p><strong>Question 3</strong>: How can we reduce query execution time using P2P caching in the context of CLTQP?</p>
         </li>
         <li>
-          <p><strong>Hypothesis 1</strong>: Given a large enough search space, defined
-as a search space in which it is possible the split it between the engines,
-then there is an inverse correlation between the number of engines collaborating and 
-the execution time and a direct correlation with the number of data sources explored.</p>
+          <p><strong>Hypothesis 1</strong>: Given a large enough search space, in which it is possible to split it between the engines, 
+there is an inverse correlation between the number of engines collaborating and 
+the execution time, and a direct correlation with the number of data sources explored.</p>
         </li>
         <li>
           <p><strong>Hypothesis 2</strong>: It is possible to partition the search space in the context of CLTQP,
@@ -265,7 +264,7 @@ so that its lookup time is faster than the execution of the query.</p>
         </li>
       </ul>
 
-      <p>Question 1 is the main question of my work, which aims at determining if CLTQP is a useful query paradigm.
+      <p>Question 1, on the one hand, is the main question of my work, which aims at determining if CLTQP is a useful query paradigm.
 Questions 2 and 3, on the other hand, are asked to determine the efficiency of the specific method 
 that will be employed to solve the two main problems.
 Those questions can be extended to consider the number
@@ -305,7 +304,7 @@ The advantage of this strategy is, also, the low communication between the engin
 However, unlike the previous one, there is a mechanism to avoid redundant calculations.
 The query engines have a lookup policy that restricts links visited by others.
 For example, the engines might be responsible for a specific semantic section of the domain, 
-e.g.: cities in geospatial query. 
+e.g., cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
 and the type of dataset from which we expect to find results.</p>
         </li>
@@ -332,7 +331,7 @@ I propose to measure the following metrics:</p>
       <ul>
         <li><strong>Result accuracy</strong>: The F-score; a fraction indicating the correctness and completeness of results</li>
         <li><strong>Query execution time</strong>: The total time it takes to complete a query</li>
-        <li>The ratio of the execution time and the communication time between the engines
+        <li><strong>The ratio of the execution time and the communication time between the engines</strong>
 <!-- Not sure yet how to do it--></li>
         <li><strong>Ability to access isolated documents</strong>: Measured by analyzing the number of links leading to query-relevant data sources and evaluating their actual contribution</li>
         <li><strong>Overlapping of the search space</strong>: The number of times a triple and data source has been queried</li>
@@ -357,7 +356,7 @@ The disadvantage of that method is that it relies on a type of self-organization
 and it does not consider that engines that have not collaborated might still have results in common.</p>
         </li>
         <li>
-          <p><strong>DHT to find the cached element</strong>:
+          <p><strong>Distributed Hash Table (DHT) to find the cached element</strong>:
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
 The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user <span class="references">[<a href="#ref-9">9</a>]</span>,
@@ -381,10 +380,10 @@ Also, an alternative would be to not share private information.</p>
 <div datatype="rdf:HTML" property="schema:description">
       <h2 property="schema:name">Conclusion</h2>
 
-      <p>In this article, I present a proposal for my PhD research and the state of the art associated with it.
+      <p>In this article, I presented a proposal for my PhD research and the state of the art associated with it.
 My project aims at reducing the query execution time and increasing the query completeness when exploring the web of linked data.
 The solution proposed enables query engines to collaborate in the exploration of data sources and to share of results through a P2P cache.
-The potential of this proposal is to democratize the creation and usage of large-scale social media applications.</p>
+The potential of this proposal is to democratize the creation and usage of large-scale Web applications.</p>
 
     </div>
 </section>
@@ -396,7 +395,7 @@ The potential of this proposal is to democratize the creation and usage of large
 <a href="https://pietercolpaert.be/">Pieter Colpaert</a>, <a href="https://www.rubensworks.net/">Ruben Taelman</a></p>
 
       <p><strong>Funding</strong>:
-supported by SolidLab Vlaanderen (Flemish Government VV023/10) and the Research Foundation Flandes (FWO) under grant number S006323N</p>
+Supported by SolidLab Vlaanderen (Flemish Government VV023/10) and the Research Foundation Flanders (FWO) under grant number S006323N</p>
 
     </div>
 </section>
