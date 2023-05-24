@@ -3,11 +3,10 @@
 
 Decentralized web initiatives give users more control over their data.
 It can be formalized in a concept called data sovereignty. The authors of [](cite:cites verstraete2022solid) defined this concept as 
-<q>the power an individual has over their data.</q>[](cite:cites verstraete2022solid).
+<q>the power an individual has over their data</q>[](cite:cites verstraete2022solid).
 It can also be interpreted as <q>the self-determination of 
-individuals and organizations concerning to the use of their data</q>[](cite:cites verstraete2022solid).
-In practice it means that individual and legal entities
-<q>can choose where [their] data is stored and who is granted access to it.</q>[](cite:cites verstraete2022solid)
+individuals and organizations concerning to the use of their data</q>[](cite:cites verstraete2022solid),
+in practice it is the power of the user to choose <q>where [their] data is stored and who is granted access to it</q>[](cite:cites verstraete2022solid).
 In this PhD program, I attempt to move the definition of power and control,
 in the context of decentralized web environments, from a more consumer choice 
 [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013),

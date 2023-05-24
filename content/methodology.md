@@ -9,7 +9,7 @@ This implies two sets of potential solutions detailed below.
 
 My first aim is to increase the query completeness;
 For that purpose I will try to divide the search space among peers in a P2P network.
-It has to be considered first that the topology of the domain cannot 
+It has to be considered first that the topology of the domain is not known, 
 so we cannot divide the search space a priori.
 Below I present three strategies to divide the domain and process the query. 
 
@@ -57,7 +57,7 @@ I propose to measure the following metrics:
 ### Collaborative Caching
 
 My second aim is to reduce the query execution time by using already computed results from a shared cache.
-The information cached could be the *data source URLs contributing to a query*,
+The information cached could be the *data source URLs contributing to a query* and
 the *intermediary joint results*, given some triple patterns to avoid their calculations.
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.
 I propose to investigate those two strategies:
@@ -69,7 +69,7 @@ The clustering can be based on the engines that have engaged in a query collabor
 The disadvantage of that method is that it relies on a type of self-organization of the network of engines,
 and it does not consider that engines that have not collaborated might still have results in common.
 
-- **Distributed Hash Table (DHT) to find the cached element**:
+- **Distributed Hash Table to find the cached element**:
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
 The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user [](cite:cites Grall2020),

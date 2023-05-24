@@ -4,7 +4,7 @@
 ### Proposal
 {:#proposal}
 
-This paper aims to create a SPARQL query paradigm called Collaborative Link Traversal Query Processing (CLQTP).
+This paper aims to create a SPARQL query paradigm called Collaborative Link Traversal Query Processing.
 It consists of using multiple SPARQL query engines with the aim of improving the completeness
 of queries by exploring more of the search space and reducing the query execution time through the means of exchange of results.
 Both problems have been engaged in the academic literature, but not in the case of LTQP and considering the distributed SPARQL querying domain [](cite:cites 8029358).
@@ -35,7 +35,7 @@ which may change the conclusion of the caching and network strategy.
 Additionally, in environments like Solid, privacy is an additional consideration for caching [](cite:cites 10.1145/2413176.2413215).
 For both problems, it has to be considered that a mechanism to incentivize reciprocity is necessary to ensure fairness and the good functioning of the P2P system.
 It can be implemented in multiple ways, for example, as an obligation to participate in a minimum percentage of queries or
-a number links to provide.
+a number of links to provide.
 This enforcement could be managed by a community-specific structure with policies in that regard.
 Given that a user does not respect the policy, they cannot access the results of that community,
 so it is a form of social contract.
@@ -45,7 +45,7 @@ so it is a form of social contract.
 {:#research_question}
 
 Building on the proposal and the related work of [](#litterature_review),
-I formalize my the research questions and hypotheses below:
+I formalize my research questions and hypotheses below:
 
 - **Question 1**: Can we achieve better query result completeness
 and lower query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?

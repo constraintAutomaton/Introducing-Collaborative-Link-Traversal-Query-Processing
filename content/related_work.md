@@ -8,7 +8,7 @@ LTQP is a technique that consists of [recursively looking up URLs from dereferen
 to explore the surrounding information around the original response](cite:cites Hartig2016) using the follow-your-nose
 principle of Linked Data. 
 In contrast, traditional SPARQL queries only query one document,
-and Federated Query Processing where the data sources need to be known beforehand. 
+and Federated Query Processing the data sources need to be known beforehand. 
 The query first starts with a small set of URIs called [seed URIs](cite:cites Hartig2016) that form
 the initial data sources for the execution.
 The engine then uses a predefined lookup policy to discover new URIs inside the documents obtained from the seed URIs.
