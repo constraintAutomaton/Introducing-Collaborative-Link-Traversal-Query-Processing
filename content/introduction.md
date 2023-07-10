@@ -15,11 +15,12 @@ in the context of decentralized web environments, from a more consumer choice
 the right to choose who will use my data,
 to a definition that includes the right of the users as a collective to make use of their data without relying on
 a third-party distributor with substantial computational power.
-In the context of data usage, sovereignty, and control are vested in the owner of the computational unit.
+In the context of data usage, sovereignty, and control are vested in the owner of the computational unit [](cite:cites 9663788).
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users [](cite:cites Sevignani2013).
-Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue,
+Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue [](cite:cites 9663788),
 even when the data is anonymized [](cite:cites Terranova2000FreeLP, Sevignani2013).
-To improve this sovereignty, I focus on data querying of social applications.
+To improve this sovereignty, I focus on data querying of social applications,
+application that are driven by the interaction between users.
 In social applications, requesting and discovering new information, while taking into consideration
 complex concepts like serendipity [](cite:cites Smets2022SerendipityIR),
 are the core functionalities creating the shared context that enable sociability.
