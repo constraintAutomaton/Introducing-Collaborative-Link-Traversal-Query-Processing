@@ -1,6 +1,5 @@
 .DS_Store
 *.pdf
-!/content/article/*
 .sass-cache
 tmp
 output
@@ -8,4 +7,3 @@ output
 *.diff
 content/references.bib.sav
 content/reference.bib.sav
-content/article
