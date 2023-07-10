@@ -13,24 +13,27 @@ It has to be considered first that the topology of the domain is not known,
 so we cannot divide the search space a priori.
 Below I present three strategies to divide the domain and process the query. 
 
-- **Collect the seed URLs and divide them between the query engines**: 
+1. **Collect the seed URLs and divide them between the query engines**: 
 The advantage of this strategy is the communication between the engines is minimal,
 at the start or at a moment when we have a large number of URLs we let the engines execute the query on their own and at
 the stopping condition, the engine share their results.
 The limitation of this strategy is that we don't consider if the data sources discoverable inside the seed URLs overlaps.
+Another important limitation is when parts of the results are inside data sources process by different engines.
+In that case there will be a loss of query accuracy because the solution mapping will have to be joint between the eniges.
+By detecting those cases and using adaptative query planning [](cite:cites taelman2023, Acosta2011), it would be possible change strategy to avoid the loss of accuracy .
 
-- **Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field**:
+2. **Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field**:
 The advantage of this strategy is, also, the low communication between the engines.
 However, unlike the previous one, there is a mechanism to avoid redundant calculations.
 The query engines have a lookup policy that restricts links visited by others.
 For example, the engines might be responsible for a specific semantic section of the domain, 
 e.g., cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
-and the type of dataset from which we expect to find results.
+and the type of dataset from which we expect to find results and the loss of accuracy explained in the first strategy.
 
-- **Use a global link queue shared between all the query engines**:
+3. **Use a global link queue and solution map shared between all the query engines**:
 The advantage of this strategy is that it's a simple way to avoid redundant calculations as all engines have the same link queue.
-Every engine can then execute the query on their own with no consideration for redundancy.
+Also with the shared solution map the engine would avoid the problem of accuracy references in the first strategy
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
 the execution of the query as inspired by the "slave-master" paradigm of [](cite:cites 8029358).
 The problem with this strategy is the necessary communication and the potential locking mechanism to avoid inconsistencies.
@@ -62,14 +65,14 @@ the *intermediary joint results*, given some triple patterns to avoid their calc
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.
 I propose to investigate those two strategies:
 
-- **Unstructured network where peers are clustered based on their behavior**: 
+1. **Unstructured network where peers are clustered based on their behavior**: 
 The advantage of this strategy is that the lookup time to find information in the cache is constant and the peers 
 have a high probability of possessing the knowledge desired. 
 The clustering can be based on the engines that have engaged in a query collaboration with the subject engine.
 The disadvantage of that method is that it relies on a type of self-organization of the network of engines,
 and it does not consider that engines that have not collaborated might still have results in common.
 
-- **Distributed Hash Table to find the cached element**:
+2. **Distributed Hash Table to find the cached element**:
 The advantage of this approach is that we can get every cached element of the engines implementing the protocol.
 The disadvantage is that the lookup time is logarithmic with the number of elements cached,
 also the private information of the users will be dispersed in the DHT, with no regard to the will of the user [](cite:cites Grall2020),
