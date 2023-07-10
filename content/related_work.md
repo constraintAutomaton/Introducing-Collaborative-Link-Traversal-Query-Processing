@@ -12,11 +12,13 @@ and Federated Query Processing the data sources need to be known beforehand.
 The query first starts with a small set of URIs called [seed URIs](cite:cites Hartig2016) that form
 the initial data sources for the execution.
 The engine then uses a predefined lookup policy to discover new URIs inside the documents obtained from the seed URIs.
-Link traversal has great exploratory potential.
+Link traversal has a great exploratory potential by discovering unknown data sources during the querying execution with no 
+input from the client [](cite:cites Hartig2016). 
+The exploitation of this potential can extend the knowledge available for the engine to query or give more context to the data.
 In its traditional form, it consists of following,
 more or less naively, the links inside the response payload and dereferencing them to get new data sources.
 However, Link Traversal comes with some difficulties,
-such as the open-endedness of the web and query planning [](cite:cites Hartig2014LinkedDQ). 
+such as the open-endedness of the web and the complexity of query planning [](cite:cites Hartig2014LinkedDQ). 
 Reachability criteria can be defined to restrict the links that are followed based on conditions.
 Classical examples are `cAll`, which follows every link, and `cMatch`, which follows links that match the query pattern [](cite:cites hartig2012).
 
