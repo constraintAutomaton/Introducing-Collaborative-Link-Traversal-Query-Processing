@@ -10,7 +10,7 @@
   <meta name="citation_title" content="Introducing Collaborative Link Traversal Query Processing in the Context of Structured Decentralized Environments">
   <meta name="citation_author" content="Bryan-Elliott Tam" />
   
-  <meta name="citation_publication_date" content="2023/05/25" />
+  <meta name="citation_publication_date" content="2023/07/10" />
 </head>
 
 <body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
@@ -71,8 +71,9 @@ It can be formalized in a concept called data sovereignty. The authors of <span 
 <q>the power an individual has over their data</q><span class="references">[<a href="#ref-1">1</a>]</span>.
 It can also be interpreted as <q>the self-determination of 
 individuals and organizations concerning to the use of their data</q><span class="references">[<a href="#ref-1">1</a>]</span>,
-in practice it is the power of the user to choose <q>where [their] data is stored and who is granted access to it</q><span class="references">[<a href="#ref-1">1</a>]</span>.
-In this PhD program, I attempt to move the definition of power and control,
+in practice it is the power of the user to choose <q>where [their] data is stored and who is granted access to it</q><span class="references">[<a href="#ref-1">1</a>]</span>.</p>
+
+      <p>In this PhD program, I attempt to move the definition of power and control,
 in the context of decentralized web environments, from a more consumer choice 
 <span class="references">[<a href="#ref-2">2</a>, <a href="#ref-3">3</a>, <a href="#ref-4">4</a>]</span>,
 the right to choose who will use my data,
@@ -94,8 +95,9 @@ and to reduce execution time for all users.
 With this collective participation, 
 it would be possible at little cost to provide a more democratic economic base from which
 users could have more power to choose features for social applications that cater to their
-desire and interest and start social applications with a lesser monetary barrier.
-This paper is divided as follows, first,
+desire and interest and start social applications with a lesser monetary barrier.</p>
+
+      <p>This paper is divided as follows, first,
 <a href="#litterature_review">related work</a> is presented,
 after the <a href="#proposal">research proposal</a> is made,
 then the <a href="#evaluation">methodology</a> is explained and there is a short <a href="#conclusion">conclusion</a>.</p>
@@ -131,11 +133,13 @@ and Federated Query Processing the data sources need to be known beforehand.
 The query first starts with a small set of URIs called seed URIs <span class="references">[<a href="#ref-6">6</a>]</span> that form
 the initial data sources for the execution.
 The engine then uses a predefined lookup policy to discover new URIs inside the documents obtained from the seed URIs.
-Link traversal has great exploratory potential.
+Link traversal has a great exploratory potential by discovering unknown data sources during the querying execution with no 
+input from the client <span class="references">[<a href="#ref-6">6</a>]</span>. 
+The exploitation of this potential can extend the knowledge available for the engine to query or give more context to the data.
 In its traditional form, it consists of following,
 more or less naively, the links inside the response payload and dereferencing them to get new data sources.
 However, Link Traversal comes with some difficulties,
-such as the open-endedness of the web and query planning <span class="references">[<a href="#ref-7">7</a>]</span>. 
+such as the open-endedness of the web and the complexity of query planning <span class="references">[<a href="#ref-7">7</a>]</span>. 
 Reachability criteria can be defined to restrict the links that are followed based on conditions.
 Classical examples are <code>cAll</code>, which follows every link, and <code>cMatch</code>, which follows links that match the query pattern <span class="references">[<a href="#ref-8">8</a>]</span>.</p>
 
@@ -201,30 +205,35 @@ of queries by exploring more of the search space and reducing the query executio
 Both problems have been engaged in the academic literature, but not in the case of LTQP and considering the distributed SPARQL querying domain <span class="references">[<a href="#ref-18">18</a>]</span>.
 In this PhD project, I will apply this query paradigm in the context of Solid, 
 which implies that there is a strong consideration for privacy during querying <span class="references">[<a href="#ref-19">19</a>]</span>
-and a structured environment that can be leveraged to speed up the query <span class="references">[<a href="#ref-20">20</a>]</span>.
-The first problem I aim to solve is to increase the query completeness.
+and a structured environment that can be leveraged to speed up the query <span class="references">[<a href="#ref-20">20</a>]</span>.</p>
+
+      <p>The first problem I aim to solve is to increase the query completeness.
 To do so, CLTQP attempts to explore more of the search space by having multiple query engines engaging in 
 non-overlapping partitions of the huge or pseudo-infinite search domain and executing the query.
+In this context, I define the domain and the search space as the whole web of linked data,
+so as disjoint (knowledge) graph containing all the triples available on the web.
 Hence, in the same amount of time, having more triples processed compared to an approach with just a single query engine.
 An important property emerging from the traversal of links is a structural proximity bias of the query results, which
 means that from the link traversal method, some data sources tend to be discovered more easily regardless of their potential
 influence on the query completeness and the interpretation of the query results.
 The bias has two interconnected sources: a sensitivity to the initial conditions induced by the seed URLs and the structure of the web,
 which is not a fully connected graph.
-Hence, a data source that takes more steps to be accessed, in regards to the seed URLs can be more difficult to discover.
+Hence, a data source that takes more steps to be accessed, in regards to the seed URLs, can be more difficult to discover.
 Corollary, there is a bias based on the popularity of the data source, as it is easier to find a data source that is
 referenced more times and in a wide range of data source types (by data source types, I mean data sources that focus on specific topics)
 than data sources having the reverse properties.
-Hence by exploring more of the search space, there is more chance to discover those data sources.
-The second problem is to reduce the execution time, and I explore the method of P2P caching to alleviate this issue.
-<span class="references">[<a href="#ref-21">21</a>]</span> demonstrates that caching in LTQP can help improve the completeness of results,
+Hence by exploring more of the search space, there is more chance to discover those data sources.</p>
+
+      <p>The second problem is to reduce the execution time, and I explore the method of P2P caching to alleviate this issue.
+Hartig in <span class="references">[<a href="#ref-21">21</a>]</span> demonstrates that caching in LTQP can help improve the completeness of results,
 however, in some conditions the query execution time can be increased.
 In the <a href="#literature_review_P2P_caching">literature</a>, there are contributions on the topic of P2P caching,
 but none engage with the problem of LTQP and its particularities,
 such as long execution time, exploration of multiple sources, and difficulty in attaining completeness
 which may change the conclusion of the caching and network strategy.
-Additionally, in environments like Solid, privacy is an additional consideration for caching <span class="references">[<a href="#ref-22">22</a>]</span>.
-For both problems, it has to be considered that a mechanism to incentivize reciprocity is necessary to ensure fairness and the good functioning of the P2P system.
+Additionally, in environments like Solid, privacy is an additional consideration for caching <span class="references">[<a href="#ref-22">22</a>]</span>.</p>
+
+      <p>For both problems, it has to be considered that a mechanism to incentivize reciprocity is necessary to ensure fairness and the good functioning of the P2P system.
 It can be implemented in multiple ways, for example, as an obligation to participate in a minimum percentage of queries or
 a number of links to provide.
 This enforcement could be managed by a community-specific structure with policies in that regard.
@@ -242,8 +251,7 @@ I formalize my research questions and hypotheses below:</p>
 and lower query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?</p>
         </li>
         <li>
-          <p><strong>Question 2</strong>: How can we minimize the overlapping of data sources exploration during CLTQP to avoid useless 
-repeated query processing?</p>
+          <p><strong>Question 2</strong>: How can we prevent multiple query engines from repeating identical calculations over the same data sources?</p>
         </li>
         <li>
           <p><strong>Question 3</strong>: How can we reduce query execution time using P2P caching in the context of CLTQP?</p>
@@ -289,13 +297,16 @@ It has to be considered first that the topology of the domain is not known,
 so we cannot divide the search space a priori.
 Below I present three strategies to divide the domain and process the query.</p>
 
-      <ul>
+      <ol>
         <li>
           <p><strong>Collect the seed URLs and divide them between the query engines</strong>: 
 The advantage of this strategy is the communication between the engines is minimal,
 at the start or at a moment when we have a large number of URLs we let the engines execute the query on their own and at
 the stopping condition, the engine share their results.
-The limitation of this strategy is that we don’t consider if the data sources discoverable inside the seed URLs overlaps.</p>
+The limitation of this strategy is that we don’t consider if the data sources discoverable inside the seed URLs overlaps.
+Another important limitation is when parts of the results are inside data sources process by different engines.
+In that case there will be a loss of query accuracy because the solution mapping will have to be joint between the eniges.
+By detecting those cases and using adaptative query planning <span class="references">[<a href="#ref-20">20</a>, <a href="#ref-23">23</a>]</span>, it would be possible change strategy to avoid the loss of accuracy .</p>
         </li>
         <li>
           <p><strong>Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</strong>:
@@ -305,19 +316,19 @@ The query engines have a lookup policy that restricts links visited by others.
 For example, the engines might be responsible for a specific semantic section of the domain, 
 e.g., cities in geospatial query. 
 The limitation of this strategy is that the criteria might have to be changed depending on the executed query
-and the type of dataset from which we expect to find results.</p>
+and the type of dataset from which we expect to find results and the loss of accuracy explained in the first strategy.</p>
         </li>
         <li>
-          <p><strong>Use a global link queue shared between all the query engines</strong>:
+          <p><strong>Use a global link queue and solution map shared between all the query engines</strong>:
 The advantage of this strategy is that it’s a simple way to avoid redundant calculations as all engines have the same link queue.
-Every engine can then execute the query on their own with no consideration for redundancy.
+Also with the shared solution map the engine would avoid the problem of accuracy references in the first strategy
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
 the execution of the query as inspired by the “slave-master” paradigm of <span class="references">[<a href="#ref-18">18</a>]</span>.
 The problem with this strategy is the necessary communication and the potential locking mechanism to avoid inconsistencies.</p>
         </li>
-      </ul>
+      </ol>
 
-      <p>I am planning to build a prototype using the SPARQL meta query engine <a property="schema:citation http://purl.org/spar/cito/cites" href="https://comunica.github.io/Article-ISWC2018-Resource/">Comunica</a> <span class="references">[<a href="#ref-23">23</a>]</span>,
+      <p>I am planning to build a prototype using the SPARQL meta query engine <a property="schema:citation http://purl.org/spar/cito/cites" href="https://comunica.github.io/Article-ISWC2018-Resource/">Comunica</a> <span class="references">[<a href="#ref-24">24</a>]</span>,
 because it already has LTQP algorithms implemented and it is a highly extensible software which 
 will facilitate the implementation of those algorithms.
 I will evaluate it against the Solid social media benchmark;
@@ -334,7 +345,7 @@ I propose to measure the following metrics:</p>
 <!-- Not sure yet how to do it--></li>
         <li><strong>Ability to access isolated documents</strong>: Measured by analyzing the number of links leading to query-relevant data sources and evaluating their actual contribution</li>
         <li><strong>Overlapping of the search space</strong>: The number of times a triple and data source has been queried</li>
-        <li><strong>Query result arrival times</strong>: The time it takes for each triple from the beginning of the query to be obtained <span class="references">[<a href="#ref-24">24</a>]</span></li>
+        <li><strong>Query result arrival times</strong>: The time it takes for each triple from the beginning of the query to be obtained <span class="references">[<a href="#ref-25">25</a>]</span></li>
       </ul>
 
       <h3 id="collaborative-caching">Collaborative Caching</h3>
@@ -345,7 +356,7 @@ the <em>intermediary joint results</em>, given some triple patterns to avoid the
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.
 I propose to investigate those two strategies:</p>
 
-      <ul>
+      <ol>
         <li>
           <p><strong>Unstructured network where peers are clustered based on their behavior</strong>: 
 The advantage of this strategy is that the lookup time to find information in the cache is constant and the peers 
@@ -362,7 +373,7 @@ also the private information of the users will be dispersed in the DHT, with no 
 but there are strategies with the combination of a gossip protocol to keep privacy <span class="references">[<a href="#ref-22">22</a>]</span>.
 Also, an alternative would be to not share private information.</p>
         </li>
-      </ul>
+      </ol>
 
       <p>Building on the evaluation method of the first set of solutions, those metrics are added:</p>
 
@@ -449,8 +460,10 @@ Supported by SolidLab Vlaanderen (Flemish Government VV023/10) and the Research 
   <dt id="ref-22">[22]</dt>
   <dd resource="https://doi.org/10.1145/2413176.2413215" typeof="schema:Article">Nilizadeh, S., Jahid, S., Mittal, P., Borisov, N., Kapadia, A.: Cachet: A Decentralized Architecture for Privacy Preserving Social Networking with Caching. In: Emerging Networking Experiments and Technologies (2012).</dd>
   <dt id="ref-23">[23]</dt>
-  <dd resource="https://comunica.github.io/Article-ISWC2018-Resource/" typeof="schema:Article">Taelman, R., Van Herwegen, J., Vander Sande, M., Verborgh, R.: Comunica: a Modular SPARQL Query Engine for the Web. In: International Semantic Web Conference (2018).</dd>
+  <dd resource="#Acosta2011" typeof="schema:Article">Acosta, M., Vidal, M.-E., Lampo, T., Castillo, J., Ruckhaus, E.: ANAPSID: An Adaptive Query Processing Engine for SPARQL Endpoints. In: ISWC 2011. Springer Berlin Heidelberg (2011).</dd>
   <dt id="ref-24">[24]</dt>
+  <dd resource="https://comunica.github.io/Article-ISWC2018-Resource/" typeof="schema:Article">Taelman, R., Van Herwegen, J., Vander Sande, M., Verborgh, R.: Comunica: a Modular SPARQL Query Engine for the Web. In: International Semantic Web Conference (2018).</dd>
+  <dt id="ref-25">[25]</dt>
   <dd resource="#Acosta2017" typeof="schema:Article">Acosta, M., Vidal, M.-E., Sure-Vetter, Y.: Diefficiency Metrics: Measuring the Continuous Efficiency of Query Processing Approaches. In: ISWC 2017 (2017).</dd>
 </dl>
 </section>
