@@ -7,6 +7,8 @@ It can be formalized in a concept called data sovereignty. The authors of [](cit
 It can also be interpreted as <q>the self-determination of 
 individuals and organizations concerning to the use of their data</q>[](cite:cites verstraete2022solid),
 in practice it is the power of the user to choose <q>where [their] data is stored and who is granted access to it</q>[](cite:cites verstraete2022solid).
+
+
 In this PhD program, I attempt to move the definition of power and control,
 in the context of decentralized web environments, from a more consumer choice 
 [](cite:cites Terranova2000FreeLP, Curran2016ch1, Sevignani2013),
@@ -30,6 +32,7 @@ With this collective participation,
 it would be possible at little cost to provide a more democratic economic base from which
 users could have more power to choose features for social applications that cater to their
 desire and interest and start social applications with a lesser monetary barrier.
+
 This paper is divided as follows, first,
 [related work](#litterature_review) is presented,
 after the [research proposal](#proposal) is made,
