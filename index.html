@@ -10,7 +10,7 @@
   <meta name="citation_title" content="Introducing Collaborative Link Traversal Query Processing in the Context of Structured Decentralized Environments">
   <meta name="citation_author" content="Bryan-Elliott Tam" />
   
-  <meta name="citation_publication_date" content="2023/07/10" />
+  <meta name="citation_publication_date" content="2023/07/12" />
 </head>
 
 <body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
@@ -82,15 +82,16 @@ a third-party distributor with substantial computational power.
 In the context of data usage, sovereignty, and control are vested in the owner of the computational unit <span class="references">[<a href="#ref-5">5</a>]</span>.
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users <span class="references">[<a href="#ref-4">4</a>]</span>.
 Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue <span class="references">[<a href="#ref-5">5</a>]</span>,
-even when the data is anonymized <span class="references">[<a href="#ref-2">2</a>, <a href="#ref-4">4</a>]</span>.
+even when the data is anonymized <span class="references">[<a href="#ref-2">2</a>, <a href="#ref-4">4</a>]</span> 
+and contribute to the centralization of wealth, increased surveillance and the non representative distribution of content online (for example in languages and type of content) <span class="references">[<a href="#ref-3">3</a>, <a href="#ref-4">4</a>, <a href="#ref-5">5</a>]</span>.
 To improve this sovereignty, I focus on data querying of social applications,
-application that are driven by the interaction between users.
+applications that are driven by the interaction between users.
 In social applications, requesting and discovering new information, while taking into consideration
 complex concepts like serendipity <span class="references">[<a href="#ref-6">6</a>]</span>,
 are the core functionalities creating the shared context that enable sociability.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
-their computational power when querying. 
+their computational power when querying using SPARQL.
 This collaboration aims to increase query result completeness 
 and to reduce execution time for all users.
 With this collective participation, 
@@ -252,10 +253,14 @@ I formalize my research questions and hypotheses below:</p>
 and lower query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?</p>
         </li>
         <li>
-          <p><strong>Question 2</strong>: How can we prevent multiple query engines from repeating identical calculations over the same data sources?</p>
+          <p><strong>Question 2</strong>: Does the query execution time, the number of HTTP requests and the CPU usages diminish 
+linearly for each engine with the number of engines collaborating?</p>
         </li>
         <li>
-          <p><strong>Question 3</strong>: How can we reduce query execution time using P2P caching in the context of CLTQP?</p>
+          <p><strong>Question 3</strong>: How can we prevent multiple query engines from repeating identical calculations over the same data sources?</p>
+        </li>
+        <li>
+          <p><strong>Question 4</strong>: How can we reduce query execution time using P2P caching in the context of CLTQP?</p>
         </li>
         <li>
           <p><strong>Hypothesis 1</strong>: Given a large enough search space, in which it is possible to split it between the engines, 
@@ -272,8 +277,8 @@ so that its lookup time is faster than the execution of the query.</p>
         </li>
       </ul>
 
-      <p>Question 1, on the one hand, is the main question of my work, which aims at determining if CLTQP is a useful query paradigm.
-Questions 2 and 3, on the other hand, are asked to determine the efficiency of the specific method 
+      <p>Question 1 and 2, on the one hand, is the main question of my work, which aims at determining if CLTQP is a useful query paradigm.
+Questions 3 and 4, on the other hand, are asked to determine the efficiency of the specific method 
 that will be employed to solve the two main problems.
 Those questions can be extended to consider the number
 of query engines and the types of scenarios (query, data sources, privacy policy, and so on) encountered.
@@ -303,11 +308,12 @@ Below I present three strategies to divide the domain and process the query.</p>
           <p><strong>Collect the seed URLs and divide them between the query engines</strong>: 
 The advantage of this strategy is the communication between the engines is minimal,
 at the start or at a moment when we have a large number of URLs we let the engines execute the query on their own and at
-the stopping condition, the engine share their results.
+the stopping condition, the engines share their results.
 The limitation of this strategy is that we don’t consider if the data sources discoverable inside the seed URLs overlaps.
-Another important limitation is when parts of the results are inside data sources process by different engines.
-In that case there will be a loss of query accuracy because the solution mapping will have to be joint between the eniges.
-By detecting those cases and using adaptative query planning <span class="references">[<a href="#ref-21">21</a>, <a href="#ref-24">24</a>]</span>, it would be possible change strategy to avoid the loss of accuracy .</p>
+Another important limitation is the loss of accuracy if part of the solution is present inside the documents processed by different engines.
+In that case, to find those results, the solution map would need to be joined, to retain the accuracy.
+By detecting those cases and using adaptative query planning <span class="references">[<a href="#ref-21">21</a>, <a href="#ref-24">24</a>]</span>,
+it would be possible to change strategy to avoid the loss of accuracy.</p>
         </li>
         <li>
           <p><strong>Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field</strong>:
@@ -322,9 +328,9 @@ and the type of dataset from which we expect to find results and the loss of acc
         <li>
           <p><strong>Use a global link queue and solution map shared between all the query engines</strong>:
 The advantage of this strategy is that it’s a simple way to avoid redundant calculations as all engines have the same link queue.
-Also with the shared solution map the engine would avoid the problem of accuracy references in the first strategy
+Also with the shared solution map the engine would avoid the problem of loss accuracy mention in the first strategy.
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
-the execution of the query as inspired by the “slave-master” paradigm of <span class="references">[<a href="#ref-19">19</a>]</span>.
+the execution of the query as inspired by the “slave-master” paradigm of the article <span class="references">[<a href="#ref-19">19</a>]</span>.
 The problem with this strategy is the necessary communication and the potential locking mechanism to avoid inconsistencies.</p>
         </li>
       </ol>
@@ -353,7 +359,7 @@ I propose to measure the following metrics:</p>
 
       <p>My second aim is to reduce the query execution time by using already computed results from a shared cache.
 The information cached could be the <em>data source URLs contributing to a query</em> and
-the <em>intermediary joint results</em>, given some triple patterns to avoid their calculations.
+the <em>intermediary joint results with the associated solution map</em>, given some triple patterns to avoid their calculations.
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.
 I propose to investigate those two strategies:</p>
 
@@ -425,7 +431,7 @@ Supported by SolidLab Vlaanderen (Flemish Government VV023/10) and the Research 
   <dt id="ref-4">[4]</dt>
   <dd resource="https://doi.bak.org/10.1093/scipol/sct082" typeof="schema:Article">Sevignani, S.: The commodification of privacy on the Internet. Science and Public Policy. (2013).</dd>
   <dt id="ref-5">[5]</dt>
-  <dd resource="https://dx.doi.org/10.1109/CMI53512.2021.9663788" typeof="schema:Article">Mechant, P., De Wolf, R., Van Compernolle, M., Joris, G., Evens, T., De Marez, L.: Saving the web by decentralizing data networks? A socio-technical reflection on the promise of decentralization and personal data stores. In: 2021 14th CMI International Conference - Critical ICT Infrastructures and Platforms (CMI). pp. 1–6 (2021). doi:10.1109/CMI53512.2021.9663788</dd>
+  <dd resource="#9663788" typeof="schema:Article">Mechant, P., De Wolf, R., Van Compernolle, M., Joris, G., Evens, T., De Marez, L.: Saving the web by decentralizing data networks? A socio-technical reflection on the promise of decentralization and personal data stores. In: 2021 14th CMI International Conference (2021).</dd>
   <dt id="ref-6">[6]</dt>
   <dd resource="#Smets2022SerendipityIR" typeof="schema:Article">Smets, A., Michiels, L., Bogers, T., Björneborn, L.: Serendipity in Recommender Systems Beyond the Algorithm: a Feature Repository and Experimental Design. In: IntRS@RecSys (2022).</dd>
   <dt id="ref-7">[7]</dt>
