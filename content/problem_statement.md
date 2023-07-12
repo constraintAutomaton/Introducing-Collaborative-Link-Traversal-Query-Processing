@@ -58,10 +58,12 @@ I formalize my research questions and hypotheses below:
 - **Question 1**: Can we achieve better query result completeness
 and lower query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?
 
-- **Question 2**: How can we prevent multiple query engines from repeating identical calculations over the same data sources?
+- **Question 2**: Does the query execution time, the number of HTTP requests and the CPU usages diminish 
+linearly for each engine with the number of engines collaborating?
 
-- **Question 3**: How can we reduce query execution time using P2P caching in the context of CLTQP?
+- **Question 3**: How can we prevent multiple query engines from repeating identical calculations over the same data sources?
 
+- **Question 4**: How can we reduce query execution time using P2P caching in the context of CLTQP?
 
 - **Hypothesis 1**: Given a large enough search space, in which it is possible to split it between the engines, 
 there is an inverse correlation between the number of engines collaborating and 
@@ -74,8 +76,8 @@ in a way that the query processing time of overlapping data sources is less than
 so that its lookup time is faster than the execution of the query.
 
 
-Question 1, on the one hand, is the main question of my work, which aims at determining if CLTQP is a useful query paradigm.
-Questions 2 and 3, on the other hand, are asked to determine the efficiency of the specific method 
+Question 1 and 2, on the one hand, is the main question of my work, which aims at determining if CLTQP is a useful query paradigm.
+Questions 3 and 4, on the other hand, are asked to determine the efficiency of the specific method 
 that will be employed to solve the two main problems.
 Those questions can be extended to consider the number
 of query engines and the types of scenarios (query, data sources, privacy policy, and so on) encountered.

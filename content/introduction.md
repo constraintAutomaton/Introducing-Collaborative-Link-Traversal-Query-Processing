@@ -18,15 +18,16 @@ a third-party distributor with substantial computational power.
 In the context of data usage, sovereignty, and control are vested in the owner of the computational unit [](cite:cites 9663788).
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users [](cite:cites Sevignani2013).
 Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue [](cite:cites 9663788),
-even when the data is anonymized [](cite:cites Terranova2000FreeLP, Sevignani2013).
+even when the data is anonymized [](cite:cites Terranova2000FreeLP, Sevignani2013) 
+and contribute to the centralization of wealth, increased surveillance and the non representative distribution of content online (for example in languages and type of content) [](cite:cites Curran2016ch1, Sevignani2013, 9663788).
 To improve this sovereignty, I focus on data querying of social applications,
-application that are driven by the interaction between users.
+applications that are driven by the interaction between users.
 In social applications, requesting and discovering new information, while taking into consideration
 complex concepts like serendipity [](cite:cites Smets2022SerendipityIR),
 are the core functionalities creating the shared context that enable sociability.
 Concretely, I propose Collaborative Link Traversal Query Processing (CLTQP),
 a Link Traversal Query Processing (LTQP) paradigm where every user can share
-their computational power when querying. 
+their computational power when querying using SPARQL.
 This collaboration aims to increase query result completeness 
 and to reduce execution time for all users.
 With this collective participation, 

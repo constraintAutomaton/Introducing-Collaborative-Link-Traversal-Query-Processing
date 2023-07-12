@@ -16,11 +16,12 @@ Below I present three strategies to divide the domain and process the query.
 1. **Collect the seed URLs and divide them between the query engines**: 
 The advantage of this strategy is the communication between the engines is minimal,
 at the start or at a moment when we have a large number of URLs we let the engines execute the query on their own and at
-the stopping condition, the engine share their results.
+the stopping condition, the engines share their results.
 The limitation of this strategy is that we don't consider if the data sources discoverable inside the seed URLs overlaps.
-Another important limitation is when parts of the results are inside data sources process by different engines.
-In that case there will be a loss of query accuracy because the solution mapping will have to be joint between the eniges.
-By detecting those cases and using adaptative query planning [](cite:cites taelman2023, Acosta2011), it would be possible change strategy to avoid the loss of accuracy .
+Another important limitation is the loss of accuracy if part of the solution is present inside the documents processed by different engines.
+In that case, to find those results, the solution map would need to be joined, to retain the accuracy.
+By detecting those cases and using adaptative query planning [](cite:cites taelman2023, Acosta2011),
+it would be possible to change strategy to avoid the loss of accuracy.
 
 2. **Set the reachability criteria of each engine so that they cannot or are less likely to have overlapping search field**:
 The advantage of this strategy is, also, the low communication between the engines.
@@ -33,9 +34,9 @@ and the type of dataset from which we expect to find results and the loss of acc
 
 3. **Use a global link queue and solution map shared between all the query engines**:
 The advantage of this strategy is that it's a simple way to avoid redundant calculations as all engines have the same link queue.
-Also with the shared solution map the engine would avoid the problem of accuracy references in the first strategy
+Also with the shared solution map the engine would avoid the problem of loss accuracy mention in the first strategy.
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
-the execution of the query as inspired by the "slave-master" paradigm of [](cite:cites 8029358).
+the execution of the query as inspired by the "slave-master" paradigm of the article [](cite:cites 8029358).
 The problem with this strategy is the necessary communication and the potential locking mechanism to avoid inconsistencies.
 
 
@@ -61,7 +62,7 @@ I propose to measure the following metrics:
 
 My second aim is to reduce the query execution time by using already computed results from a shared cache.
 The information cached could be the *data source URLs contributing to a query* and
-the *intermediary joint results*, given some triple patterns to avoid their calculations.
+the *intermediary joint results with the associated solution map*, given some triple patterns to avoid their calculations.
 The cache could also be interpreted as a checkpoint for a longer execution or as a map of the data sources to explore.
 I propose to investigate those two strategies:
 
