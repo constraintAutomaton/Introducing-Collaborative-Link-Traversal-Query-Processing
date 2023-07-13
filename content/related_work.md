@@ -8,7 +8,7 @@ LTQP is a technique that consists of [recursively looking up URLs from dereferen
 to explore the surrounding information around the original response](cite:cites Hartig2016) using the follow-your-nose
 principle of Linked Data. 
 In contrast, traditional SPARQL queries only query one document,
-and Federated Query Processing the data sources need to be known beforehand. 
+and in Federated Query Processing the data sources need to be known beforehand. 
 The query first starts with a small set of URIs called [seed URIs](cite:cites Hartig2016) that form
 the initial data sources for the execution.
 The engine then uses a predefined lookup policy to discover new URIs inside the documents obtained from the seed URIs.
@@ -40,10 +40,10 @@ The query engines still have a partial view of the network but it is based on co
 A community, in the ColChain context, is a set of
 <q>nodes that participate in and observe [each other] and the fragments published [between them]</q> [](cite:cites Aebeloe2021).
 So the division of the network is made intentionally by the users.
-For the query process the engine examines its own data sources and then expands the search to include the data sources of known communities.
+For the query process, the engine examines its own data sources and then expands the search to include the data sources of known communities.
 To discover new communities, the engine inquires peers to identify unknown communities.
 The collaborative aspect lies in the partition of a "global" knowledge graph into intentional semantic units.
-Other academic contributions have also aimed to leverage the social links between data sources to diminish the query execution time by not flooding the network when querying, such as in
+Other academic contributions have also aimed to leverage the social links between data sources to diminish the query execution time by not flooding the network when querying, such as in the article
 [](cite:cites Shen2014AnIP).
 Another approach is to use the structure of the object modeled,
 such as academic papers as in the contribution of the authors of [](cite:cites jin2006).
@@ -53,7 +53,7 @@ such as academic papers as in the contribution of the authors of [](cite:cites j
 ### P2P caching in the context of the web
 {:#litterature_review_P2P_caching} 
 
-We define P2P caching as a particular case of collaborative querying 
+I define P2P caching as a particular case of collaborative querying 
 where the query engine shares their already computed and valid results.
 [Squirrel](cite:cites Iyer2002SquirrelAD) proposed a P2P caching mechanism,
 where the URLs are mapped to keys inside a distributed hash table (DHT).

@@ -29,12 +29,12 @@ However, unlike the previous one, there is a mechanism to avoid redundant calcul
 The query engines have a lookup policy that restricts links visited by others.
 For example, the engines might be responsible for a specific semantic section of the domain, 
 e.g., cities in geospatial query. 
-The limitation of this strategy is that the criteria might have to be changed depending on the executed query
-and the type of dataset from which we expect to find results and the loss of accuracy explained in the first strategy.
+The limitations of this strategy are that the criteria might have to be changed depending on the executed query
+and the type of dataset from which we expect to find results ,and the loss of accuracy explained in the first strategy.
 
 3. **Use a global link queue and solution map shared between all the query engines**:
 The advantage of this strategy is that it's a simple way to avoid redundant calculations as all engines have the same link queue.
-Also with the shared solution map the engine would avoid the problem of loss accuracy mention in the first strategy.
+Also with the shared solution map the engines would avoid the problem of loss accuracy mention in the first strategy.
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
 the execution of the query as inspired by the "slave-master" paradigm of the article [](cite:cites 8029358).
 The problem with this strategy is the necessary communication and the potential locking mechanism to avoid inconsistencies.

@@ -14,10 +14,10 @@ and a structured environment that can be leveraged to speed up the query [](cite
 
 
 The first problem I aim to solve is to increase the query completeness.
-To do so, CLTQP attempts to explore more of the search space by having multiple query engines engaging in 
+In this context, I define the domain and the search space as a subset of a graph containing all the triple of the web of linked data
+that can be explore by the query engine.
+To increase the query completeness, CLTQP attempts to explore more of the search space by having multiple query engines engaging in 
 non-overlapping partitions of the huge or pseudo-infinite search domain and executing the query.
-In this context, I define the domain and the search space as the whole web of linked data,
-so as disjoint (knowledge) graph containing all the triples available on the web.
 Hence, in the same amount of time, having more triples processed compared to an approach with just a single query engine.
 An important property emerging from the traversal of links is a structural proximity bias of the query results, which
 means that from the link traversal method, some data sources tend to be discovered more easily regardless of their potential
@@ -29,8 +29,6 @@ Corollary, there is a bias based on the popularity of the data source, as it is 
 referenced more times and in a wide range of data source types (by data source types, I mean data sources that focus on specific topics)
 than data sources having the reverse properties.
 Hence by exploring more of the search space, there is more chance to discover those data sources.
-
-
 The second problem is to reduce the execution time, and I explore the method of P2P caching to alleviate this issue.
 Hartig in [](cite:cites Hartig2011) demonstrates that caching in LTQP can help improve the completeness of results,
 however, in some conditions the query execution time can be increased.
@@ -39,8 +37,6 @@ but none engage with the problem of LTQP and its particularities,
 such as long execution time, exploration of multiple sources, and difficulty in attaining completeness
 which may change the conclusion of the caching and network strategy.
 Additionally, in environments like Solid, privacy is an additional consideration for caching [](cite:cites 10.1145/2413176.2413215).
-
-
 For both problems, it has to be considered that a mechanism to incentivize reciprocity is necessary to ensure fairness and the good functioning of the P2P system.
 It can be implemented in multiple ways, for example, as an obligation to participate in a minimum percentage of queries or
 a number of links to provide.
@@ -56,10 +52,9 @@ Building on the proposal and the related work of [](#litterature_review),
 I formalize my research questions and hypotheses below:
 
 - **Question 1**: Can we achieve better query result completeness
-and lower query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?
+and lower global query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?
 
-- **Question 2**: Does the query execution time, the number of HTTP requests and the CPU usages diminish 
-linearly for each engine with the number of engines collaborating?
+- **Question 2**: Does the CPU usages and the number of HTTP request for each engine diminish inversely with the increase of engine collaborating?
 
 - **Question 3**: How can we prevent multiple query engines from repeating identical calculations over the same data sources?
 
