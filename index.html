@@ -10,7 +10,7 @@
   <meta name="citation_title" content="Introducing Collaborative Link Traversal Query Processing in the Context of Structured Decentralized Environments">
   <meta name="citation_author" content="Bryan-Elliott Tam" />
   
-  <meta name="citation_publication_date" content="2023/07/12" />
+  <meta name="citation_publication_date" content="2023/07/13" />
 </head>
 
 <body prefix="dctypes: http://purl.org/dc/dcmitype/ pimspace: http://www.w3.org/ns/pim/space# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio# lsc: http://linkedscience.org/lsc/ns#" typeof="schema:CreativeWork sioc:Post prov:Entity lsc:Research">
@@ -79,7 +79,7 @@ in the context of decentralized web environments, from a more consumer choice
 the right to choose who will use my data,
 to a definition that includes the right of the users as a collective to make use of their data without relying on
 a third-party distributor with substantial computational power.
-In the context of data usage, sovereignty, and control are vested in the owner of the computational unit <span class="references">[<a href="#ref-5">5</a>]</span>.
+In the context of data usage, sovereignty, and control are largely vested in the owner of the computational unit <span class="references">[<a href="#ref-5">5</a>]</span>.
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users <span class="references">[<a href="#ref-4">4</a>]</span>.
 Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue <span class="references">[<a href="#ref-5">5</a>]</span>,
 even when the data is anonymized <span class="references">[<a href="#ref-2">2</a>, <a href="#ref-4">4</a>]</span> 
@@ -97,9 +97,8 @@ and to reduce execution time for all users.
 With this collective participation, 
 it would be possible at little cost to provide a more democratic economic base from which
 users could have more power to choose features for social applications that cater to their
-desire and interest and start social applications with a lesser monetary barrier.</p>
-
-      <p>This paper is divided as follows, first,
+desire and interest and start social applications with a lesser monetary barrier.
+This paper is divided as follows, first,
 <a href="#litterature_review">related work</a> is presented,
 after the <a href="#proposal">research proposal</a> is made,
 then the <a href="#evaluation">methodology</a> is explained and there is a short <a href="#conclusion">conclusion</a>.</p>
@@ -131,7 +130,7 @@ then the <a href="#evaluation">methodology</a> is explained and there is a short
 to explore the surrounding information around the original response <span class="references">[<a href="#ref-7">7</a>]</span> using the follow-your-nose
 principle of Linked Data. 
 In contrast, traditional SPARQL queries only query one document,
-and Federated Query Processing the data sources need to be known beforehand. 
+and in Federated Query Processing the data sources need to be known beforehand. 
 The query first starts with a small set of URIs called seed URIs <span class="references">[<a href="#ref-7">7</a>]</span> that form
 the initial data sources for the execution.
 The engine then uses a predefined lookup policy to discover new URIs inside the documents obtained from the seed URIs.
@@ -162,17 +161,17 @@ The query engines still have a partial view of the network but it is based on co
 A community, in the ColChain context, is a set of
 <q>nodes that participate in and observe [each other] and the fragments published [between them]</q> <span class="references">[<a href="#ref-12">12</a>]</span>.
 So the division of the network is made intentionally by the users.
-For the query process the engine examines its own data sources and then expands the search to include the data sources of known communities.
+For the query process, the engine examines its own data sources and then expands the search to include the data sources of known communities.
 To discover new communities, the engine inquires peers to identify unknown communities.
 The collaborative aspect lies in the partition of a “global” knowledge graph into intentional semantic units.
-Other academic contributions have also aimed to leverage the social links between data sources to diminish the query execution time by not flooding the network when querying, such as in
+Other academic contributions have also aimed to leverage the social links between data sources to diminish the query execution time by not flooding the network when querying, such as in the article
 <span class="references">[<a href="#ref-13">13</a>]</span>.
 Another approach is to use the structure of the object modeled,
 such as academic papers as in the contribution of the authors of <span class="references">[<a href="#ref-14">14</a>]</span>.</p>
 
       <h3 id="litterature_review_P2P_caching">P2P caching in the context of the web</h3>
 
-      <p>We define P2P caching as a particular case of collaborative querying 
+      <p>I define P2P caching as a particular case of collaborative querying 
 where the query engine shares their already computed and valid results.
 Squirrel <span class="references">[<a href="#ref-15">15</a>]</span> proposed a P2P caching mechanism,
 where the URLs are mapped to keys inside a distributed hash table (DHT).
@@ -210,10 +209,10 @@ which implies that there is a strong consideration for privacy during querying <
 and a structured environment that can be leveraged to speed up the query <span class="references">[<a href="#ref-21">21</a>]</span>.</p>
 
       <p>The first problem I aim to solve is to increase the query completeness.
-To do so, CLTQP attempts to explore more of the search space by having multiple query engines engaging in 
+In this context, I define the domain and the search space as a subset of a graph containing all the triple of the web of linked data
+that can be explore by the query engine.
+To increase the query completeness, CLTQP attempts to explore more of the search space by having multiple query engines engaging in 
 non-overlapping partitions of the huge or pseudo-infinite search domain and executing the query.
-In this context, I define the domain and the search space as the whole web of linked data,
-so as disjoint (knowledge) graph containing all the triples available on the web.
 Hence, in the same amount of time, having more triples processed compared to an approach with just a single query engine.
 An important property emerging from the traversal of links is a structural proximity bias of the query results, which
 means that from the link traversal method, some data sources tend to be discovered more easily regardless of their potential
@@ -224,18 +223,16 @@ Hence, a data source that takes more steps to be accessed, in regards to the see
 Corollary, there is a bias based on the popularity of the data source, as it is easier to find a data source that is
 referenced more times and in a wide range of data source types (by data source types, I mean data sources that focus on specific topics)
 than data sources having the reverse properties.
-Hence by exploring more of the search space, there is more chance to discover those data sources.</p>
-
-      <p>The second problem is to reduce the execution time, and I explore the method of P2P caching to alleviate this issue.
+Hence by exploring more of the search space, there is more chance to discover those data sources.
+The second problem is to reduce the execution time, and I explore the method of P2P caching to alleviate this issue.
 Hartig in <span class="references">[<a href="#ref-22">22</a>]</span> demonstrates that caching in LTQP can help improve the completeness of results,
 however, in some conditions the query execution time can be increased.
 In the <a href="#literature_review_P2P_caching">literature</a>, there are contributions on the topic of P2P caching,
 but none engage with the problem of LTQP and its particularities,
 such as long execution time, exploration of multiple sources, and difficulty in attaining completeness
 which may change the conclusion of the caching and network strategy.
-Additionally, in environments like Solid, privacy is an additional consideration for caching <span class="references">[<a href="#ref-23">23</a>]</span>.</p>
-
-      <p>For both problems, it has to be considered that a mechanism to incentivize reciprocity is necessary to ensure fairness and the good functioning of the P2P system.
+Additionally, in environments like Solid, privacy is an additional consideration for caching <span class="references">[<a href="#ref-23">23</a>]</span>.
+For both problems, it has to be considered that a mechanism to incentivize reciprocity is necessary to ensure fairness and the good functioning of the P2P system.
 It can be implemented in multiple ways, for example, as an obligation to participate in a minimum percentage of queries or
 a number of links to provide.
 This enforcement could be managed by a community-specific structure with policies in that regard.
@@ -250,11 +247,10 @@ I formalize my research questions and hypotheses below:</p>
       <ul>
         <li>
           <p><strong>Question 1</strong>: Can we achieve better query result completeness
-and lower query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?</p>
+and lower global query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?</p>
         </li>
         <li>
-          <p><strong>Question 2</strong>: Does the query execution time, the number of HTTP requests and the CPU usages diminish 
-linearly for each engine with the number of engines collaborating?</p>
+          <p><strong>Question 2</strong>: Does the CPU usages and the number of HTTP request for each engine diminish inversely with the increase of engine collaborating?</p>
         </li>
         <li>
           <p><strong>Question 3</strong>: How can we prevent multiple query engines from repeating identical calculations over the same data sources?</p>
@@ -322,13 +318,13 @@ However, unlike the previous one, there is a mechanism to avoid redundant calcul
 The query engines have a lookup policy that restricts links visited by others.
 For example, the engines might be responsible for a specific semantic section of the domain, 
 e.g., cities in geospatial query. 
-The limitation of this strategy is that the criteria might have to be changed depending on the executed query
-and the type of dataset from which we expect to find results and the loss of accuracy explained in the first strategy.</p>
+The limitations of this strategy are that the criteria might have to be changed depending on the executed query
+and the type of dataset from which we expect to find results ,and the loss of accuracy explained in the first strategy.</p>
         </li>
         <li>
           <p><strong>Use a global link queue and solution map shared between all the query engines</strong>:
 The advantage of this strategy is that it’s a simple way to avoid redundant calculations as all engines have the same link queue.
-Also with the shared solution map the engine would avoid the problem of loss accuracy mention in the first strategy.
+Also with the shared solution map the engines would avoid the problem of loss accuracy mention in the first strategy.
 Another possibility would be to let one peer do the join operation while the other peers handle the traversal and
 the execution of the query as inspired by the “slave-master” paradigm of the article <span class="references">[<a href="#ref-19">19</a>]</span>.
 The problem with this strategy is the necessary communication and the potential locking mechanism to avoid inconsistencies.</p>
