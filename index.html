@@ -83,7 +83,7 @@ In the context of data usage, sovereignty, and control are largely vested in the
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users <span class="references">[<a href="#ref-4">4</a>]</span>.
 Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue <span class="references">[<a href="#ref-5">5</a>]</span>,
 even when the data is anonymized <span class="references">[<a href="#ref-2">2</a>, <a href="#ref-4">4</a>]</span> 
-and contribute to the centralization of wealth, increased surveillance and the non representative distribution of content online (for example in languages and type of content) <span class="references">[<a href="#ref-3">3</a>, <a href="#ref-4">4</a>, <a href="#ref-5">5</a>]</span>.
+and contribute to the centralization of wealth, increased surveillance and the non-representative distribution of contents online (for example in languages and type of content) <span class="references">[<a href="#ref-3">3</a>, <a href="#ref-4">4</a>, <a href="#ref-5">5</a>]</span>.
 To improve this sovereignty, I focus on data querying of social applications,
 applications that are driven by the interaction between users.
 In social applications, requesting and discovering new information, while taking into consideration
@@ -117,6 +117,7 @@ then the <a href="#evaluation">methodology</a> is explained and there is a short
 * Reflection and future work: Are there any limitations in your approach? What are your planned next steps to complete your investigation?
 
 -->
+
     </div>
 </section>
  <!-- 2 -->
@@ -250,7 +251,7 @@ I formalize my research questions and hypotheses below:</p>
 and lower global query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?</p>
         </li>
         <li>
-          <p><strong>Question 2</strong>: Does the CPU usages and the number of HTTP request for each engine diminish inversely with the increase of engine collaborating?</p>
+          <p><strong>Question 2</strong>: Does the CPU usages and the number of HTTP request for each engine diminish with the increase of engine collaborating?</p>
         </li>
         <li>
           <p><strong>Question 3</strong>: How can we prevent multiple query engines from repeating identical calculations over the same data sources?</p>
@@ -307,7 +308,7 @@ at the start or at a moment when we have a large number of URLs we let the engin
 the stopping condition, the engines share their results.
 The limitation of this strategy is that we don’t consider if the data sources discoverable inside the seed URLs overlaps.
 Another important limitation is the loss of accuracy if part of the solution is present inside the documents processed by different engines.
-In that case, to find those results, the solution map would need to be joined, to retain the accuracy.
+In that case, to find those results and retain the accuracy, the solution map would need to be joined.
 By detecting those cases and using adaptative query planning <span class="references">[<a href="#ref-21">21</a>, <a href="#ref-24">24</a>]</span>,
 it would be possible to change strategy to avoid the loss of accuracy.</p>
         </li>
