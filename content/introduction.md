@@ -19,7 +19,7 @@ In the context of data usage, sovereignty, and control are largely vested in the
 This ownership empowers them to make decisions that may diverge from the desires or interests of the users [](cite:cites Sevignani2013).
 Additionally, it facilitates the utilization of users as products to be sold or as an unpaid source of revenue [](cite:cites 9663788),
 even when the data is anonymized [](cite:cites Terranova2000FreeLP, Sevignani2013) 
-and contribute to the centralization of wealth, increased surveillance and the non representative distribution of content online (for example in languages and type of content) [](cite:cites Curran2016ch1, Sevignani2013, 9663788).
+and contribute to the centralization of wealth, increased surveillance and the non-representative distribution of contents online (for example in languages and type of content) [](cite:cites Curran2016ch1, Sevignani2013, 9663788).
 To improve this sovereignty, I focus on data querying of social applications,
 applications that are driven by the interaction between users.
 In social applications, requesting and discovering new information, while taking into consideration

@@ -19,7 +19,7 @@ at the start or at a moment when we have a large number of URLs we let the engin
 the stopping condition, the engines share their results.
 The limitation of this strategy is that we don't consider if the data sources discoverable inside the seed URLs overlaps.
 Another important limitation is the loss of accuracy if part of the solution is present inside the documents processed by different engines.
-In that case, to find those results, the solution map would need to be joined, to retain the accuracy.
+In that case, to find those results and retain the accuracy, the solution map would need to be joined.
 By detecting those cases and using adaptative query planning [](cite:cites taelman2023, Acosta2011),
 it would be possible to change strategy to avoid the loss of accuracy.
 

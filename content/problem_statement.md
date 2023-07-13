@@ -54,7 +54,7 @@ I formalize my research questions and hypotheses below:
 - **Question 1**: Can we achieve better query result completeness
 and lower global query execution time in the context of LTQP by making multiple SPARQL query engines collaborate?
 
-- **Question 2**: Does the CPU usages and the number of HTTP request for each engine diminish inversely with the increase of engine collaborating?
+- **Question 2**: Does the CPU usages and the number of HTTP request for each engine diminish with the increase of engine collaborating?
 
 - **Question 3**: How can we prevent multiple query engines from repeating identical calculations over the same data sources?
 
