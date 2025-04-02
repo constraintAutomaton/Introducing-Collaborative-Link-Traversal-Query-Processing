@@ -31,12 +31,12 @@ bundle exec guard
 ```
 bundle install
 bundle exec nanoc compile
-
-## License
-The code is licensed under the CC-BY-4.0 license. See the [LICENSE](LICENSE) file for details.
-
 ```
 
 View on http://localhost:3000/
 
+## License
+The code is licensed under the CC-BY-4.0 license. See the [LICENSE](LICENSE) file for details.
+
 **This article makes use of the [ScholarMarkdown](https://github.com/rubensworks/ScholarMarkdown/) framework.**
+
